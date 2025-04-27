@@ -77,7 +77,7 @@ layout: default
         <div class="projects-grid">
           {% assign service_projects = site.projects | where: "categories", page.service-type | limit: 3 %}
           {% for project in service_projects %}
-          <a href="{{ project.url }}" class="project-card">
+          <a href="{{ project.url | relative_url }}" class="project-card">
             <div class="project-image">
               <img class="project-media" src="{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}" alt="{{ project.title }}" loading="lazy">
               <div class="project-overlay">

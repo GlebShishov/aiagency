@@ -15,7 +15,7 @@ permalink: /services/
       {% assign main_services = site.services | where_exp: "item", "item.url contains '/services/'" | sort: 'order' %}
       {% for service in main_services %}
         {% assign service_slug = service.url | split: '/' | last %}
-        {% if service_slug == 'branding' or service_slug == 'development' or service_slug == 'marketing' or service_slug == 'social-media' or service_slug == 'strategy' or service_slug == 'ux-ui' %}
+        {% if service_slug == 'branding' or service_slug == 'development' or service_slug == 'marketing' or service_slug == 'social-media' or service_slug == 'strategy' or service_slug == 'ux-ui' or service_slug == 'additional' %}
           <span class="service-hero-tag">{{ service.title }}</span>
         {% endif %}
       {% endfor %}
@@ -30,7 +30,7 @@ permalink: /services/
   {% assign main_services = site.services | where_exp: "item", "item.url contains '/services/'" | sort: 'order' %}
   {% for service in main_services %}
     {% assign service_slug = service.url | split: '/' | last %}
-    {% if service_slug == 'branding' or service_slug == 'development' or service_slug == 'marketing' or service_slug == 'social-media' or service_slug == 'strategy' or service_slug == 'ux-ui' %}
+    {% if service_slug == 'branding' or service_slug == 'development' or service_slug == 'marketing' or service_slug == 'social-media' or service_slug == 'strategy' or service_slug == 'ux-ui' or service_slug == 'additional' %}
       <div class="service-category-card">
         <div class="container">
           <div class="service-category-content">
