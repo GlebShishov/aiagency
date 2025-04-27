@@ -166,7 +166,7 @@ layout: default
       
       <div class="case-grid-layout">
         {% for case in related_cases %}
-          <a href="{{ case.url }}" class="project-card small text-dec-none">
+          <a href="{{ case.url | relative_url }}" class="project-card small text-dec-none">
             <div class="project-image">
               <img class="project-media" src="{% if case.thumbnail %}{{ case.thumbnail | relative_url }}{% elsif case.images.first %}{{ case.images.first | relative_url }}{% else %}{{ '/assets/images/placeholder.jpg' | relative_url }}{% endif %}" alt="{{ case.title }}" loading="lazy">
               <div class="project-overlay">

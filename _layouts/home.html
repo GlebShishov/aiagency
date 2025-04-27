@@ -47,7 +47,7 @@ layout: default
             {% assign recent_projects = site.projects | sort: "date" | reverse | limit: 5 %}
             {% for project in recent_projects %}
             <div class="project-slide {% if forloop.first %}active{% endif %}" data-slide-index="{{ forloop.index0 }}">
-              <a href="{{ project.url }}" class="text-dec-none">
+              <a href="{{ project.url | relative_url }}" class="text-dec-none">
                 <img src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}" loading="lazy">
               </a>
             </div>
@@ -63,7 +63,7 @@ layout: default
     
     <div class="last-project">
       <p class="last-project-title">Последний кейс</p>
-      <a href="{{ recent_projects.first.url }}" class="project-card medium text-dec-none">
+      <a href="{{ recent_projects.first.url | relative_url }}" class="project-card medium text-dec-none">
         <div class="project-image">
           <img class="project-media" src="{% if recent_projects.first.thumbnail %}{{ recent_projects.first.thumbnail | relative_url }}{% elsif recent_projects.first.images.first %}{{ recent_projects.first.images.first | relative_url }}{% else %}{{ '/assets/images/projects/03.jpg' | relative_url }}{% endif %}" alt="{{ recent_projects.first.title }}" loading="lazy">
           <div class="project-overlay">
@@ -117,7 +117,7 @@ layout: default
   <div class="case-grid-layout" id="projects-grid">
     {% assign featured_projects = site.projects | sort: "date" | reverse | limit: 6 %}
     {% for project in featured_projects %}
-    <a href="{{ project.url }}" class="project-card small text-dec-none">
+    <a href="{{ project.url | relative_url }}" class="project-card small text-dec-none">
       <div class="project-image">
         <img class="project-media" src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}" loading="lazy">
         <div class="project-overlay">
