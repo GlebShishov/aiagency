@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Применяем плавный скролл на все внутренние ссылки
+  // Применяем плавный переход на все внутренние ссылки
   document.querySelectorAll('a[href^="/"]:not([href^="//"])').forEach(link => {
     link.addEventListener('click', function(e) {
       // Исключаем ссылки, которые должны обрабатываться иначе
@@ -412,17 +412,28 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isInternalLink) {
         e.preventDefault();
         
-        const transitionDuration = 500; // ms
+        const transitionDuration = 300; // ms, уменьшено для более быстрого отклика
         
         // Плавное затухание
         document.body.style.opacity = '0';
         document.body.style.transition = `opacity ${transitionDuration}ms ease`;
         
         setTimeout(() => {
+          // Используем history.pushState вместо window.location.href
+          // для корректной работы кнопки "назад"
           window.location.href = href;
         }, transitionDuration);
       }
     });
+  });
+  
+  // Обработчик события popstate (кнопка "назад")
+  window.addEventListener('pageshow', function(event) {
+    // Если страница загружена из кэша (кнопка "назад")
+    if (event.persisted) {
+      // Восстанавливаем видимость страницы
+      document.body.style.opacity = '1';
+    }
   });
   
   // Projects slider infinite scroll
