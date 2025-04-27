@@ -54,8 +54,3 @@ exclude:
   - docker-compose.yml
   - Dockerfile
   - .dockerignore
-
-# Настройки для формы обратной связи
-form_submission_email: hello@aiagency.ru
-telegram_bot_token: 7206856978:AAG4WV_K_M3MrsOXhFZ5Tfo14Wmowb8IQyY
-telegram_chat_id: 386565045
