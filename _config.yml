@@ -1,6 +1,7 @@
 title: AI Agency
 email: info@aiagency.art
 description: Диджитал агентство прокаченное новыми технологиями
+baseurl: "/aiagency"
 lsi: false
 safe: true
 source: ./
