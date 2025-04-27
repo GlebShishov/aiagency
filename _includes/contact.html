@@ -1,0 +1,121 @@
+<section class="contact-section section full-width">
+  <div class="contact-grid">
+      <!-- Левая колонка с информацией -->
+      <div class="contact-info">
+        <h2 class="section-title">Оставьте заявку,<br>чтобы обсудить проект</h2>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <a href="mailto:hello@aiagency.ru" class="contact-link">hello@aiagency.ru</a>
+          </div>
+          <div class="contact-item">
+            <a href="tel:+74995104351" class="contact-link">+7 (499) 510-43-51</a>
+          </div>
+          <div class="contact-item">
+            <a href="https://t.me/aiagency" class="contact-link">
+              <span class="icon-telegram"></span> телеграм
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-download">
+          <a href="{{ '/assets/files/presentation.pdf' | relative_url }}" class="button text download-link">
+            <span class="icon-download"></span> Скачать бриф
+          </a>
+        </div>
+        
+        <div class="contact-careers">
+          <h3 class="contact-subtitle">Работа</h3>
+          <a href="mailto:rabota@aiagency.ru" class="contact-link">rabota@aiagency.ru</a>
+          <p class="contact-text">Для сотрудничества</p>
+        </div>
+        
+        <div class="contact-legal">
+          <p class="small-text">ООО "АйЭдженси" ОГРН 1109847023826 190005, Санкт-Петербург, ул. Московский пер., 25, лит А</p>
+        </div>
+      </div>
+      
+      <!-- Правая колонка с формой -->
+      <div class="contact-form">
+        <div class="form-header">
+          <h3 class="form-title">Ваши контакты</h3>
+        </div>
+        
+        <form action="#" method="post" id="contactForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-control" placeholder="Имя" required maxlength="50" pattern="[А-Яа-яЁёA-Za-z\s]+" title="Только буквы и пробелы">
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (XXX) XXX XX-XX" required pattern="\+7 \(\d{3}\) \d{3} \d{2}-\d{2}">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="input-with-icon">
+              <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required maxlength="100" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Введите корректный email">
+              <span class="input-icon"><img src="{{ '/assets/images/icons/web-icon.svg' | relative_url }}" alt="web" class="web-icon"></span>
+            </div>
+          </div>
+          
+          <div class="form-section">
+            <h4 class="form-subtitle">О проекте</h4>
+            
+            <div class="form-services">
+              <label class="service-checkbox" id="complex-service">
+                <input type="checkbox" name="service[]" value="Комплексный">
+                <span class="checkbox-text">Комплексный</span>
+              </label>
+              <label class="service-checkbox" id="branding-service">
+                <input type="checkbox" name="service[]" value="Брендинг">
+                <span class="checkbox-text">Брендинг</span>
+              </label>
+              <label class="service-checkbox" id="web-service">
+                <input type="checkbox" name="service[]" value="Веб">
+                <span class="checkbox-text">Веб</span>
+              </label>
+              <label class="service-checkbox" id="promo-service">
+                <input type="checkbox" name="service[]" value="Продвижение">
+                <span class="checkbox-text">Продвижение</span>
+              </label>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="description" name="description" class="form-control" rows="4" placeholder="Опишите задачу" required maxlength="500"></textarea>
+              <div class="char-counter"><span id="charCount">0</span>/500</div>
+            </div>
+            
+            <div class="form-file">
+              <label for="file" class="file-label">
+                <span class="icon-attach"></span> Прикрепить файл
+              </label>
+              <input type="file" id="file" name="file" class="file-input">
+              <div class="file-info">
+                <ol class="file-tips">
+                  <li>Из какой вы компании, чем она занимается?</li>
+                  <li>С какой задачей/проблемой Вы обращаетесь к нам?</li>
+                  <li>На какой бюджет Вы рассчитываете?</li>
+                  <li>Напишите, если дедлайн горит и нужно сделать в кратчайшие...</li>
+                </ol>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <select id="source" name="source" class="form-control">
+                <option value="" selected disabled>Откуда узнали про AI Agency</option>
+                <option value="Поиск">Поиск в интернете</option>
+                <option value="Соцсети">Социальные сети</option>
+                <option value="Рекомендация">Рекомендация знакомых</option>
+                <option value="Другое">Другое</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-footer">
+            <button type="submit" class="button rounded">Отправить заявку</button>
+            <p class="form-disclaimer">Нажав на кнопку, соглашаюсь<br>на обработку <a href="#">персональных данных</a></p>
+          </div>
+        </form>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  jekyll:
+    build: .
+    ports:
+      - "4001:4000"
+    volumes:
+      - .:/srv/jekyll
+    command: jekyll serve --host 0.0.0.0 --watch --force_polling
+    environment:
+      - JEKYLL_ENV=development
+    mem_limit: 512m 

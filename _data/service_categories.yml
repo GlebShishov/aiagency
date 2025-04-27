@@ -1,0 +1,34 @@
+- id: strategy
+  title: Стратегия
+  subtitle: Выбираем путь и создаем основу
+  order: 1
+
+- id: branding
+  title: Брендинг
+  subtitle: От идеи до коммуникации
+  order: 2
+
+- id: ux-ui
+  title: UX/UI-дизайн
+  subtitle: Осмысленный и эстетичный
+  order: 3
+
+- id: development
+  title: Веб-разработка
+  subtitle: Полный цикл разработки
+  order: 4
+
+- id: marketing
+  title: Performance-маркетинг
+  subtitle: Вдумчивый и эффективный
+  order: 5
+
+- id: communication
+  title: Коммуникация
+  subtitle: От SMM до креативных кампаний
+  order: 6
+
+- id: additional
+  title: Дополнительные
+  subtitle: Расширенные возможности
+  order: 7

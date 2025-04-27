@@ -1,0 +1,72 @@
+<!-- Модальное окно обратной связи -->
+<div id="contact-modal" class="modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-container">
+    <button class="modal-close" id="contact-modal-close">
+      <span></span>
+      <span></span>
+    </button>
+    
+    <div class="modal-content">
+      <h2 class="modal-title">Обсудить проект</h2>
+      
+      <form id="contactForm" class="project-form" action="#" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="messageInput" class="form-label">Несколько слов о проекте</label>
+          <textarea id="messageInput" name="message" class="form-input" rows="4" placeholder="Опишите ваш проект или задачу..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="fileUpload" class="form-label">Загрузить файл</label>
+          <input type="file" id="fileUpload" name="file" class="form-input file-input">
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Интересующие услуги</label>
+          <div class="form-options">
+            <button type="button" class="option-button" data-service="strategy">Стратегия</button>
+            <button type="button" class="option-button" data-service="branding">Брендинг</button>
+            <button type="button" class="option-button" data-service="design">UX/UI Дизайн</button>
+            <button type="button" class="option-button" data-service="development">Разработка</button>
+            <button type="button" class="option-button" data-service="marketing">Маркетинг</button>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="companyNameInput" class="form-label">Название компании</label>
+          <input type="text" id="companyNameInput" name="companyName" class="form-input" placeholder="ООО «Компания»">
+        </div>
+                
+        <div class="form-group">
+          <label for="nameInput" class="form-label">Имя</label>
+          <input type="text" id="nameInput" name="name" class="form-input" required placeholder="Иванов Иван">
+        </div>
+        
+        <div class="form-group">
+          <label for="emailInput" class="form-label">Email</label>
+          <input type="email" id="emailInput" name="email" class="form-input" required placeholder="example@mail.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="phoneInput" class="form-label">Телефон</label>
+          <input type="tel" id="phoneInput" name="phone" class="form-input" required placeholder="+7 (999) 123-45-67">
+        </div>
+        
+        <div class="form-group form-checkbox">
+          <input type="checkbox" id="privacyCheckbox" name="privacy" required>
+          <label for="privacyCheckbox">Даю согласие на обработку моих персональных данных</label>
+        </div>
+        
+        <input type="hidden" id="serviceInput" name="service" value="">
+        
+        <button type="submit" class="button">Отправить заявку</button>
+      </form>
+    </div>
+    
+    <div class="modal-logo-container">
+      <div class="modal-logo">
+        AI Agency
+      </div>
+    </div>
+  </div>
+</div> 

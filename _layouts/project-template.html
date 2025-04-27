@@ -1,0 +1,196 @@
+---
+layout: default
+---
+
+<article class="case-page">
+  <!-- Заголовок кейса с информацией о клиенте и задаче -->
+  <section class="case-header">
+    <div class="container">
+      <div class="container">
+        <h1 class="case-title">{{ page.title }}</h1>
+        <p class="case-subtitle">{{ page.description }}</p>
+        
+        <div class="case-meta">
+          <div class="case-type">{{ page.case-type }}</div>
+          <div class="case-date">{{ page.date | date: "%m.%Y" }}</div>
+          {% if page.client-url %}
+            <a href="{{ page.client-url }}" class="case-url" target="_blank" rel="noopener">{{ page.client-url }}</a>
+          {% endif %}
+        </div>
+      </div>
+      
+      <!-- Клиент и задача -->
+      <div class="case-client-task">
+        <div class="container">
+          <div class="client-task-container">
+            <div class="client-info">
+              <h3 class="info-title">О клиенте</h3>
+              <div class="info-content">
+                <p>{{ page.client_description | default: "Информация о клиенте" }}</p>
+              </div>
+            </div>
+            
+            <div class="key-goal">
+              <h3 class="info-title">Ключевая цель</h3>
+              <div class="info-content">
+                <p>{{ page.key_goal | default: page.task }}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tasks-container">
+            <h3 class="info-title">Основные задачи</h3>
+            <div class="tasks-grid">
+              {% if page.tasks %}
+                {% for task in page.tasks limit:4 %}
+                  <div class="task-card">
+                    <div class="task-number">{{ forloop.index }}</div>
+                    <div class="task-content">{{ task }}</div>
+                  </div>
+                {% endfor %}
+              {% else %}
+                <div class="task-card">
+                  <p>1</p>
+                  <p>{{ page.plan }}</p>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Большая картинка во всю ширину (соотношение 16:9) -->
+  {% if page.images %}
+  <section class="case-hero-full">
+    <div class="hero-image-wrapper">
+      <img src="{{ page.images[0] | relative_url }}" alt="{{ page.title }}" class="hero-full-image">
+    </div>
+  </section>
+  {% endif %}
+
+
+  
+  <!-- Сетка из (проблематика, подход, результат) -->
+  <section class="case-grid-info section">
+    <div class="container">
+      <div class="grid-info-container">
+        <!-- Проблематика -->
+        <div class="info-block">
+          <h3 class="info-title">проблематика</h3>
+          <div class="info-content">
+            <p>{{ page.task }}</p>
+          </div>
+        </div>
+
+        <!-- Подход -->
+        <div class="info-block">
+          <h3 class="info-title">подход</h3>
+          <div class="info-content">
+            <p>{{ page.idea }}</p>
+          </div>
+        </div>
+
+        <!-- Результат -->
+        <div class="info-block">
+          <h3 class="info-title">результат</h3>
+          <div class="info-content">
+            <p>{{ page.result | default: "Успешная реализация проекта в соответствии с поставленными задачами." }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Большая картинка во всю ширину (вторая, соотношение 16:9) -->
+  {% if page.images and page.images.size > 1 %}
+  <section class="case-hero-full">
+    <div class="hero-image-wrapper">
+      <img src="{{ page.images[1] | relative_url }}" alt="{{ page.title }}" class="hero-full-image">
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Галерея изображений проекта -->
+  {% if page.images and page.images.size > 2 %}
+  <section class="case-gallery">
+    <div class="container">
+      <div class="gallery-grid">
+        {% for image in page.images offset:2 limit:4 %}
+          <div class="gallery-item">
+            <img src="{{ image | relative_url }}" alt="{{ page.title }} - изображение {{ forloop.index | plus: 2 }}" loading="lazy">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Основное содержимое -->
+  <section class="case-content-section">
+    <div class="container">
+      <div class="case-content">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Команда проекта -->
+  {% if page.team %}
+  <section class="case-team-section">
+    <div class="container">
+      <h2 class="section-title">Команда проекта</h2>
+      <div class="team-grid">
+        {% for member in page.team %}
+          <div class="team-member">
+            <div class="member-name">{{ member.name }}</div>
+            <div class="member-role">{{ member.role }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Другие проекты -->
+  <section class="other-projects-section">
+    <div class="container">
+      <h2 class="other-projects-title">Ещё кейсы</h2>
+      
+      <!-- Получаем все проекты, исключая текущий -->
+      {% assign all_other_projects = site.projects | where_exp: "item", "item.url != page.url" %}
+      
+      <!-- Берем 6 проектов для отображения в сетке -->
+      {% assign related_cases = all_other_projects | limit: 6 %}
+      
+      <div class="case-grid-layout">
+        {% for case in related_cases %}
+          <a href="{{ case.url }}" class="project-card small text-dec-none">
+            <div class="project-image">
+              <img class="project-media" src="{% if case.thumbnail %}{{ case.thumbnail | relative_url }}{% elsif case.images.first %}{{ case.images.first | relative_url }}{% else %}{{ '/assets/images/placeholder.jpg' | relative_url }}{% endif %}" alt="{{ case.title }}" loading="lazy">
+              <div class="project-overlay">
+                <p class="project-category">{{ case.case-type }}</p>
+                <h3 class="project-title">{{ case.title }}</h3>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+        <a href="{{ '/projects' | relative_url }}" class="project-card small cta-card text-dec-none">
+          <div class="cta-content">
+            <h3>Ещё проекты</h3>
+            <p>Смотреть все наши работы</p>
+            <span class="arrow-icon">→</span>
+          </div>
+        </a>
+      </div>
+      
+      <div class="back-to-projects">
+        <a href="{{ '/projects' | relative_url }}" class="back-to-projects-button">
+          <span class="arrow">←</span>
+          <span>Все проекты</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</article>

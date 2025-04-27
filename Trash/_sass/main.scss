@@ -1,0 +1,72 @@
+@import "base/variables";
+@import "base/reset";
+@import "base/base";
+@import "base/typography";
+
+// Компоненты
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/animations";
+@import "components/theme_toggle";
+@import "components/modal";
+
+// Макет и секции
+@import "layout/grid";
+@import "layout/header_footer";
+@import "layout/sections";
+@import "layout/client-grid";
+@import "layout/services";
+@import "layout/responsive";
+
+body {
+  font-family: "Inter", "Suisse Intl", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: opacity var(--transition-speed) ease;
+  
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+}
+
+button {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity var(--transition-speed) ease;
+  
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+} 

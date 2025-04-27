@@ -1,0 +1,182 @@
+---
+layout: default
+---
+
+<section class="hero-video hero-animation">
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="{{ '/img/Backvideo.mp4' | relative_url }}" type="video/mp4">
+    </video>
+  </div>
+  
+  <div class="hero-container">
+    <p class="hero-text">Диджитал агентство прокаченное новыми технологиями</p>
+      
+    <h1 class="hero-name">
+      <span class="hero-title-char a-char">A</span
+      ><span class="hero-title-char i-char">I</span
+      ><span class="hero-title-char space-char"> </span
+      ><span class="hero-title-char agency-char">A</span
+      ><span class="hero-title-char agency-char">g</span
+      ><span class="hero-title-char agency-char">e</span
+      ><span class="hero-title-char agency-char">n</span
+      ><span class="hero-title-char agency-char">c</span
+      ><span class="hero-title-char agency-char">y</span>
+    </h1>
+      <div class="tabs-container">
+        <a href="{{ '/services/strategy' | relative_url }}" class="button text-dec-none">стратегия</a>
+        <a href="{{ '/services/branding' | relative_url }}" class="button text-dec-none">брендинг</a>
+        <a href="{{ '/services/ux-ui' | relative_url }}" class="button text-dec-none">ux/ui</a>
+        <a href="{{ '/services/development' | relative_url }}" class="button text-dec-none">разработка</a>
+        <a href="{{ '/services/marketing' | relative_url }}" class="button text-dec-none">маркетинг</a>
+        <a href="{{ '/services/social-media' | relative_url }}" class="button text-dec-none">smm</a>
+      </div>
+      
+      <a href="{{ '/start-project' | relative_url }}" class="button rounded text-dec-none">Обсудить проект</a>
+  </div>
+</section>
+
+{% comment %}Начало секции последних проектов{% endcomment %}
+<section class="last-projects section">
+  <div class="last-projects-grid">
+    <div class="today-projects">
+      <p class="today-projects-title">Опубликовано сегодня</h3>
+      <div class="today-projects-scroll">
+        <div class="projects-slider">
+          <div class="projects-slider-container">
+            {% assign recent_projects = site.projects | sort: "date" | reverse | limit: 5 %}
+            {% for project in recent_projects %}
+            <div class="project-slide {% if forloop.first %}active{% endif %}" data-slide-index="{{ forloop.index0 }}">
+              <a href="{{ project.url }}" class="text-dec-none">
+                <img src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}">
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          
+          <div class="slider-progress">
+            <div class="slider-progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="last-project">
+      <p class="last-project-title">Последний кейс</p>
+      <a href="{{ recent_projects.first.url }}" class="project-card medium text-dec-none">
+        <div class="project-image">
+          <img class="project-media" src="{% if recent_projects.first.thumbnail %}{{ recent_projects.first.thumbnail | relative_url }}{% elsif recent_projects.first.images.first %}{{ recent_projects.first.images.first | relative_url }}{% else %}{{ '/assets/images/projects/03.jpg' | relative_url }}{% endif %}" alt="{{ recent_projects.first.title }}">
+          <div class="project-overlay">
+            <p class="project-category">{{ recent_projects.first.case-type }}</p>
+            <h3 class="project-title">{{ recent_projects.first.title }}</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div class="last-tg-post">
+      <p class="last-tg-post-title">Последний пост<a href="https://t.me/aiagency" target="_blank" class="text-dec-none">Телеграм</a></p>
+      <div class="telegram-post">
+        <img class="telegram-media" src="{{ '/assets/images/placeholder.jpg' | relative_url }}" alt="Telegram post">
+        <div class="telegram-post-text-block">
+          <p>Внезапно, элементы политического процесса представлены в исключительно положительном свете. Повседневная практика показывает, что разбавленное изрядной долей эмпатии...</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sirlce">
+      <p class="sirlce-title">Sirlce</p>
+      <div class="sirlce-image-container">
+        <img class="sirlce-image" src="{{ '/assets/images/projects/01.jpg' | relative_url }}" alt="Sirlce image">
+      </div>
+    </div>
+  
+  </div>
+</section>
+{% comment %}Конец секции последних проектов{% endcomment %}
+
+<section class="clients section">
+  <h2 class="section-title">Нам уже доверяют</h2>
+  <div class="clients-grid">
+    {% assign sorted_clients = site.clients | sort: 'order' %}
+    {% for client in sorted_clients %}
+    <div class="client-card">
+      <h2>{{ client.name }}</h2>
+      <p>{{ client.category }}</p>
+    </div>
+    {% endfor %}
+    <div class="client-card cta-card">
+      <h3>Станьте клиентом</h3>
+      <p>Хотите стать нашим клиентом? Свяжитесь с нами прямо сейчас!</p>
+      <button class="button rounded text-dec-none js-modal-trigger" data-modal="contact-modal">Обсудить проект</button>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section">
+  <div class="case-grid-layout" id="projects-grid">
+    {% assign featured_projects = site.projects | sort: "date" | reverse | limit: 6 %}
+    {% for project in featured_projects %}
+    <a href="{{ project.url }}" class="project-card small text-dec-none">
+      <div class="project-image">
+        <img class="project-media" src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}">
+        <div class="project-overlay">
+          <span class="project-category">{{ project.case-type }}</p>
+          <span class="project-title">{{ project.title }}</h3>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+    <a href="{{ '/projects' | relative_url }}" class="project-card small cta-card text-dec-none">
+      <div class="cta-content">
+        <h3>Ещё проекты</h3>
+        <p>Смотреть все наши работы</p>
+        <span class="arrow-icon">→</span>
+      </div>
+    </a>
+  </div>
+  <div id="loading" class="loading-indicator hidden">
+    <div class="spinner"></div>
+  </div>
+</section>
+
+<section class="services-ticker">
+  <div class="ticker-container">
+    <div class="ticker-wrapper">
+      <div class="ticker-content" id="js-ticker-content">
+        {% assign sorted_services = site.services | sort: 'order' %}
+        {% for service in sorted_services %}
+          <span class="ticker-item">{{ service.title }}</span>
+          <span class="ticker-separator">&bull;</span>
+        {% endfor %}
+        {% for service in sorted_services %}
+          <span class="ticker-item">{{ service.title }}</span>
+          <span class="ticker-separator">&bull;</span>
+        {% endfor %}
+        {% for service in sorted_services %}
+          <span class="ticker-item">{{ service.title }}</span>
+          <span class="ticker-separator">&bull;</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Секция с партнёрами -->
+<section class="section partners-section">
+  <div class="container-fluid">
+    <h2 class="section-title">Наши партнёры</h2>
+    <div class="partners-grid">
+      {% assign sorted_partners = site.partners | sort: 'order' %}
+      {% for partner in sorted_partners %}
+      <div class="partner-card">
+        <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" class="partner-logo">
+        <h3 class="partner-name">{{ partner.name }}</h3>
+        <p class="partner-description">{{ partner.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ content }}

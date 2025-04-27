@@ -1,0 +1,332 @@
+/* Адаптивные стили */
+
+/* Мобильные стили */
+@media (max-width: $mobile) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  
+  .button {
+    padding: 0.875rem 1.75rem;
+  }
+  
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .option-button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero {
+    min-height: 60vh;
+    padding: 6rem 0 3rem;
+  }
+  
+  .projects-slider {
+    gap: 1rem;
+  }
+  
+  .slider-item {
+    width: 250px;
+  }
+  
+  .description-text {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+  
+  .project-overlay {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+  }
+  
+  .hero h1 {
+    font-size: 18vw;
+  }
+  
+  .mobile-cta-button {
+    display: block;
+  }
+  
+  /* Мобильное меню */
+  .dropdown-menu-grid {
+    grid-template-columns: 1fr;
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transform: none;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 1rem;
+    margin-top: 0.5rem;
+    background-color: transparent;
+  }
+  
+  .dropdown-menu.mobile-active {
+    visibility: visible;
+    opacity: 1;
+    max-height: 1000px;
+  }
+  
+  .dropdown-group {
+    margin-bottom: 1rem;
+  }
+  
+  .dropdown-group-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dropdown-group-items {
+    gap: 0.25rem;
+  }
+  
+  .dropdown-subitem {
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Планшетные стили */
+@media (max-width: $tablet) {
+  .section {
+    padding: 4rem 0;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-text {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+  
+  .description-text {
+    font-size: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  
+  /* Планшетное меню */
+  .dropdown-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    min-width: 600px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Стили для ноутбуков */
+@media (max-width: $laptop) {
+  .nav-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-top: var(--box-border);
+    overflow-y: auto;
+    padding: 5rem 2rem;
+  }
+  
+  .nav-wrapper.active {
+    display: flex;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  
+  .menu-cta {
+    margin-left: 0;
+    margin-top: 2rem;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .menu-cta .button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .mobile-toggle {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  .mobile-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 7rem 0 4rem;
+  }
+  
+  .hero h1 {
+    font-size: 20vw;
+  }
+  
+  .no-scroll {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: $laptop) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  
+  .hero h1 {
+    font-size: 22vw;
+  }
+}
+
+/* Стили для настольных компьютеров */
+@media (min-width: $desktop) {
+  .projects-grid {
+    gap: 0;
+  }
+  
+  .slider-item {
+    width: 400px;
+  }
+  
+  .clients-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Для больших экранов от 1280px */
+@media (min-width: 1280px) {
+  .clients-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Стили для печати */
+@media print {
+  .header,
+  .footer,
+  .mobile-toggle,
+  form button {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: rgb(25, 25, 25);
+    background: #fff;
+  }
+  
+  a {
+    color: rgb(25, 25, 25);
+    text-decoration: underline;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Планшеты */
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .hero h1 {
+    font-size: 19vw;
+  }
+}
+
+/* Ноутбуки */
+@media (min-width: $tablet) and (max-width: $laptop) {
+  .hero h1 {
+    font-size: 20vw;
+  }
+}
+
+/* Мобильная кнопка заказа проекта */
+.mobile-cta-button {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+  padding: 0 1rem;
+}
+
+.mobile-cta-button .button {
+  width: 100%;
+  max-width: 320px;
+  padding: 1rem;
+  border-radius: var(--button-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} 

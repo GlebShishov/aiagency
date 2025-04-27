@@ -1,0 +1,143 @@
+/* Стили карточек */
+.card {
+  background-color: var(--card-bg, #fff);
+  border-radius: var(--border-radius, 8px);
+  padding: var(--spacing-md, 2rem);
+  border: 1px solid var(--border-color, #e0e0e0);
+}
+
+.card:hover {
+  border-color: var(--border-color-hover, #000);
+}
+
+.card-title {
+  font-size: var(--font-size-lg, 1.5rem);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm, 1rem);
+  color: var(--text-color);
+}
+
+.card-content {
+  color: var(--text-color);
+}
+
+/* Проекты */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  /* border: 1px solid var(--border-color, #e0e0e0); */
+  /* border-radius: var(--border-radius, 8px); */
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card:hover {
+  border-color: var(--border-color-hover, #000);
+}
+
+.project-image {
+  width: 100%;
+  position: relative;
+  background-color: var(--accent-bg, #f5f5f5);
+  padding-bottom: 75%; /* 4:3 соотношение сторон по умолчанию */
+  overflow: hidden;
+}
+
+.project-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Квадратная карточка 1:1 */
+.project-card.small .project-image {
+  padding-bottom: 100%; /* Создает квадратную пропорцию 1:1 */
+}
+
+/* Исправляем отображение названий проектов в маленьких карточках */
+.project-card.small .project-category,
+.project-card.small .project-title {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--spacing-md, 2rem);
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  z-index: 1;
+}
+
+.project-category {
+  text-transform: uppercase;
+  font-size: var(--font-size-xs, 0.7rem);
+  margin-bottom: var(--spacing-xs, 0.25rem);
+  opacity: 0.9;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #fff;
+  display: block !important;
+}
+
+.project-title {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  /* margin-bottom: 0;
+  font-weight: 700; */
+  color: #fff;
+  /* display: block !important; */
+}
+
+/* Сетка проектов */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0;
+  margin: var(--section-spacing, 40px) 0;
+}
+
+/* Новая сетка кейсов */
+.case-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 0;
+  margin: var(--section-spacing, 40px) 0;
+}
+
+/* Разные размеры карточек проектов */
+.project-card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.project-card.medium {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.project-card.medium .project-image {
+  padding-bottom: 100%;
+}
+
+/* Описание проекта внутри карточки */
+.post-excerpt {
+  font-size: var(--font-size-sm, 0.9rem);
+  margin-top: var(--spacing-xs, 0.5rem);
+  opacity: 0.9;
+  color: #fff;
+}
+
+.post-meta {
+  font-size: var(--font-size-xs, 0.7rem);
+  color: #fff;
+  margin-top: var(--spacing-xs, 0.25rem);
+}

@@ -1,0 +1,44 @@
+/* Стили для кастомного курсора */
+
+/* Показываем стандартный курсор вместе с кастомным */
+body {
+  cursor: auto;
+}
+
+/* Кликабельные элементы с поинтером */
+a, button, input[type="submit"], .clickable {
+  cursor: pointer;
+}
+
+/* Основной кружок курсора */
+.cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(31, 31, 31, 0.7);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.3s;
+  mix-blend-mode: difference; /* Инвертирует цвет на темном фоне */
+}
+
+/* Курсор при наведении на кликабельные элементы */
+.cursor.hover {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(31, 31, 31, 0.5);
+}
+
+/* Курсор при клике */
+.cursor.click {
+  width: 15px;
+  height: 15px;
+  transition: width 0.1s, height 0.1s;
+}
+
+/* Точка в центре больше не нужна, так как есть стандартный курсор */
+.cursor-dot {
+  display: none;
+}

@@ -1,0 +1,109 @@
+---
+layout: page
+title: Об агентстве
+description: AI Agency - диджитал агентство, использующее современные технологии для создания эффективных решений.
+permalink: /about/
+---
+
+<!-- Hero секция во весь экран как на картинке 1 -->
+<section class="hero full-height">
+  <div class="container-fluid">
+    <div class="hero-content">
+      <h1 class="hero-title">/ агентство</h1>
+      <div class="hero-description">
+        <p class="hero-subtitle">aic — это компания, которая объединяет в себе дизайн, данные, клиентский опыт и цифровой консалтинг</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Секция миссии как на картинке 2 -->
+<section class="section mission-section">
+  <div class="container-fluid">
+    <div class="mission-content">
+      <div class="mission-header">
+        <h2 class="mission-label">наша цель</h2>
+      </div>
+      <div class="mission-text">
+        <div class="mission-arrow left">←</div>
+        <h2 class="mission-statement">сохранить человека в центре</h2>
+        <div class="mission-arrow right">→</div>
+        <h2 class="mission-statement-second">решая задачи бизнеса,</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Секция о нас -->
+<section class="section about-section">
+  <div class="container-fluid">
+    <div class="about-intro">
+      <h2>Кто мы</h2>
+      <p>AI Agency — команда профессионалов с многолетним опытом в области диджитал-маркетинга, дизайна и разработки. Мы специализируемся на создании цифровых продуктов, которые помогают бизнесу расти и развиваться.</p>
+      <p>Наш подход сочетает креативные идеи, современные технологии и глубокое понимание бизнес-процессов наших клиентов.</p>
+    </div>
+    
+    <div class="about-values">
+      <h2>Наши ценности</h2>
+      <div class="grid grid-cols-4 gap-0">
+        <div class="value-card">
+          <h3>Качество</h3>
+          <p>Мы стремимся к совершенству в каждом проекте, уделяя внимание даже самым мелким деталям.</p>
+        </div>
+        <div class="value-card">
+          <h3>Инновации</h3>
+          <p>Постоянно изучаем и применяем новейшие технологии и методики для достижения лучших результатов.</p>
+        </div>
+        <div class="value-card">
+          <h3>Честность</h3>
+          <p>Строим открытые и честные отношения с клиентами, делая прозрачным весь процесс работы.</p>
+        </div>
+        <div class="value-card">
+          <h3>Результат</h3>
+          <p>Фокусируемся на достижении измеримых бизнес-результатов для наших клиентов.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Сетка с партнёрами в том же стиле как clients-grid -->
+<section class="section partners-section">
+  <div class="container-fluid">
+    <h2>Наши партнёры</h2>
+    <div class="partners-grid">
+      {% assign sorted_partners = site.partners | sort: 'order' %}
+      {% for partner in sorted_partners %}
+      <div class="partner-card">
+        <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" class="partner-logo">
+        <h3 class="partner-name">{{ partner.name }}</h3>s
+        <p class="partner-description">{{ partner.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Плитки с командой -->
+<section class="section team-section">
+  <div class="container-fluid">
+    <h2>Наша команда</h2>
+    <div class="case-grid-layout">
+      {% assign sorted_team = site.team | sort: 'order' %}
+      {% for member in sorted_team %}
+      <div class="team-card">
+        <div class="team-image-container">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-image">
+        </div>
+        <h3 class="team-name">{{ member.name }}</h3>
+        <p class="team-position">{{ member.position }}</p>
+        {% if member.content != empty %}
+        <div class="team-bio">
+          {{ member.content }}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

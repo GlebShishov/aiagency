@@ -1,0 +1,198 @@
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modal.open {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: var(--padding-md) auto;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  z-index: 2;
+  animation: slideIn 0.3s ease-in-out;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--padding-sm);
+  right: var(--padding-sm);
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal-close span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.modal-close span:first-child {
+  transform: rotate(45deg);
+}
+
+.modal-close span:last-child {
+  transform: rotate(-45deg);
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  margin: 0 auto;
+  padding: var(--modal-padding-desktop);
+  border-radius: var(--border-radius);
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  
+  @media (max-width: 768px) {
+    padding: var(--modal-padding-mobile) var(--padding-md);
+  }
+}
+
+.modal-title {
+  margin-bottom: var(--padding-md);
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Полноэкранный контактный модал */
+@media (min-width: 1024px) {
+  #contact-modal .modal-container {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  #contact-modal .modal-content {
+    flex: 1;
+    width: 50%;
+    padding: var(--padding-lg);
+    height: 100%;
+    overflow-y: auto;
+    order: 1; /* Форма слева */
+  }
+  
+  #contact-modal .modal-logo-container {
+    flex: 1;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-md);
+    order: 2; /* Логотип справа */
+    position: relative;
+  }
+  
+  #contact-modal .modal-logo {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+  }
+}
+
+/* Форма проекта */
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.form-checkbox input[type="checkbox"] {
+  margin-top: 0.25rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .modal-container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+  
+  .modal-content {
+    padding: var(--modal-padding-mobile);
+    padding-top: var(--padding-lg);
+  }
+  
+  #contact-modal .modal-logo-container {
+    display: none;
+  }
+}
+
+.modal-logo-container {
+  position: absolute;
+  top: var(--modal-logo-offset);
+  left: var(--modal-logo-offset);
+  z-index: 10;
+}
+
+.modal-logo {
+  max-width: 60%;
+  max-height: 60%;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+} 

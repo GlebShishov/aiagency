@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main {% if page.layout != "home" %}class="page-content"{% endif %}>
+    {{ content }}
+  </main>
+
+  {% include contact.html %}
+  {% comment %}{% include footer.html %}{% endcomment %}
+  {% include project_modal.html %}
+  
+  <!-- Кнопка заказа дизайна -->
+  <a href="#" class="button rounded text-dec-none order-design-btn scroll-to-contact">Заказать дизайн</a>
+
+  <script src="{{ '/assets/js/smooth-scroll.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/telegram-sender.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/contact-form.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/hero-animation.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/custom-cursor.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Responsive styles - mobile first approach */
+
+/* Base mobile styles are defined in their respective component files */
+
+/* Tablet styles */
+@media (min-width: $tablet) {
+  .container {
+    padding: 0 3rem;
+  }
+  
+  .section {
+    padding: 6rem 0;
+  }
+  
+  .projects-grid {
+    gap: 2rem;
+  }
+  
+  .project-card {
+    &:hover .project-image {
+      transform: scale(1.05);
+    }
+  }
+  
+  .footer-grid {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+/* Laptop styles */
+@media (min-width: $laptop) {
+  .container {
+    padding: 0 4rem;
+  }
+  
+  .hero {
+    min-height: 90vh;
+  }
+  
+  .projects-grid {
+    gap: 3rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .last-projects {
+    height: 40vh;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: $desktop) {
+  .container {
+    padding: 0 6rem;
+  }
+  
+  .projects-grid {
+    gap: 4rem;
+  }
+  
+  .clients-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .slider-item {
+    width: 400px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .header,
+  .footer,
+  .mobile-toggle,
+  form button {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+} 

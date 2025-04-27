@@ -1,0 +1,239 @@
+/* Layout styles */
+
+.section {
+  padding: 4rem 0;
+  
+  @media (min-width: $tablet) {
+    padding: 6rem 0;
+  }
+}
+
+/* Hero section */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255,0,255,0.1), rgba(0,255,255,0.1));
+  z-index: -1;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Project grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--grid-gap);
+  margin-bottom: var(--section-spacing);
+  
+  @media (min-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  
+  &.large {
+    grid-column: 1 / -1;
+    
+    .project-image {
+      padding-bottom: 56.25%; /* 16:9 ratio */
+    }
+  }
+  
+  &.medium {
+    @media (min-width: $tablet) {
+      grid-column: span 2;
+    }
+    
+    .project-image {
+      padding-bottom: 100%; /* 1:1 ratio */
+    }
+  }
+  
+  &.small {
+    .project-image {
+      padding-bottom: 100%; /* 1:1 ratio */
+    }
+  }
+}
+
+.project-image {
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  z-index: 2;
+}
+
+.project-category {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  
+  @media (min-width: $tablet) {
+    font-size: 1.75rem;
+  }
+}
+
+/* Services grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--grid-gap);
+  
+  @media (min-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Clients section */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (min-width: $laptop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.client-card {
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+/* Last projects slider */
+.last-projects {
+  overflow: hidden;
+  position: relative;
+  height: 30vh;
+}
+
+.projects-slider {
+  display: flex;
+  width: max-content;
+  animation: slideProjects 30s linear infinite;
+}
+
+.slider-item {
+  width: 300px;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--text-color);
+  
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+
+textarea {
+  min-height: 150px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 4rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  
+  @media (min-width: $mobile) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-nav a {
+  color: var(--footer-text);
+  opacity: 0.7;
+  
+  &:hover {
+    opacity: 1;
+  }
+} 

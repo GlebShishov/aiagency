@@ -1,0 +1,99 @@
+---
+layout: default
+title: 404 - Страница не найдена
+permalink: /404.html
+---
+
+<section class="error-page">
+  <div class="container-fluid">
+    <div class="error-content">
+      <h1 class="error-title">404</h1>
+      <div class="error-description">
+        <p class="error-subtitle">Страница не найдена</p>
+        <p class="error-text">Похоже, вы перешли по неверной ссылке или страница была удалена.</p>
+      </div>
+      <div class="error-actions">
+        <a href="{{ '/' | relative_url }}" class="button rounded">Вернуться на главную</a>
+        <a href="{{ '/projects' | relative_url }}" class="button text-dec-none">Посмотреть проекты</a>
+        <a href="{{ '/services' | relative_url }}" class="button text-dec-none">Наши услуги</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .error-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  
+  .error-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .error-title {
+    font-size: 12rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--primary-color, #0066ff), var(--accent-color, #ff6b00));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  .error-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .error-text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary, #666);
+  }
+  
+  .error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .error-title {
+      font-size: 8rem;
+    }
+    
+    .error-subtitle {
+      font-size: 2rem;
+    }
+    
+    .error-text {
+      font-size: 1.125rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .error-title {
+      font-size: 6rem;
+    }
+    
+    .error-subtitle {
+      font-size: 1.75rem;
+    }
+    
+    .error-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

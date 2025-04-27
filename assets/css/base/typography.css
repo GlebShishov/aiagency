@@ -1,0 +1,434 @@
+/* 
+ * Typography.css - Основные стили типографики
+ */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-lg);
+  color: var(--text-primary);
+}
+
+h1, .h1 {
+  font-size: var(--font-size-5xl);
+  letter-spacing: -0.025em;
+  line-height: var(--line-height-xl);
+}
+
+h2, .h2 {
+  font-size: var(--font-size-4xl);
+  letter-spacing: -0.025em;
+  line-height: var(--line-height-xl);
+}
+
+h3, .h3 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: -0.02em;
+  line-height: var(--line-height-lg);
+}
+
+h4, .h4 {
+  font-size: var(--font-size-2xl);
+}
+
+h5, .h5 {
+  font-size: var(--font-size-xl);
+}
+
+h6, .h6 {
+  font-size: var(--font-size-lg);
+}
+
+/* Абзацы */
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  line-height: var(--line-height-base);
+}
+
+/* Инлайн-элементы */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+strong, b {
+  font-weight: var(--font-weight-bold);
+}
+
+em, i {
+  font-style: italic;
+}
+
+small, .text-small {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+.text-2xl {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-xl);
+}
+
+.text-3xl {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-xl);
+}
+
+.text-4xl {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-xl);
+}
+
+.text-5xl {
+  font-size: var(--font-size-5xl);
+  line-height: var(--line-height-xl);
+}
+
+.text-6xl {
+  font-size: var(--font-size-6xl);
+  line-height: var(--line-height-xl);
+}
+
+/* Веса шрифта */
+.font-thin {
+  font-weight: var(--font-weight-thin);
+}
+
+.font-extralight {
+  font-weight: var(--font-weight-extralight);
+}
+
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.font-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+.font-black {
+  font-weight: var(--font-weight-black);
+}
+
+/* Трекинг и кернинг */
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-normal {
+  letter-spacing: 0;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+/* Высота строки */
+.leading-none {
+  line-height: var(--line-height-none);
+}
+
+.leading-tight {
+  line-height: var(--line-height-tight);
+}
+
+.leading-snug {
+  line-height: var(--line-height-snug);
+}
+
+.leading-normal {
+  line-height: var(--line-height-normal);
+}
+
+.leading-relaxed {
+  line-height: var(--line-height-relaxed);
+}
+
+.leading-loose {
+  line-height: var(--line-height-loose);
+}
+
+/* Цвета текста */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+.text-brand {
+  color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-error {
+  color: var(--error);
+}
+
+.text-info {
+  color: var(--info);
+}
+
+/* Трансформация текста */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.normal-case {
+  text-transform: none;
+}
+
+/* Выравнивание текста */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Стили для списков */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  padding-left: var(--spacing-6);
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: var(--spacing-2);
+}
+
+/* Списки без маркеров */
+.list-none {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Меты и дополнительная информация */
+.meta {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+}
+
+/* Параграфы с разным размером текста */
+.lead {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  margin-bottom: var(--spacing-6);
+}
+
+/* Цитаты */
+blockquote {
+  padding-left: var(--spacing-4);
+  margin-left: 0;
+  margin-right: 0;
+  border-left: var(--border-width-md) solid var(--primary);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Монопространственный текст и код */
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+}
+
+pre {
+  padding: var(--spacing-4);
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  overflow: auto;
+  border-radius: var(--border-radius);
+  background-color: var(--gray-100);
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Обрезка текста */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-1,
+.line-clamp-2,
+.line-clamp-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+/* Декоративный текст */
+.no-underline {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+/* Медиа-запросы для адаптивной типографики */
+@media (max-width: 768px) {
+  h1, .h1 {
+    font-size: var(--font-size-4xl);
+  }
+  
+  h2, .h2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h3, .h3 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  h4, .h4 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 576px) {
+  h1, .h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2, .h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  h3, .h3 {
+    font-size: var(--font-size-xl);
+  }
+} 

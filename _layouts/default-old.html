@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="{{ '/' | relative_url }}" class="logo agency-name">AI Agency</a>
+        
+        <button class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav-wrapper">
+          <ul class="nav-menu">
+            <li><a href="{{ '/projects' | relative_url }}" class="nav-link">кейсы</a></li>
+            <li><a href="{{ '/about' | relative_url }}" class="nav-link">агентство</a></li>
+            <li class="dropdown">
+              <a href="{{ '/services' | relative_url }}" class="nav-link">услуги</a>
+              <div class="dropdown-menu dropdown-menu-grid">
+                <div class="dropdown-group">
+                  <div class="dropdown-group-title">Стратегия</div>
+                  <div class="dropdown-group-items">
+                    <a href="{{ '/services/strategy' | relative_url }}" class="dropdown-subitem">Маркетинговая стратегия</a>
+                    <a href="{{ '/services/digital-strategy' | relative_url }}" class="dropdown-subitem">Digital-стратегия</a>
+                    <a href="{{ '/services/content-strategy' | relative_url }}" class="dropdown-subitem">Контент-стратегия</a>
+                    <a href="{{ '/services/service-strategy' | relative_url }}" class="dropdown-subitem">Стратегия развития сервиса</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown-group">
+                  <div class="dropdown-group-title">Брендинг</div>
+                  <div class="dropdown-group-items">
+                    <a href="{{ '/services/branding' | relative_url }}" class="dropdown-subitem">Разработка бренда</a>
+                    <a href="{{ '/services/identity' | relative_url }}" class="dropdown-subitem">Фирменный стиль</a>
+                    <a href="{{ '/services/brand-platform' | relative_url }}" class="dropdown-subitem">Платформа бренда</a>
+                    <a href="{{ '/services/hr-branding' | relative_url }}" class="dropdown-subitem">HR-брендинг</a>
+                    <a href="{{ '/services/naming' | relative_url }}" class="dropdown-subitem">Нейминг</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown-group">
+                  <div class="dropdown-group-title">Разработка</div>
+                  <div class="dropdown-group-items">
+                    <a href="{{ '/services/ux-ui' | relative_url }}" class="dropdown-subitem">UX/UI дизайн</a>
+                    <a href="{{ '/services/development' | relative_url }}" class="dropdown-subitem">Веб-разработка</a>
+                    <a href="{{ '/services/websites' | relative_url }}" class="dropdown-subitem">Сайты и сервисы</a>
+                    <a href="{{ '/services/nocode' | relative_url }}" class="dropdown-subitem">Nocode-решения</a>
+                    <a href="{{ '/services/bots' | relative_url }}" class="dropdown-subitem">Чат-боты</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown-group">
+                  <div class="dropdown-group-title">Маркетинг</div>
+                  <div class="dropdown-group-items">
+                    <a href="{{ '/services/marketing' | relative_url }}" class="dropdown-subitem">Performance-маркетинг</a>
+                    <a href="{{ '/services/seo' | relative_url }}" class="dropdown-subitem">SEO-продвижение</a>
+                    <a href="{{ '/services/context' | relative_url }}" class="dropdown-subitem">Контекстная реклама</a>
+                    <a href="{{ '/services/target' | relative_url }}" class="dropdown-subitem">Таргетированная реклама</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown-group">
+                  <div class="dropdown-group-title">Коммуникации</div>
+                  <div class="dropdown-group-items">
+                    <a href="{{ '/services/social-media' | relative_url }}" class="dropdown-subitem">SMM-продвижение</a>
+                    <a href="{{ '/services/influencers' | relative_url }}" class="dropdown-subitem">Инфлюенс-маркетинг</a>
+                    <a href="{{ '/services/content' | relative_url }}" class="dropdown-subitem">Контент</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="{{ '/pricing' | relative_url }}" class="nav-link">цены</a></li>
+            <li><a href="{{ '/contacts' | relative_url }}" class="nav-link">контакты</a></li>
+            <!-- Скрытые временно
+            <li><a href="{{ '/vacancies' | relative_url }}" class="nav-link">вакансии</a></li>
+            <li><a href="{{ '/for-experts' | relative_url }}" class="nav-link">экспертам</a></li>
+            -->
+          </ul>
+          
+          <div class="menu-cta">
+            <a href="{{ '/assets/files/presentation.pdf' | relative_url }}" class="button">презентация</a>
+            <a href="#" class="button">Обсудить проект</a>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="header-right">
+        <div class="menu-cta desktop-only">
+          <a href="{{ '/assets/files/presentation.pdf' | relative_url }}" class="button">презентация</a>
+          <a href="#" class="button">Обсудить проект</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main {% if page.layout != "home" %}class="page-content"{% endif %}>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+  {% include contact_modal.html %}
+  {% include project_modal.html %}
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/today-projects-slider.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/services-ticker.js' | relative_url }}"></script>
+</body>
+</html>

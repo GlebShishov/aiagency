@@ -1,0 +1,252 @@
+/* Стили для хедера */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: var(--z-header, 100);
+  background-color: var(--card-bg, #fff);
+  transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 0 0 2rem 2rem;
+  /* Тени удалены */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header.transparent {
+  background-color: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
+}
+
+.header.scrolled {
+  /* Тени удалены */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--header-padding, 1rem);
+  height: var(--header-height, 80px);
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* Логотип */
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-color, #333);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+/* Стили логотипа в зависимости от состояния хедера */
+.transparent .logo,
+.transparent .agency-name {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.scrolled .logo,
+.visible .logo,
+.scrolled .agency-name,
+.visible .agency-name {
+  color: var(--text-color, #333);
+  transition: color 0.3s ease;
+}
+
+/* Навигация */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 2rem;
+}
+
+.nav-menu li {
+  margin-right: 1.5rem;
+}
+
+.nav-menu li:last-child {
+  margin-right: 0;
+}
+
+.nav-link, .nav-menu .button {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-link:hover, .nav-menu .button:hover {
+  color: var(--primary-color);
+}
+
+.transparent .nav-link, .transparent .nav-menu .button {
+  color: #fff;
+}
+
+.transparent .nav-link:hover, .transparent .nav-menu .button:hover {
+  opacity: 0.8;
+}
+
+/* Меню CTA */
+.menu-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Мобильное меню */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 1rem;
+  z-index: 1001;
+}
+
+.mobile-toggle span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent .mobile-toggle span {
+  background-color: #fff;
+}
+
+.mobile-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.mobile-toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mobile-toggle span:nth-child(3) {
+  bottom: 0;
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Медиа-запросы для хедера на планшетах и мобильных */
+@media (max-width: 1024px) {
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--menu-bg);
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .nav-wrapper.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-menu li {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .nav-menu .button {
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    display: block;
+  }
+  
+  .mobile-toggle {
+    display: block;
+    z-index: 1001; /* Поверх меню */
+  }
+  
+  /* Скрываем выпадающее меню на мобильных */
+  .dropdown .dropdown-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}

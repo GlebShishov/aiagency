@@ -1,0 +1,148 @@
+---
+layout: default
+---
+
+<article class="service-page">
+  <!-- Hero секция с названием услуги и кратким описанием -->
+  <section class="service-hero">
+    <div class="service-hero-container">
+      <!-- Левая часть с текстом -->
+      <div class="service-hero-content">
+        <p class="service-hero-title">{{ page.title }}</h1>
+        <p class="service-hero-description">{{ page.description }}</p>
+        
+        <div class="service-hero-tags">
+          {% if page.tags %}
+            {% for tag in page.tags %}
+              <span class="service-hero-tag">{{ tag }}</span>
+            {% endfor %}
+          {% endif %}
+        </div>
+        
+        <a href="#contact" class="button service-hero-button">Обсудить проект</a>
+      </div>
+      
+      <!-- Правая часть со слайдшоу -->
+      <div class="service-hero-slideshow">
+        <div class="slideshow-grid">
+          <!-- Левая колонка (большая картинка) -->
+          <div class="slideshow-main">
+            <div class="slideshow-image active" data-index="0">
+              <img src="{{ '/assets/images/projects/01.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 1">
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <div class="slideshow-image" data-index="1">
+              <img src="{{ '/assets/images/projects/02.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 2">
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <div class="slideshow-image" data-index="2">
+              <img src="{{ '/assets/images/projects/03.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 3">
+              <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+          </div>
+          
+          <!-- Правая колонка (две маленькие картинки) -->
+          <div class="slideshow-thumbnails">
+            <div class="slideshow-thumbnail" data-index="1">
+              <img src="{{ '/assets/images/projects/04.jpg' | relative_url }}" alt="{{ page.title }} - Миниатюра 2">
+            </div>
+            <div class="slideshow-thumbnail" data-index="2">
+              <img src="{{ '/assets/images/projects/05.jpg' | relative_url }}" alt="{{ page.title }} - Миниатюра 3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% if page.subservices %}
+  <!-- Секция с подуслугами во всю ширину -->
+  <section class="service-offerings-fullwidth">
+    <div class="subservices-grid-fullwidth">
+      {% for subservice in page.subservices %}
+      <a href="{{ subservice.url | relative_url }}" class="subservice-card">
+        <h3>{{ subservice.title }}</h3>
+        <p>{{ subservice.description }}</p>
+        <span class="subservice-link">Подробнее &rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+    <!-- Секция с кейсами по этой услуге -->
+    <section class="service-cases-section">
+      <div class="container">
+        <h2>Наши кейсы</h2>
+        <div class="projects-grid">
+          {% assign service_projects = site.projects | where: "categories", page.service-type | limit: 3 %}
+          {% for project in service_projects %}
+          <a href="{{ project.url }}" class="project-card">
+            <div class="project-image">
+              <img class="project-media" src="{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}" alt="{{ project.title }}">
+              <div class="project-overlay">
+                <p class="project-category">{{ project.case-type }}</p>
+                <h3 class="project-title">{{ project.title }}</h3>
+                <p class="project-excerpt">{{ project.excerpt | truncate: 120 }}</p>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+        <div class="text-center">
+          <a href="{{ '/projects' | relative_url }}?category={{ page.service-type | slugify }}" class="button">Смотреть все проекты</a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- Секция с информацией об услуге -->
+  <section class="service-info-section">
+    <div class="container">
+      <div class="service-info-content">
+        {{ content }}
+      </div>
+      
+      <!-- Секция с нашим подходом в виде таблицы -->
+      </div>
+    </div>
+  </section>
+  
+  <section class="service-approach-section">
+    <div class="approach-container">
+      <h2>Наш подход</h2>
+      
+      {% assign approach_steps = content | split: '### ' %}
+      {% for step in approach_steps %}
+        {% if step contains '####' %}
+          {% assign step_parts = step | split: '####' %}
+          {% assign step_number = step_parts[0] | strip %}
+          {% assign step_title_and_desc = step_parts[1] | newline_to_br | split: '<br />' %}
+          {% assign step_title = step_title_and_desc[0] | strip %}
+          {% assign step_description = '' %}
+          {% for line in step_title_and_desc offset:1 %}
+            {% assign line_content = line | strip %}
+            {% if line_content != '' %}
+              {% assign step_description = step_description | append: line_content | append: ' ' %}
+            {% endif %}
+          {% endfor %}
+          
+          <div class="approach-row">
+            <div class="approach-col approach-number">{{ step_number }}</div>
+            <div class="approach-col approach-title">{{ step_title }}</div>
+            <div class="approach-col approach-description">{{ step_description | strip }}</div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  
+  <section class="service-parent-section">
+    <div class="container">
+      {% if page.parent %}
+      <div class="parent-service-link">
+        <a href="/services/{{ page.parent }}/" class="button button-outline">Вернуться к разделу {{ page.parent | capitalize }}</a>
+      </div>
+      {% endif %}
+    </div>
+  </section>

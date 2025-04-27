@@ -1,0 +1,21 @@
+FROM ruby:3.1 as builder
+
+# Установка всех гемов напрямую, без использования Bundler
+# Это помогает избежать проблем с компиляцией нативных расширений
+RUN gem install --no-document \
+    jekyll \
+    webrick \
+    ffi \
+    sassc \
+    jekyll-feed \
+    jekyll-seo-tag
+
+# Создание рабочей директории
+RUN mkdir /srv/jekyll
+WORKDIR /srv/jekyll
+
+# Открытие портов для Jekyll
+EXPOSE 4000 35729
+
+# Команда для запуска Jekyll
+CMD ["jekyll", "serve", "--livereload", "--host", "0.0.0.0"] 

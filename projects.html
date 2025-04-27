@@ -1,0 +1,72 @@
+---
+layout: page
+title: Кейсы
+description: Наше портфолио включает разноплановые кейсы в области стратегии, брендинга, UX/UI дизайна, разработки и маркетинга.
+permalink: /projects/
+---
+
+<section class="projects-filter">
+  <div class="filter-buttons">
+    <button class="filter-button active" data-filter="all">Все</button>
+    <button class="filter-button" data-filter="Branding">Брендинг</button>
+    <button class="filter-button" data-filter="UX/UI">UX/UI</button>
+    <button class="filter-button" data-filter="Development">Разработка</button>
+    <button class="filter-button" data-filter="Marketing">Маркетинг</button>
+  </div>
+</section>
+
+<div class="case-grid-layout">
+  {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+  {% for project in sorted_projects %}
+  <a href="{{ project.url }}" class="project-card small" data-category="{{ project.case-type | slugify }}">
+    <div class="project-image">
+      <img class="project-media" src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}">
+      <div class="project-overlay">
+        <p class="project-category">{{ project.case-type }}</p>
+        <h3 class="project-title">{{ project.title }}</h3>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter projects
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category').toLowerCase() === filter.toLowerCase()) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // Перестраиваем сетку после фильтрации, чтобы избежать пустых мест
+        const gridLayout = document.querySelector('.case-grid-layout');
+        gridLayout.style.display = 'grid';
+        gridLayout.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
+      });
+    });
+    
+    // Check if URL has category param and apply filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+      const matchingButton = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter').toLowerCase() === categoryParam.toLowerCase());
+      if (matchingButton) {
+        matchingButton.click();
+      }
+    }
+  });
+</script> 

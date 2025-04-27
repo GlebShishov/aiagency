@@ -1,0 +1,55 @@
+title: AI Agency
+email: info@aiagency.art
+description: Диджитал агентство прокаченное новыми технологиями
+lsi: false
+safe: true
+source: ./
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  services:
+    output: true
+    permalink: /services/:path/
+  prices:
+    output: false
+    sort_by: price
+  clients:
+    output: false
+  team:
+    output: false
+  partners:
+    output: false
+
+# Удаляем секцию sass, так как теперь используем CSS
+# sass:
+#   sass_dir: _sass
+#   style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - .idea/
+  - .git/
+  - .github/
+  - docker-compose.yml
+  - Dockerfile
+  - .dockerignore

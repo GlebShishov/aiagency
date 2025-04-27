@@ -1,0 +1,67 @@
+/* Typography styles inspired by Swiss design */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  max-width: 75ch;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: $mobile) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-text {
+    font-size: 1.25rem;
+  }
+} 

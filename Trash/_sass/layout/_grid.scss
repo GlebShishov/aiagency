@@ -1,0 +1,86 @@
+/* Сетка и контейнеры */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: clamp(0.5rem, 2vw, 1rem);
+  padding-right: clamp(0.5rem, 2vw, 1rem);
+}
+
+.section {
+  padding: 0;
+}
+
+/* Проекты сетка */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+  margin-bottom: var(--section-spacing);
+  width: 100%;
+}
+
+/* Слайдер последних проектов */
+.projects-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  margin: 0 auto;
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  direction: rtl; /* Направление справа налево */
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(calc(-100% - 1.5rem));
+  }
+}
+
+.projects-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  width: 300px;
+  aspect-ratio: 9/16;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: var(--box-border);
+  direction: ltr; /* Восстановление направления для элементов */
+  position: relative;
+}
+
+.slider-item.portrait {
+  aspect-ratio: 9/16;
+}
+
+.slider-item img, .slider-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Услуги сетка */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Клиенты сетка */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+  margin-top: 2rem;
+  grid-auto-rows: minmax(160px, 1fr);
+} 

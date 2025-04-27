@@ -1,0 +1,343 @@
+/* Hero Animation Styles */
+
+/* Base hero container styles */
+.hero-video {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* 100% высоты экрана */
+  background-color: #fff; /* Белый фон как запрошено */
+  border-radius: 3rem; /* Скругление на всех углах */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Добавляем центрирование по горизонтали */
+}
+
+/* Video container with animation */
+.hero-animation .video-container {
+  position: absolute !important;
+  z-index: 1 !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 0 !important; /* Начинаем с нулевого размера */
+  height: 0 !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background-color: #000 !important; /* Черный фон для видимости */
+  transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) !important; /* Ускоренный переход с плавной кривой */
+}
+
+/* Шаг 1: Круг в центре */
+.hero-animation.loaded .video-container {
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Шаг 2: Прямоугольник со скругленными углами */
+.hero-animation.rectangle .video-container {
+  width: 500px !important;
+  height: 300px !important;
+  border-radius: 2rem !important;
+}
+
+/* Шаг 3: Расширение на весь экран */
+.hero-animation.expanded .video-container {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* Убираем скругления углов у hero-video на последнем этапе */
+.hero-animation.expanded {
+  border-radius: 0 !important;
+  transition: border-radius 0.3s ease-out;
+}
+
+/* Container expansion animation */
+@keyframes containerExpand {
+  /* Step 1: Circle in the center */
+  0% {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  15% {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Step 2: Rounded rectangle in the center */
+  40% {
+    width: 500px;
+    height: 300px;
+    border-radius: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Step 3: Expand to fill the entire hero section */
+  70% {
+    width: 80%;
+    height: 80%;
+    border-radius: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}
+
+/* Контейнер для текста и кнопок */
+
+.hero-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+}
+
+/* Левая часть с текстом */
+.hero-left {
+  opacity: 1;
+  position: relative;
+  z-index: 10; /* Ensure content is above video */
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+
+
+/* Стили для заголовка AI Agency */
+.hero-animation .hero-name {
+  font-size: 20vw; /* Размер шрифта до 20% ширины экрана */
+  line-height: normal;
+  margin: 0;
+  z-index: 20;
+  white-space: nowrap;
+  align-self: flex-start;
+  font-weight: 900;
+  color: #fff;
+  opacity: 1; /* Всегда видимый */
+}
+
+/* Individual character animations - без анимаций */
+.hero-animation .hero-title-char {ы
+  display: inline-block;
+  opacity: 1; /* Всегда видимый */
+  color: #fff; /* Ensure text is visible on video background */
+}
+
+
+
+/* Staggered animation delays for each character */
+.a-char {
+  animation-delay: 1.8s;
+}
+
+.i-char {
+  animation-delay: 1.9s;
+}
+
+.space-char {
+  animation-delay: 2.0s;
+}
+
+.agency-char:nth-child(4) {
+  animation-delay: 2.1s;
+}
+
+.agency-char:nth-child(5) {
+  animation-delay: 2.2s;
+}
+
+.agency-char:nth-child(6) {
+  animation-delay: 2.3s;
+}
+
+.agency-char:nth-child(7) {
+  animation-delay: 2.4s;
+}
+
+.agency-char:nth-child(8) {
+  animation-delay: 2.5s;
+}
+
+.agency-char:nth-child(9) {
+  animation-delay: 2.6s;
+}
+
+/* Группа с кнопками и текстом на правой стороне */
+.hero-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  z-index: 20;
+}
+
+/* Hero text - без анимаций */
+.hero-text {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Табы с кнопками - без анимаций */
+.hero-animation .tabs-container {
+  opacity: 1; /* Всегда видимый */
+  animation: none ; /* Убираем анимацию */
+  display: flex ;
+  flex-wrap: wrap ;
+  gap: 0.75rem ;
+  margin-bottom: 0 ;
+  align-self: flex-start ;
+  width: 100%;
+}
+
+/* Кнопка Обсудить проект - без анимаций */
+.hero-animation .button.rounded {
+  opacity: 1 ; /* Всегда видимый */
+  animation: none ; /* Убираем анимацию */
+  align-self: flex-start ;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Стили для видео внутри контейнера */
+.hero-animation .video-container video {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  z-index: 2 !important;
+  opacity: 1 !important; /* Видео без затемнения по умолчанию */
+  transition: opacity 0.3s ease-out !important; /* Добавляем плавный переход для прозрачности */
+}
+
+/* Затемнение видео на последнем этапе */
+.hero-animation.expanded .video-container video {
+  opacity: 0.7 !important; /* Затемняем видео только на последнем этапе */
+}
+
+/* Overlay animation */
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный оверлей */
+  z-index: 5;
+  opacity: 0; /* По умолчанию оверлей невидимый */
+  transition: opacity 0.3s ease-out; /* Плавное появление */
+}
+
+/* Показываем оверлей только на последнем этапе */
+.hero-animation.expanded .video-container::after {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  @keyframes containerExpand {
+    /* Step 1: Circle in the center */
+    0% {
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+    }
+    15% {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+    
+    /* Step 2: Rounded rectangle in the center */
+    40% {
+      width: 300px;
+      height: 200px;
+      border-radius: 1.5rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    /* Step 3: Expand to fill the entire hero section */
+    70% {
+      width: 90%;
+      height: 70%;
+      border-radius: 1.5rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+/* Стили для hero-container */
+.hero-animation .hero-container {
+  padding: 2rem !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important; /* Располагаем все элементы внизу */
+  align-items: flex-start !important; /* Выравниваем по левому краю */
+  gap: 1.5rem !important;
+  z-index: 10 !important;
+  position: relative !important;
+}
+
+/* Контейнер для текста */
+.hero-animation .hero-text-container {
+  margin-bottom: 1rem !important;
+  max-width: 600px;
+}

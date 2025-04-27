@@ -1,0 +1,166 @@
+/* CSS переменные */
+
+:root {
+  /* Цветовая схема (монохромная) */
+  --text-color: #1F1F1F;
+  --text-muted: #666;
+  --card-bg: #fff;
+  --bg-color: #f8f8f8;
+  --accent-bg: #f5f5f5;
+  --accent-color: #1F1F1F;
+  --border-color: #e0e0e0;
+  --border-color-hover: #1F1F1F;
+  
+  /* Кнопки */
+  --button-bg: #1F1F1F;
+  --button-text: #fff;
+  --button-bg-hover: #1F1F1F;
+  
+  /* Скроллбар */
+  --scrollbar-track: #f5f5f5;
+  --scrollbar-thumb: #1F1F1F;
+  
+  /* Размеры и отступы */
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  
+  /* Секции */
+  --section-spacing: 4rem;
+  --grid-gap: 2rem;
+  --grid-gap-mobile: 2.5rem;
+  --container-padding: clamp(1rem, 2vw, 2rem);
+  --header-padding: 1rem;
+  
+  /* Контейнеры */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  
+  /* Карточки */
+  --card-padding: 1.5rem;
+  --card-max-width: 385px;
+  --client-card-height: 230px;
+  --card-width: 280px;
+  --card-width-mobile: 260px;
+  --content-width: 800px;
+  --modal-width: 800px;
+  
+  /* Границы */
+  --border-radius: 8px;
+  --border-radius-sm: 4px;
+  --border-radius-round: 100px;
+  
+  /* Шрифты по принципу золотого сечения (1.618) */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --golden-ratio: 1.618;
+  --font-size-base: clamp(1rem, 1vw, 21px);
+  --font-size-xs: calc(var(--font-size-base) / var(--golden-ratio));
+  --font-size-sm: calc(var(--font-size-base) / (var(--golden-ratio) * 0.5));
+  --font-size-md: calc(var(--font-size-base) * var(--golden-ratio) * 0.5);
+  --font-size-lg: calc(var(--font-size-base) * var(--golden-ratio));
+  --font-size-xl: calc(var(--font-size-base) * var(--golden-ratio) * var(--golden-ratio));
+  --font-size-xxl: calc(var(--font-size-base) * var(--golden-ratio) * var(--golden-ratio) * var(--golden-ratio));
+  
+  /* Дополнительные размеры для заголовков */
+  --font-size-2xl: calc(var(--font-size-lg) * var(--golden-ratio) * 0.5);
+  --font-size-3xl: calc(var(--font-size-lg) * var(--golden-ratio));
+  --font-size-4xl: calc(var(--font-size-lg) * var(--golden-ratio) * var(--golden-ratio) * 0.5);
+  --font-size-5xl: calc(var(--font-size-lg) * var(--golden-ratio) * var(--golden-ratio));
+  --font-size-6xl: calc(var(--font-size-lg) * var(--golden-ratio) * var(--golden-ratio) * var(--golden-ratio));
+  
+  /* Высота строки - базовая 160%, меньше для больших шрифтов, больше для маленьких */
+  --line-height-xs: 200%; /* Для очень маленьких шрифтов */
+  --line-height-sm: 180%; /* Для маленьких шрифтов */
+  --line-height-base: 160%; /* Базовая высота строки */
+  --line-height-lg: 140%; /* Для больших шрифтов */
+  --line-height-xl: 120%; /* Для очень больших шрифтов */
+  
+  /* Анимации */
+  --transition-duration: 0.3s;
+  --hover-offset: -5px;
+  
+  /* Z-индексы */
+  --z-header: 100;
+  --z-modal: 200;
+  --z-sticky: 1000;
+  
+  /* Структура страницы */
+  --header-height: 80px;
+  --footer-bg: #f8f8f8;
+  --footer-text: #1F1F1F;
+  --menu-bg: rgba(255, 255, 255, 1);
+  
+  /* Тени (пустые) */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  
+  /* Breakpoints */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+  
+  /* Цвета в формате RGB для использования с rgba() */
+  --primary-color-rgb: 31, 31, 31;
+  --secondary-color-rgb: 31, 31, 31;
+  --accent-color-rgb: 31, 31, 31;
+  --text-color-rgb: 31, 31, 31;
+  --text-muted-rgb: 102, 102, 102;
+}
+
+:root.dark-theme {
+  --bg-color: rgb(25, 25, 25);
+  --text-color: #1F1F1F;
+  --accent-color: #1F1F1F;
+  --border-color: #333333;
+  --card-bg: #1e1e1e;
+  --accent-bg: #222;
+  --menu-bg: rgba(25, 25, 25, 1);
+  --footer-bg: rgb(25, 25, 25);
+  --footer-text: #1F1F1F;
+  --text-muted: #666;
+  --button-bg: #fff;
+  --button-text: #1F1F1F;
+  --button-bg-hover: #eee;
+  --border-color-hover: #fff;
+}
+
+/* Breakpoints */
+@media (max-width: 380px) {
+  :root {
+    --small-mobile: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --mobile: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --tablet: 768px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --laptop: 1024px;
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --desktop: 1280px;
+  }
+}

@@ -1,0 +1,193 @@
+/*
+ * Reset.css - Сброс браузерных стилей
+ */
+
+/* Сброс полей и отступов для всех элементов */
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Установка основных значений для html и body */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Упрощенная обработка медиа-контента */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Наследование шрифтов для форм и кнопок */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Удаление стилей списков, если они не используются */
+ul[class], ol[class] {
+  list-style: none;
+}
+
+/* Упрощенная обработка ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Сброс стилей таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Скрытие прокрутки для элементов с атрибутом hidden */
+[hidden] {
+  display: none !important;
+}
+
+/* Удаление анимаций и переходов для людей, предпочитающих их отключение */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Сброс стилей fieldset */
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* Сброс стилей легенды */
+legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: inherit;
+}
+
+/* Удаление дефолтных отступов для абзацев */
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Сброс стилей для заголовков */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+/* Сброс стилей для кнопок */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Сброс стандартных стилей для текстовых полей */
+input, textarea {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+/* Сброс стилей цитат */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* Сброс стилей горизонтальной линии */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+}
+
+/* Сброс для изображений */
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Сброс для форм */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: var(--box-border);
+  border-radius: var(--input-radius);
+  background-color: var(--light);
+}
+
+/* Убираем стрелки с инпутов с типом number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Общие классы */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section {
+  padding: var(--section-spacing) 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+} 

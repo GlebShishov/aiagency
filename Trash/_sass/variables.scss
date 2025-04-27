@@ -1,0 +1,36 @@
+:root {
+  color-scheme: light dark;
+  
+  // Light theme colors
+  --bg-color: #f8f8f8;
+  --text-color: #111111;
+  --accent-color: rgb(25, 25, 25);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --hover-opacity: 0.7;
+  --menu-bg: rgba(248, 248, 248, 0.8);
+  --footer-bg: rgb(25, 25, 25);
+  --footer-text: #ffffff;
+  
+  // Common variables
+  --container-width: 1440px;
+  --grid-gap: 2rem;
+  --section-spacing: 6rem;
+  --border-radius: 0px;
+  --transition-speed: 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --accent-color: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --menu-bg: rgba(18, 18, 18, 0.8);
+  }
+}
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px; 

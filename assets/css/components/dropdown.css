@@ -1,0 +1,156 @@
+/* Dropdown menu styles */
+
+/* Hide dropdown menu by default */
+.dropdown .dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: inherit; /* Наследование позиции */
+  top: 100%;
+  width: 620px; /* Уменьшенная ширина для более компактного вида */
+  background-color: var(--card-bg, #ffffff);
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  z-index: var(--z-dropdown, 1000);
+  transition: opacity 0.2s ease, visibility 0.2s ease; /* Быстрое плавное появление */
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu,
+.dropdown.active .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Удаляем невидимую область, чтобы окно открывалось только при наведении на кнопку */
+
+/* Dropdown container */
+.dropdown-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left column - categories */
+.dropdown-categories {
+  width: calc(100% - 240px); /* Уменьшенная ширина правой колонки */
+  padding: 1rem;
+  border-right: 1px solid var(--border-color, #eee);
+}
+
+/* Right column - services */
+.dropdown-services {
+  width: 240px; /* Уменьшенная ширина правой колонки */
+  padding: 1rem;
+  background-color: var(--bg-light, #f9f9f9);
+}
+
+/* Category styles */
+.dropdown-category {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.dropdown-category:hover,
+.dropdown-category.active {
+  border-left-color: var(--primary-color, #0066ff);
+  background-color: var(--bg-light, #f9f9f9);
+}
+
+.dropdown-category-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-color);
+}
+
+.dropdown-category-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted, #666);
+}
+
+/* Service group styles */
+.dropdown-service-group {
+  display: none;
+}
+
+.dropdown-service-group.active {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dropdown-service-item {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  font-size: 0.85rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-color-light, #f0f0f0);
+}
+
+.dropdown-service-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-service-item:hover {
+  opacity: 0.7;
+}
+
+/* Add dropdown arrow indicator */
+.dropdown .button {
+  position: relative;
+  padding-right: 1.5rem; /* Увеличиваем правый отступ для иконки */
+  width: auto; /* Автоматическая ширина */
+}
+
+.dropdown .button::after {
+  content: '';
+  position: absolute;
+  right: 0.5rem; /* Позиционирование иконки справа */
+  top: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid currentColor; /* Используем currentColor для наследования цвета текста */
+  border-bottom: 2px solid currentColor; /* Используем currentColor для наследования цвета текста */
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Добавляем плавный переход для цвета */
+}
+
+.dropdown:hover .button::after,
+.dropdown.active .button::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .dropdown .dropdown-menu {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+  
+  .dropdown-container {
+    flex-direction: column;
+  }
+  
+  .dropdown-categories,
+  .dropdown-services {
+    width: 100%;
+    border-right: none;
+  }
+  
+  .dropdown-services {
+    border-top: 1px solid var(--border-color, #eee);
+  }
+}

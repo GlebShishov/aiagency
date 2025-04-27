@@ -1,0 +1,69 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <a href="{{ '/' | relative_url }}" class="logo agency-name text-dec-none">AI Agency</a>
+        <p>Диджитал агентство прокаченное новыми технологиями</p>
+        
+        <div class="footer-contact-buttons">
+          <a href="tel:+75555555555" class="contact-button text-dec-none">
+            <span class="contact-icon">📞</span>
+            <span class="contact-text">+7 (555) 555 55-55</span>
+          </a>
+          
+          <a href="mailto:{{ site.email }}" class="contact-button text-dec-none">
+            <span class="contact-icon">✉️</span>
+            <span class="contact-text">Написать на почту</span>
+          </a>
+          
+          <a href="https://yandex.ru/maps/-/CDaJXHXg" target="_blank" class="contact-button text-dec-none">
+            <span class="contact-icon">📍</span>
+            <span class="contact-text">Проложить маршрут</span>
+          </a>
+        </div>
+        
+        <p class="contact-info">г. Москва, ул. Пресненская наб., 12</p>
+        
+        <div class="footer-telegram">
+          <div class="telegram-qr">
+            <img src="{{ '/assets/images/telegram-qr.png' | relative_url }}" alt="Telegram QR код">
+          </div>
+          <p>Наш Telegram</p>
+        </div>
+        
+        <div class="footer-cta">
+          <a href="#" class="button rounded start-project-btn text-dec-none">Обсудить проект</a>
+        </div>
+        
+        <p class="copyright">&copy; Copyright {% assign date_format = site.minima.date_format | default: "%Y" %}{{ site.time | date: date_format }}.</p>
+      </div>
+      
+      <div class="footer-nav">
+        <div class="footer-nav-column">
+          <h3 class="footer-title">Услуги</h3>
+          <a href="{{ '/services/strategy' | relative_url }}" class="text-dec-none">Стратегия</a>
+          <a href="{{ '/services/branding' | relative_url }}" class="text-dec-none">Брендинг</a>
+          <a href="{{ '/services/ux-ui' | relative_url }}" class="text-dec-none">UX/UI Дизайн</a>
+          <a href="{{ '/services/development' | relative_url }}" class="text-dec-none">Разработка</a>
+          <a href="{{ '/services/marketing' | relative_url }}" class="text-dec-none">Маркетинг</a>
+        </div>
+        
+        <div class="footer-nav-column">
+          <h3 class="footer-title">Компания</h3>
+          <a href="{{ '/about' | relative_url }}" class="text-dec-none">О нас</a>
+          <a href="{{ '/projects' | relative_url }}" class="text-dec-none">Кейсы</a>
+          <a href="{{ '/pricing' | relative_url }}" class="text-dec-none">Цены</a>
+          <a href="{{ '/blog' | relative_url }}" class="text-dec-none">Блог</a>
+          <a href="{{ '/contacts' | relative_url }}" class="text-dec-none">Контакты</a>
+        </div>
+        
+        <div class="footer-nav-column">
+          <h3 class="footer-title">Контакты</h3>
+          <a href="mailto:{{ site.email }}" class="contact-link text-dec-none">{{ site.email }}</a>
+          <a href="tel:+75555555555" class="contact-link text-dec-none">+7 (555) 555 55-55</a>
+          <a href="https://t.me/aiagency" target="_blank" class="contact-link text-dec-none">Telegram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,14 @@
+FROM ruby:2.7.4-alpine
+
+WORKDIR /srv/jekyll
+
+# Установка необходимых зависимостей
+RUN apk add --no-cache build-base gcc cmake git
+
+# Установка Jekyll и Bundler из Gemfile
+COPY Gemfile /srv/jekyll/
+RUN bundle install
+
+EXPOSE 4000 35729
+
+CMD ["bundle", "exec", "jekyll", "serve", "--livereload", "--host", "0.0.0.0"] 

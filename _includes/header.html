@@ -1,0 +1,67 @@
+<header class="header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="{{ '/' | relative_url }}" class="logo agency-name">AI Agency</a>
+      
+      <button class="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="nav-wrapper">
+        <ul class="nav-menu">
+          <li><a href="{{ '/projects' | relative_url }}" class="button text">кейсы</a></li>
+          <li><a href="{{ '/about' | relative_url }}" class="button text">агентство</a></li>
+          <li class="dropdown">
+            <a href="{{ '/services' | relative_url }}" class="button text">услуги</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-container">
+                <div class="dropdown-categories">
+                  {% for category in site.data.service_categories %}
+                  <a href="{{ '/services/' | append: category.id | relative_url }}" class="dropdown-category {% if forloop.first %}active{% endif %}" data-category="{{ category.id }}">
+                    <div class="dropdown-category-title">{{ category.title }}</div>
+                    <div class="dropdown-category-subtitle">{{ category.subtitle }}</div>
+                  </a>
+                  {% endfor %}
+                </div>
+                
+                <div class="dropdown-services">
+                  {% for category in site.data.service_categories %}
+                  <div class="dropdown-service-group {% if forloop.first %}active{% endif %}" data-category="{{ category.id }}">
+                    {% assign category_services = site.services | where_exp: "item", "item.url contains category.id or item.category == category.id" %}
+                    {% for service in category_services %}
+                      {% assign service_slug = service.url | split: '/' | last %}
+                      {% if service_slug != category.id %}
+                        <a href="{{ service.url | relative_url }}" class="dropdown-service-item">{{ service.title }}</a>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="{{ '/pricing' | relative_url }}" class="button text">цены</a></li>
+          <li><a href="{{ '/contacts' | relative_url }}" class="button text">контакты</a></li>
+          <!-- Скрытые временно
+          <li><a href="{{ '/vacancies' | relative_url }}" class="nav-link">вакансии</a></li>
+          <li><a href="{{ '/for-experts' | relative_url }}" class="nav-link">экспертам</a></li>
+          -->
+        </ul>
+        
+        <div class="menu-cta">
+          <a href="{{ '/assets/files/presentation.pdf' | relative_url }}" class="button rounded text-dec-none">презентация</a>
+          <a href="#" class="button rounded text-dec-none scroll-to-contact">Обсудить проект</a>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="header-right">
+      <div class="menu-cta desktop-only">
+        <a href="{{ '/assets/files/presentation.pdf' | relative_url }}" class="button rounded text-dec-none">презентация</a>
+        <a href="#" class="button rounded text-dec-none scroll-to-contact">Обсудить проект</a>
+      </div>
+    </div>
+  </div>
+</header>

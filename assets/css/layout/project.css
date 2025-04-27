@@ -1,0 +1,348 @@
+/* Стили для страницы проекта */
+
+/* Заголовок кейса */
+.case-header {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-top: 10vw;
+  position: relative;
+}
+
+.case-header-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.case-header-content {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.case-client-task {
+  margin-top: auto;
+  padding: 60px 0;
+  background-color: var(--bg-color-secondary);
+  width: 100%;
+}
+
+.case-title {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 20px;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+.case-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.case-meta {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.case-type {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.case-date {
+  font-weight: var(--font-weight-medium);
+}
+
+.case-url {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.case-url:hover {
+  opacity: 0.8;
+}
+
+/* Большая картинка во всю ширину с соотношением 16:9 */
+.case-hero-full {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* Соотношение сторон 16:9 */
+  overflow: hidden;
+}
+
+.hero-full-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+.client-task-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .client-task-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tasks-container {
+  margin-top: 20px;
+}
+
+.tasks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.task-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.task-number {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  min-width: 30px;
+}
+
+.task-content {
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+/* Сетка с информацией */
+.case-grid-info {
+  padding: 80px 0;
+  background-color: var(--bg-color-secondary);
+}
+
+.grid-info-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .grid-info-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-info-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-title {
+  font-size: var(--font-size-md);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-medium);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.info-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.info-content {
+  flex-grow: 1;
+}
+
+.large-text {
+  font-size: var(--font-size-lg);
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tasks-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 15px;
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+}
+
+.tasks-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* Секция с контентом проекта */
+.case-content-section {
+  padding: 60px 0;
+}
+
+.case-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.case-content h2 {
+  font-size: var(--font-size-xl);
+  margin-top: 60px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.case-content h3 {
+  font-size: var(--font-size-lg);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.case-content p {
+  margin-bottom: 20px;
+}
+
+.case-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin: 30px 0;
+}
+
+/* Галерея изображений проекта */
+.case-gallery {
+  padding: 60px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+/* Секция "Другие проекты" */
+.other-projects-section {
+  padding: 80px 0;
+  background-color: var(--bg-color-secondary);
+}
+
+.other-projects-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: var(--font-size-xl);
+  color: var(--text-color);
+}
+
+/* Кнопка "Вернуться к проектам" */
+.back-to-projects {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.back-to-projects-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--font-size-md);
+  transition: all 0.3s ease;
+}
+
+.back-to-projects-button:hover {
+  background-color: var(--bg-color-secondary);
+  transform: translateY(-2px);
+}
+
+.back-to-projects-button .arrow {
+  transition: transform 0.3s ease;
+}
+
+.back-to-projects-button:hover .arrow {
+  transform: translateX(-5px);
+}
+
+

@@ -1,0 +1,40 @@
+/* Переключатель темы */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.theme-toggle-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--text-color);
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.theme-toggle-btn .sun-icon {
+  opacity: 1;
+  position: absolute;
+}
+
+.theme-toggle-btn .moon-icon {
+  opacity: 0;
+  transform: translateY(10px) rotate(45deg);
+  position: absolute;
+}
+
+:root.dark-theme .theme-toggle-btn .sun-icon {
+  opacity: 0;
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+:root.dark-theme .theme-toggle-btn .moon-icon {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+} 

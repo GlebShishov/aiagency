@@ -1,0 +1,110 @@
+/* Формы */
+.form-wrapper {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  border: var(--box-border);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+  margin-bottom: var(--padding-md);
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  padding: var(--input-padding-y) var(--input-padding-x);
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color var(--transition-speed) ease;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--padding-xs);
+  font-weight: 500;
+}
+
+.form-message {
+  width: 100%;
+  padding: 1rem;
+  height: 150px;
+  resize: vertical;
+}
+
+.file-input {
+  padding: 0.5rem;
+  background-color: var(--bg-color);
+  border: 1px dashed var(--border-color);
+  cursor: pointer;
+  
+  &:hover {
+    border-color: var(--accent-color);
+  }
+}
+
+textarea.form-input {
+  min-height: var(--padding-xxl);
+  resize: vertical;
+}
+
+.form-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.option-button {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: var(--accent-color);
+    background-color: var(--highlight-bg);
+  }
+  
+  &.active {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+  }
+}
+
+/* Стили для форм */
+.contact-form {
+  background-color: var(--bg-color);
+  padding: var(--form-padding);
+  border-radius: var(--card-radius);
+}
+
+.form-submit {
+  margin-top: var(--padding-md);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--padding-xs);
+  
+  label {
+    font-size: 0.875rem;
+    padding: var(--padding-xs) 0;
+  }
+  
+  input[type="checkbox"] {
+    margin-top: var(--padding-xs);
+  }
+} 

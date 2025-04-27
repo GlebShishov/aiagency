@@ -1,0 +1,161 @@
+---
+layout: default
+title: Тарифы и цены
+permalink: /pricing/
+---
+
+<section class="case-header pricing-header">
+  <div class="container">
+    <div class="case-header-content">
+      <h1 class="case-title">Тарифы и цены</h1>
+      <p class="case-subtitle">Выберите идеальный план для вашего проекта</p>
+      
+      <div class="case-meta">
+        <div class="case-type">Актуально</div>
+        <div class="case-date">2023</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing-section section">
+  <div class="container">
+    <!-- Основные тарифы - сетка из 3 карточек -->
+    <div class="pricing-grid">
+      {% assign non_vip_plans = site.prices | where_exp: "item", "item.category != 'VIP'" | where_exp: "item", "item.price != 200000" | sort: "price" %}
+      
+      {% for plan in non_vip_plans %}
+        <div class="pricing-card {% if plan.title contains 'Стандартный' %}popular{% endif %}">
+          <div class="pricing-tag">{{ plan.category }}</div>
+          <h3 class="client-name">
+            {% if plan.title contains 'Стартовый' %}Стартовый{% elsif plan.title contains 'Стандартный' %}Стандартный{% elsif plan.title contains 'Максимальный' %}Максимальный{% else %}{{ plan.title }}{% endif %}
+          </h3>
+          <div class="pricing-price">
+            <span class="current-price">{{ plan.price | number_with_delimiter }} ₽</span>
+            <span class="price-period">{% if plan.duration == 1 %}в месяц{% else %}за {{ plan.duration }} мес.{% endif %}</span>
+          </div>
+          <a href="#" class="button rounded">{% if plan.price == 0 %}Скачать{% else %}Выбрать план{% endif %}</a>
+          
+          <div class="pricing-content">
+            {{ plan.content }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <!-- VIP тариф на всю ширину -->
+    <div class="vip-pricing">
+      {% assign vip_plan = site.prices | where: "category", "VIP" | first %}
+      <div class="pricing-card vip">
+        <div class="pricing-tag">VIP</div>
+        <h3 class="client-name">VIP</h3>
+        <div class="pricing-price">
+          <span class="current-price">от {{ vip_plan.price | number_with_delimiter }} ₽</span>
+          <span class="price-period">{% if vip_plan.duration == 1 %}в месяц{% else %}за {{ vip_plan.duration }} мес.{% endif %}</span>
+        </div>
+        <a href="#" class="button rounded">Связаться</a>
+        
+        <div class="pricing-content vip-content">
+          {{ vip_plan.content }}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Блок "Нам уже доверяют" -->
+    <section class="clients section">
+      <h2 class="section-title">Нам уже доверяют</h2>
+      <div class="clients-grid">
+        <div class="client-card">
+          <h3>Agarto</h3>
+          <p>Производство</p>
+        </div>
+        <div class="client-card">
+          <h3>RuTalks</h3>
+          <p>Сообщество</p>
+        </div>
+        <div class="client-card">
+          <h3>M2AAA</h3>
+          <p>Недвижимость</p>
+        </div>
+        <div class="client-card">
+          <h3>myChess</h3>
+          <p>Веб сервис - клуб</p>
+        </div>
+        <div class="client-card">
+          <h3>Алгоритмы уюта</h3>
+          <p>Производство</p>
+        </div>
+        <div class="client-card">
+          <h3>Пересвет Юг</h3>
+          <p>Строительство</p>
+        </div>
+        <div class="client-card">
+          <h3>Vlaeva Design</h3>
+          <p>Дизайн</p>
+        </div>
+        <div class="client-card">
+          <h3>Pravda Coffee</h3>
+          <p>Кофейня</p>
+        </div>
+        <div class="client-card cta-card">
+          <p>Хотите стать нашим клиентом?</p>
+          <button class="button rounded js-modal-trigger" data-modal="contact-modal">Обсудить проект</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="section-title">Часто задаваемые вопросы</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">Что такое кредиты для постов и сторис?</div>
+          <div class="faq-answer">
+            <p>Кредиты используются для создания контента с помощью нашей системы. Один кредит для постов позволяет создать один пост для социальных сетей, а кредит для сторис — одну историю.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Что происходит, если я исчерпаю все кредиты?</div>
+          <div class="faq-answer">
+            <p>Вы можете приобрести дополнительные кредиты или дождаться следующего месяца, когда ваш план обновится. На бесплатном плане дополнительные кредиты недоступны.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Как проверить свое использование кредитов?</div>
+          <div class="faq-answer">
+            <p>Вы можете проверить использование кредитов в вашем личном кабинете в разделе "Использование" или "Аналитика".</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">Что происходит с неиспользованными кредитами?</div>
+          <div class="faq-answer">
+            <p>Неиспользованные кредиты переносятся на следующий месяц для платных планов. На бесплатном плане кредиты не переносятся.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-cta">
+        <p>Остались вопросы? <a href="/contacts">Свяжитесь с нашей командой поддержки</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Добавляем функциональность открытия/закрытия FAQ
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', function() {
+      item.classList.toggle('active');
+    });
+  });
+});
+</script> 

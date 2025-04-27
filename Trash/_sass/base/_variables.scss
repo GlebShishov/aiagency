@@ -1,0 +1,104 @@
+// SCSS переменные
+$text-color: rgb(25, 25, 25);
+$primary-color: rgb(25, 25, 25);
+
+/* Переменные */
+:root {
+  color-scheme: light dark;
+  
+  /* Light theme colors */
+  --bg-color: #ffffff;
+  --text-color: rgb(25, 25, 25);
+  --accent-color: rgb(25, 25, 25);
+  --secondary-color: rgb(55, 55, 55);
+  --border-color: #e0e0e0;
+  --hover-opacity: 1;
+  --default-opacity: 0.5;
+  --menu-bg: rgba(255, 255, 255, 0.9);
+  --footer-bg: #0a0a12;
+  --footer-text: #ffffff;
+  --muted-text: #3a3a3a;
+  --card-bg: #f9f9f9;
+  --highlight-bg: #f5f5f5;
+  --box-border: 1px solid rgb(25, 25, 25);
+  --button-text-dark: #ffffff;
+  --button-text-light: rgb(25, 25, 25);
+  --shadow-color: transparent;
+  
+  /* Common variables */
+  --header-height: 80px;
+  --grid-gap: 0;
+  --section-spacing: 6rem;
+  --border-radius: 0px;
+  --transition-speed: 0.3s;
+  --button-radius: 4rem;
+  --card-radius: 0.5rem;
+  --shadow-sm: none;
+  --shadow-md: none;
+  
+  /* Padding variables */
+  --padding-xs: 0.5rem;
+  --padding-sm: 1rem;
+  --padding-md: 2rem;
+  --padding-lg: 3rem;
+  --padding-xl: 5rem;
+  --padding-xxl: 8rem;
+  
+  /* Section padding */
+  --section-padding-y: var(--padding-xl);
+  --section-padding-x: var(--padding-md);
+  
+  /* Card padding */
+  --card-padding: var(--padding-md);
+  
+  /* Button padding */
+  --button-padding-sm: 0.5rem 1.25rem;
+  --button-padding-md: 1rem 2rem;
+  --button-padding-lg: 1rem 2.5rem;
+  
+  /* Form padding */
+  --form-padding: var(--padding-md);
+  --input-padding-y: 0.75rem;
+  --input-padding-x: var(--padding-sm);
+  
+  /* Modal padding */
+  --modal-padding-desktop: 40px;
+  --modal-padding-mobile: 1.5rem;
+  --modal-logo-offset: 20px;
+  
+  /* Header & Footer padding */
+  --header-padding-y: 1.5rem;
+  --footer-padding-y: var(--padding-xl);
+  
+  /* Grid gap */
+  --grid-gap-sm: 1rem;
+  --grid-gap-md: 2rem;
+  --grid-gap-lg: 4rem;
+}
+
+:root.dark-theme {
+  --bg-color: rgb(25, 25, 25);
+  --text-color: #f1f1f1;
+  --accent-color: #ffffff;
+  --secondary-color: #cccccc;
+  --border-color: #333333;
+  --hover-opacity: 1;
+  --default-opacity: 0.5;
+  --menu-bg: rgba(25, 25, 25, 0.9);
+  --footer-bg: rgb(25, 25, 25);
+  --footer-text: #f1f1f1;
+  --muted-text: #a0aec0;
+  --card-bg: #1e1e1e;
+  --highlight-bg: #1e1e1e;
+  --box-border: 1px solid rgba(255, 255, 255, 0.1);
+  --button-text-dark: #ffffff;
+  --button-text-light: rgb(25, 25, 25);
+  --shadow-color: transparent;
+}
+
+// Breakpoints
+$small-mobile: 380px;
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px; 

@@ -1,0 +1,57 @@
+---
+layout: page
+title: Услуги
+description: AI Agency предлагает комплекс услуг по стратегии, брендингу, UX/UI дизайну, разработке, маркетингу и социальным сетям.
+permalink: /services/
+---
+
+<!-- Hero секция с названием услуг и кратким описанием -->
+<section class="service-hero">
+  <div class="service-hero-container">
+    <h1 class="service-hero-title">{{ page.title }}</h1>
+    <p class="service-hero-description">{{ page.description }}</p>
+    
+    <div class="service-hero-tags">
+      {% assign main_services = site.services | where_exp: "item", "item.url contains '/services/'" | sort: 'order' %}
+      {% for service in main_services %}
+        {% assign service_slug = service.url | split: '/' | last %}
+        {% if service_slug == 'branding' or service_slug == 'development' or service_slug == 'marketing' or service_slug == 'social-media' or service_slug == 'strategy' or service_slug == 'ux-ui' %}
+          <span class="service-hero-tag">{{ service.title }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+    <a href="#contact" class="button service-hero-button">Обсудить проект</a>
+  </div>
+</section>
+
+<!-- Секция с категориями услуг -->
+<div class="services-categories-grid">
+  {% assign main_services = site.services | where_exp: "item", "item.url contains '/services/'" | sort: 'order' %}
+  {% for service in main_services %}
+    {% assign service_slug = service.url | split: '/' | last %}
+    {% if service_slug == 'branding' or service_slug == 'development' or service_slug == 'marketing' or service_slug == 'social-media' or service_slug == 'strategy' or service_slug == 'ux-ui' %}
+      <div class="service-category-card">
+        <div class="container">
+          <div class="service-category-content">
+            <div class="service-category-info">
+              <h2 class="service-category-title"><a href="{{ service.url | relative_url }}">{{ service.title }}</a></h2>
+              <p class="service-category-description">{{ service.description }}</p>
+            </div>
+            
+            {% if service.subservices %}
+              <div class="service-category-tabs">
+                {% for subservice in service.subservices %}
+                  <a href="{{ subservice.url | relative_url }}" class="service-category-tab">
+                    <span class="tab-title">{{ subservice.title }}</span>
+                    <span class="tab-arrow">&rarr;</span>
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,175 @@
+/* Ссылки и кнопки */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity var(--transition-speed) ease;
+}
+
+a:hover {
+  opacity: var(--hover-opacity);
+}
+
+/* Общие стили для всех кнопок */
+.button, button, .option-button {
+  display: inline-block;
+  padding: var(--button-padding-md);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  text-transform: lowercase;
+  box-shadow: none;
+  border: 1px solid rgb(25, 25, 25);
+  background: #ffffff;
+  color: rgb(25, 25, 25);
+}
+
+/* Текстовые кнопки */
+.button.text, button.text, .option-button.text {
+  border-radius: 0;
+  background: transparent;
+  opacity: var(--default-opacity);
+}
+
+.button.text:hover, button.text:hover, .option-button.text:hover {
+  opacity: var(--hover-opacity);
+}
+
+/* Закругленные кнопки */
+.button.rounded, button.rounded, .option-button.rounded {
+  border-radius: var(--button-radius);
+  opacity: 1;
+}
+
+.button.rounded:hover, button.rounded:hover, .option-button.rounded:hover {
+  opacity: 1;
+  transform: none;
+}
+
+/* Кнопка в hero секции */
+.hero .button.rounded {
+  background-color: white;
+  color: hsl(230, 80%, 10%);
+  border-color: white;
+  box-shadow: none;
+}
+
+.hero .button.rounded:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: none;
+  box-shadow: none;
+}
+
+:root.dark-theme .button,
+:root.dark-theme button,
+:root.dark-theme .option-button {
+  background: rgb(25, 25, 25);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.button.white, button.white, .option-button.white {
+  background: #ffffff;
+  color: rgb(25, 25, 25);
+  border: 1px solid rgb(25, 25, 25);
+}
+
+:root.dark-theme .button.white,
+:root.dark-theme button.white,
+:root.dark-theme .option-button.white {
+  background: rgb(25, 25, 25);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.button:hover, button:hover, .option-button:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.button:active, button:active, .option-button:active {
+  opacity: 1;
+  transform: none;
+}
+
+/* Специфические переопределения */
+.option-button {
+  padding: var(--padding-xs) var(--padding-md);
+  background-color: var(--bg-color);
+}
+
+.option-button.active {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+  opacity: 1;
+}
+
+.button.accent, button.accent {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+}
+
+.button.outline, button.outline {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+.button.outline:hover, button.outline:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+}
+
+/* Анимации для кнопок */
+.animate-fade-in.button {
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+:root.dark-theme .animate-fade-in.button.white {
+  color: #ffffff;
+}
+
+/* Кнопки */
+.button {
+  &.small {
+    padding: var(--button-padding-sm);
+    font-size: 0.875rem;
+  }
+  
+  &.large {
+    padding: var(--button-padding-lg);
+    font-size: 1.125rem;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--grid-gap-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--padding-md);
+}
+
+/* Группы кнопок-опций */
+.form-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding-xs);
+}
+
+.option-button {
+  &:hover:not(.active) {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+}
+
+/* Активная кнопка */
+.button.active, button.active, .option-button.active {
+  opacity: 1;
+} 
