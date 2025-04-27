@@ -1,0 +1,113 @@
+{% comment %}
+  Шаблон для отображения сетки проектов
+  Параметры:
+  - limit: количество проектов для отображения (опционально)
+  - show_more_link: показывать ли ссылку "Ещё проекты" (по умолчанию: true)
+  - filter_buttons: показывать ли кнопки фильтрации (по умолчанию: false)
+  - category: фильтровать по категории (опционально)
+  
+  Пример использования:
+  {% include projects-grid.html limit=6 show_more_link=true %}
+{% endcomment %}
+
+{% comment %}
+  Шаблон для отображения сетки проектов
+  Параметры:
+  - limit: количество проектов для отображения (опционально)
+  - show_more_link: показывать ли ссылку "Ещё проекты" (по умолчанию: true)
+  - filter_buttons: показывать ли кнопки фильтрации (по умолчанию: false)
+  - category: фильтровать по категории (опционально)
+  
+  Пример использования:
+  {% include projects-grid.html limit=6 show_more_link=true %}
+{% endcomment %}
+
+{% assign limit = include.limit | default: 999 %}
+{% assign show_more_link = include.show_more_link | default: true %}
+{% assign filter_buttons = include.filter_buttons | default: false %}
+
+{% if filter_buttons %}
+<section class="projects-filter">
+  <div class="filter-buttons">
+    <button class="filter-button active" data-filter="all">Все</button>
+    <button class="filter-button" data-filter="Branding">Брендинг</button>
+    <button class="filter-button" data-filter="UX/UI">UX/UI</button>
+    <button class="filter-button" data-filter="Development">Разработка</button>
+    <button class="filter-button" data-filter="Marketing">Маркетинг</button>
+  </div>
+</section>
+{% endif %}
+
+<div class="case-grid-layout" id="projects-grid">
+  {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+  {% if include.category %}
+    {% assign filtered_projects = sorted_projects | where: "case-type", include.category %}
+    {% if filtered_projects.size == 0 %}
+      {% comment %}Если нет проектов в указанной категории, показываем последние проекты{% endcomment %}
+      {% assign filtered_projects = sorted_projects %}
+    {% endif %}
+  {% else %}
+    {% assign filtered_projects = sorted_projects %}
+  {% endif %}
+  
+  {% assign display_projects = filtered_projects | limit: limit %}
+  {% for project in display_projects %}
+  <a href="{{ project.url | relative_url }}" class="project-card small text-dec-none" data-category="{{ project.case-type | slugify }}">
+    <div class="project-image">
+      <img class="project-media" src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}" loading="lazy">
+      <div class="project-overlay">
+        <span class="project-category">{{ project.case-type }}</span>
+        <span class="project-title">{{ project.title }}</span>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+  
+  {% if show_more_link and filtered_projects.size > limit %}
+  <a href="{{ '/projects' | relative_url }}{% if include.category %}?category={{ include.category | slugify }}{% endif %}" class="project-card small cta-card text-dec-none">
+    <div class="cta-content">
+      <h3>Ещё проекты</h3>
+      <p>Смотреть все наши работы</p>
+      <span class="arrow-icon">→</span>
+    </div>
+  </a>
+  {% endif %}
+</div>
+
+{% if filter_buttons %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter projects
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category').toLowerCase() === filter.toLowerCase()) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Check if URL has category param and apply filter
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+      const matchingButton = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter').toLowerCase() === categoryParam.toLowerCase());
+      if (matchingButton) {
+        matchingButton.click();
+      }
+    }
+  });
+</script>
+{% endif %}

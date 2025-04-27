@@ -70,31 +70,7 @@ layout: default
   </section>
   {% endif %}
 
-    <!-- Секция с кейсами по этой услуге -->
-    <section class="service-cases-section">
-      <div class="container">
-        <h2>Наши кейсы</h2>
-        <div class="projects-grid">
-          {% assign service_projects = site.projects | where: "categories", page.service-type | limit: 3 %}
-          {% for project in service_projects %}
-          <a href="{{ project.url | relative_url }}" class="project-card">
-            <div class="project-image">
-              <img class="project-media" src="{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}" alt="{{ project.title }}" loading="lazy">
-              <div class="project-overlay">
-                <p class="project-category">{{ project.case-type }}</p>
-                <h3 class="project-title">{{ project.title }}</h3>
-                <p class="project-excerpt">{{ project.excerpt | truncate: 120 }}</p>
-              </div>
-            </div>
-          </a>
-          {% endfor %}
-        </div>
-        <div class="text-center">
-          <a href="{{ '/projects' | relative_url }}?category={{ page.service-type | slugify }}" class="button">Смотреть все проекты</a>
-        </div>
-      </div>
-    </section>
-  </article>
+ 
 
   <!-- Секция с информацией об услуге -->
   <section class="service-info-section">
@@ -136,6 +112,12 @@ layout: default
       {% endfor %}
     </div>
   </section>
+
+  <!-- Секция с кейсами по этой услуге -->
+  {% include projects-grid.html limit=3 category=page.service-type show_more_link=false %}
+  
+  <!-- Секция с партнёрами -->
+  {% include partners-grid.html title="Наши партнёры в сфере '" | append: page.title | append: "'" limit=3 container_class="container" %}
   
   <section class="service-parent-section">
     <div class="container">

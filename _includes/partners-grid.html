@@ -1,0 +1,35 @@
+{% comment %}
+  Шаблон для отображения сетки партнёров
+  Параметры:
+  - title: заголовок секции (по умолчанию: "Наши партнёры")
+  - limit: количество партнёров для отображения (опционально)
+  - container_class: дополнительные классы для контейнера (опционально)
+  - show_description: показывать ли описание партнёров (по умолчанию: true)
+  
+  Пример использования:
+  {% include partners-grid.html title="Партнёры проекта" limit=4 %}
+{% endcomment %}
+
+{% assign title = include.title | default: "Наши партнёры" %}
+{% assign limit = include.limit | default: 999 %}
+{% assign container_class = include.container_class | default: "container-fluid" %}
+{% assign show_description = include.show_description | default: true %}
+
+<section class="section partners-section">
+  <div class="{{ container_class }}">
+    <h2 class="section-title">{{ title }}</h2>
+    <div class="partners-grid">
+      {% assign sorted_partners = site.partners | sort: 'order' %}
+      {% assign display_partners = sorted_partners | limit: limit %}
+      {% for partner in display_partners %}
+      <div class="partner-card">
+        <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" class="partner-logo" loading="lazy">
+        <h3 class="partner-name">{{ partner.name }}</h3>
+        {% if show_description %}
+        <p class="partner-description">{{ partner.description }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

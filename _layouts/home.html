@@ -114,27 +114,7 @@ layout: default
 </section>
 
 <section class="projects-section">
-  <div class="case-grid-layout" id="projects-grid">
-    {% assign featured_projects = site.projects | sort: "date" | reverse | limit: 6 %}
-    {% for project in featured_projects %}
-    <a href="{{ project.url | relative_url }}" class="project-card small text-dec-none">
-      <div class="project-image">
-        <img class="project-media" src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}" loading="lazy">
-        <div class="project-overlay">
-          <span class="project-category">{{ project.case-type }}</p>
-          <span class="project-title">{{ project.title }}</h3>
-        </div>
-      </div>
-    </a>
-    {% endfor %}
-    <a href="{{ '/projects' | relative_url }}" class="project-card small cta-card text-dec-none">
-      <div class="cta-content">
-        <h3>Ещё проекты</h3>
-        <p>Смотреть все наши работы</p>
-        <span class="arrow-icon">→</span>
-      </div>
-    </a>
-  </div>
+  {% include projects-grid.html limit=6 show_more_link=true %}
   <div id="loading" class="loading-indicator hidden">
     <div class="spinner"></div>
   </div>
@@ -163,20 +143,6 @@ layout: default
 </section>
 
 <!-- Секция с партнёрами -->
-<section class="section partners-section">
-  <div class="container-fluid">
-    <h2 class="section-title">Наши партнёры</h2>
-    <div class="partners-grid">
-      {% assign sorted_partners = site.partners | sort: 'order' %}
-      {% for partner in sorted_partners %}
-      <div class="partner-card">
-        <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" class="partner-logo" loading="lazy">
-        <h3 class="partner-name">{{ partner.name }}</h3>
-        <p class="partner-description">{{ partner.description }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% include partners-grid.html %}
 
 {{ content }}
