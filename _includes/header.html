@@ -29,7 +29,9 @@
                 <div class="dropdown-services">
                   {% for category in site.data.service_categories %}
                   <div class="dropdown-service-group {% if forloop.first %}active{% endif %}" data-category="{{ category.id }}">
-                    {% assign category_services = site.services | where_exp: "item", "item.url contains category.id or item.category == category.id" %}
+                    {% assign url_services = site.services | where_exp: "item", "item.url contains category.id" %}
+                    {% assign cat_services = site.services | where_exp: "item", "item.category == category.id" %}
+                    {% assign category_services = url_services | concat: cat_services | uniq | sort: "title" %}
                     {% for service in category_services %}
                       {% assign service_slug = service.url | split: '/' | last %}
                       {% if service_slug != category.id %}

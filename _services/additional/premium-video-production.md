@@ -1,7 +1,7 @@
 ---
 layout: service-template
 title: Премиум видеопродакшн и видеомаркетинг
-description: Имиджевые ролики, бренд-фильмы, рекламные ролики. Включает продакшн полного цикла: сценарий, съёмки, монтаж, саунд-дизайн, графика, цветокоррекция.
+description: "Имиджевые ролики, бренд-фильмы, рекламные ролики. Включает продакшн полного цикла: сценарий, съёмки, монтаж, саунд-дизайн, графика, цветокоррекция."
 category: additional
 permalink: /services/additional/premium-video-production/
 image: /assets/images/services/premium-video-production.jpg
