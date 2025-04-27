@@ -6,6 +6,14 @@ description: Выбираем путь и создаем основу для б�
 permalink: /services/strategy/
 order: 2
 category: strategy
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
+
+
 subservices:
   - title: Бизнес-стратегия
     url: /services/strategy/business-strategy/

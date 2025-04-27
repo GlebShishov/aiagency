@@ -154,43 +154,5 @@ layout: default
   {% endif %}
 
   <!-- Другие проекты -->
-  <section class="other-projects-section">
-    <div class="container">
-      <h2 class="other-projects-title">Ещё кейсы</h2>
-      
-      <!-- Получаем все проекты, исключая текущий -->
-      {% assign all_other_projects = site.projects | where_exp: "item", "item.url != page.url" %}
-      
-      <!-- Берем 6 проектов для отображения в сетке -->
-      {% assign related_cases = all_other_projects | limit: 6 %}
-      
-      <div class="case-grid-layout">
-        {% for case in related_cases %}
-          <a href="{{ case.url | relative_url }}" class="project-card small text-dec-none">
-            <div class="project-image">
-              <img class="project-media" src="{% if case.thumbnail %}{{ case.thumbnail | relative_url }}{% elsif case.images.first %}{{ case.images.first | relative_url }}{% else %}{{ '/assets/images/placeholder.jpg' | relative_url }}{% endif %}" alt="{{ case.title }}" loading="lazy">
-              <div class="project-overlay">
-                <p class="project-category">{{ case.case-type }}</p>
-                <h3 class="project-title">{{ case.title }}</h3>
-              </div>
-            </div>
-          </a>
-        {% endfor %}
-        <a href="{{ '/projects' | relative_url }}" class="project-card small cta-card text-dec-none">
-          <div class="cta-content">
-            <h3>Ещё проекты</h3>
-            <p>Смотреть все наши работы</p>
-            <span class="arrow-icon">→</span>
-          </div>
-        </a>
-      </div>
-      
-      <div class="back-to-projects">
-        <a href="{{ '/projects' | relative_url }}" class="back-to-projects-button">
-          <span class="arrow">←</span>
-          <span>Все проекты</span>
-        </a>
-      </div>
-    </div>
-  </section>
+      {% include projects-grid.html limit=6 show_more_link=true exclude_project=page.url %}
 </article>

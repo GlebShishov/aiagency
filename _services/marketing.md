@@ -6,6 +6,14 @@ permalink: /services/marketing/
 order: 5
 icon: marketing-icon.svg
 category: marketing
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
+
+
 subservices:
   - title: SEO
     url: /services/marketing/seo/

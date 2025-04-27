@@ -1,0 +1,114 @@
+---
+layout: default
+permalink: /form-handler/
+---
+
+<div class="form-handler-container">
+  <h1>Обработка заявки...</h1>
+  <p>Пожалуйста, подождите, ваша заявка обрабатывается.</p>
+  <div class="loader"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Получаем параметры из URL
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Если параметры отсутствуют, перенаправляем на главную
+    if (!urlParams.has('name') || !urlParams.has('email')) {
+      window.location.href = '{{ "/" | relative_url }}';
+      return;
+    }
+    
+    // Собираем данные из URL параметров
+    const formData = {
+      name: urlParams.get('name'),
+      phone: urlParams.get('phone'),
+      email: urlParams.get('email'),
+      services: urlParams.get('services'),
+      description: urlParams.get('description'),
+      source: urlParams.get('source')
+    };
+    
+    // Отправляем данные через GitHub API
+    sendToGitHub(formData);
+  });
+  
+  function sendToGitHub(formData) {
+    // Используем FormSubmit.co для отправки данных формы
+    // Это бесплатный сервис, который позволяет отправлять данные формы без бэкенда
+    
+    // URL для отправки данных через FormSubmit.co
+    const webhookUrl = 'https://formsubmit.co/ajax/{{ site.form_submission_email }}';
+    
+    // Формируем текст сообщения для Telegram
+    const telegramMessage = `📋 *Новая заявка с сайта*\n\n` +
+                          `👤 *Имя:* ${formData.name}\n` +
+                          `📱 *Телефон:* ${formData.phone}\n` +
+                          `📧 *Email:* ${formData.email}\n` +
+                          `🔍 *Услуги:* ${formData.services}\n` +
+                          `📝 *Описание:* ${formData.description}\n` +
+                          `🔎 *Источник:* ${formData.source}`;
+    
+    // Отправляем данные через FormSubmit.co
+    fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        services: formData.services,
+        description: formData.description,
+        source: formData.source,
+        // Добавляем дополнительные данные для FormSubmit.co
+        _subject: 'Новая заявка с сайта AI Agency',
+        _template: 'table',
+        _captcha: 'false',
+        _autoresponse: 'Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.'
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Успешная отправка
+      console.log('Success:', data);
+      // Перенаправляем на страницу с благодарностью
+      window.location.href = '{{ "/thank-you/" | relative_url }}';
+    })
+    .catch(error => {
+      // Ошибка отправки
+      console.error('Error:', error);
+      // Перенаправляем на страницу с ошибкой
+      window.location.href = '{{ "/error/" | relative_url }}';
+    });
+  }
+</script>
+
+<style>
+  .form-handler-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>

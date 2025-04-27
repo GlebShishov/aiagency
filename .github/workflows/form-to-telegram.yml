@@ -1,0 +1,25 @@
+name: Form to Telegram
+
+on:
+  repository_dispatch:
+    types: [form-submission]
+
+jobs:
+  send-to-telegram:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send message to Telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            📋 *Новая заявка с сайта*
+            
+            👤 *Имя:* ${{ github.event.client_payload.name }}
+            📱 *Телефон:* ${{ github.event.client_payload.phone }}
+            📧 *Email:* ${{ github.event.client_payload.email }}
+            🔍 *Услуги:* ${{ github.event.client_payload.services }}
+            📝 *Описание:* ${{ github.event.client_payload.description }}
+            🔎 *Источник:* ${{ github.event.client_payload.source }}

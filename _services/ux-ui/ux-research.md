@@ -1,10 +1,17 @@
 ---
 layout: service-template
-title: UX исследования
+title: UX-исследования
 category: ux-ui
 parent: ux-ui
-description: Проводим комплексные исследования пользователей для создания продуктов, которые действительно отвечают их потребностям и ожиданиям.
+description: Проводим исследования пользовательского опыта, чтобы понять потребности и поведение ваших пользователей.
 permalink: /services/ux-ui/ux-research/
+service-type: UX/UI
+example_images:
+  - /assets/images/projects/11.jpg
+  - /assets/images/projects/12.jpg
+  - /assets/images/projects/13.jpg
+  - /assets/images/projects/14.jpg
+  - /assets/images/projects/15.jpg
 ---
 
 # UX исследования

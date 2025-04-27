@@ -6,6 +6,13 @@ permalink: /services/social-media/
 order: 6
 icon: social-media-icon.svg
 category: social-media
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
+
 subservices:
   - title: SMM
     url: /services/social-media/smm/

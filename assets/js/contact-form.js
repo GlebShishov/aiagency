@@ -175,61 +175,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       
-      // Создаем объект FormData для отправки формы
-      const formData = new FormData(this);
+      // Собираем данные из формы для отправки через URL параметры
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const description = document.getElementById('description').value;
       
-      // Проверяем, доступна ли функция отправки в Telegram
-      if (typeof window.sendToTelegram !== 'function') {
-        throw new Error('Функция отправки в Telegram недоступна. Подключите скрипт telegram-sender.js');
-      }
+      // Получаем выбранные услуги
+      const serviceCheckboxes = document.querySelectorAll('input[name="service[]"]:checked');
+      const services = Array.from(serviceCheckboxes).map(cb => cb.value).join(', ');
       
-      // Отправляем данные в Telegram через JavaScript
-      window.sendToTelegram(formData)
-      .then(response => {
-        // Функция sendToTelegram уже возвращает объект с результатом
-        return response;
-      })
-      .then(data => {
-        if (data.success) {
-          // Успешная отправка
-          formStatusMessage.className = 'form-status-message success';
-          formStatusMessage.textContent = 'Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.';
-          
-          // Сбрасываем форму
-          this.reset();
-          if (charCount) {
-            charCount.textContent = '0';
-          }
-          
-          // Сбрасываем стили чекбоксов
-          const checkedBoxes = document.querySelectorAll('.service-checkbox');
-          checkedBoxes.forEach(box => {
-            box.style.backgroundColor = 'transparent';
-            box.style.color = '#000';
-          });
-        } else {
-          // Ошибка при отправке
-          formStatusMessage.className = 'form-status-message error';
-          formStatusMessage.textContent = data.message || 'Произошла ошибка при отправке заявки. Пожалуйста, попробуйте еще раз или свяжитесь с нами напрямую.';
-        }
-      })
-      .catch(error => {
-        // Ошибка сети или другая ошибка
-        formStatusMessage.className = 'form-status-message error';
-        formStatusMessage.textContent = 'Произошла ошибка при отправке заявки: ' + error.message;
-        console.error('Error:', error);
-      })
-      .finally(() => {
-        // Разблокируем кнопку отправки
-        if (submitButton) {
-          submitButton.disabled = false;
-        }
-        
-        // Скрываем сообщение о статусе через 5 секунд
-        setTimeout(() => {
-          formStatusMessage.style.display = 'none';
-        }, 5000);
-      });
+      // Получаем источник
+      const source = document.getElementById('source').value || 'Не указано';
+      
+      // Формируем URL для отправки
+      const formAction = this.getAttribute('action');
+      const url = new URL(formAction, window.location.origin);
+      
+      // Добавляем параметры
+      url.searchParams.append('name', name);
+      url.searchParams.append('phone', phone);
+      url.searchParams.append('email', email);
+      url.searchParams.append('services', services);
+      url.searchParams.append('description', description);
+      url.searchParams.append('source', source);
+      
+      // Перенаправляем на страницу обработчика
+      window.location.href = url.toString();
     });
   }
 });

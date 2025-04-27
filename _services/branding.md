@@ -6,6 +6,14 @@ description: Создаем и развиваем сильные бренды, �
 permalink: /services/branding/
 category: branding
 order: 1
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
+
+
 subservices:
   - title: Фирменный стиль
     url: /services/branding/corporate-identity/

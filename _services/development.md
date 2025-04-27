@@ -6,6 +6,19 @@ permalink: /services/development/
 order: 4
 icon: development-icon.svg
 category: development
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
+  - /assets/images/projects/1.mp4
+  - /assets/images/projects/2.mp4
+  - /assets/images/projects/3.mp4
+  - /assets/images/projects/4.mp4
+  - /assets/images/projects/5.mp4
+
+
 subservices:
   - title: Корпоративные сайты
     url: /services/development/corporate-websites/

@@ -55,6 +55,29 @@ layout: default
     </div>
   </section>
 
+  {% if page.example_images %}
+  <!-- Секция с примерами работ -->
+  <section class="service-examples-section">
+    <div class="service-examples-grid">
+      {% for item in page.example_images %}
+        {% assign item_type = item | split: '.' | last %}
+        {% if item_type == 'mp4' or item_type == 'webm' or item_type == 'mov' %}
+          <div class="example-item video-item">
+            <video src="{{ item | relative_url }}" alt="Видео пример {{ page.title }} - {{ forloop.index }}" autoplay muted loop playsinline class="example-media" loading="lazy"></video>
+          </div>
+        {% else %}
+          <div class="example-item image-item">
+            <img src="{{ item | relative_url }}" alt="Пример работы {{ page.title }} - {{ forloop.index }}" loading="lazy" class="example-media">
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  
+  <!-- Подключаем JavaScript для обработки примеров работ -->
+  <script src="{{ '/assets/js/service-examples.js' | relative_url }}"></script>
+  {% endif %}
+
   {% if page.subservices %}
   <!-- Секция с подуслугами во всю ширину -->
   <section class="service-offerings-fullwidth">
@@ -117,14 +140,4 @@ layout: default
   {% include projects-grid.html limit=3 category=page.service-type show_more_link=false %}
   
   <!-- Секция с партнёрами -->
-  {% include partners-grid.html title="Наши партнёры в сфере '" | append: page.title | append: "'" limit=3 container_class="container" %}
-  
-  <section class="service-parent-section">
-    <div class="container">
-      {% if page.parent %}
-      <div class="parent-service-link">
-        <a href="/services/{{ page.parent }}/" class="button button-outline">Вернуться к разделу {{ page.parent | capitalize }}</a>
-      </div>
-      {% endif %}
-    </div>
-  </section>
+  {% include partners-grid.html title=partner_title limit=3%}

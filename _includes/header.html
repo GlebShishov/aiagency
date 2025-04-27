@@ -32,12 +32,32 @@
                     {% assign url_services = site.services | where_exp: "item", "item.url contains category.id" %}
                     {% assign cat_services = site.services | where_exp: "item", "item.category == category.id" %}
                     {% assign category_services = url_services | concat: cat_services | uniq | sort: "title" %}
-                    {% for service in category_services %}
-                      {% assign service_slug = service.url | split: '/' | last %}
-                      {% if service_slug != category.id %}
-                        <a href="{{ service.url | relative_url }}" class="dropdown-service-item">{{ service.title }}</a>
+                    
+                    {% comment %}Проверяем, есть ли услуги в этой категории{% endcomment %}
+                    {% if category_services.size > 0 %}
+                      {% for service in category_services %}
+                        {% assign service_slug = service.url | split: '/' | last %}
+                        {% if service_slug != category.id %}
+                          <a href="{{ service.url | relative_url }}" class="dropdown-service-item">{{ service.title }}</a>
+                        {% endif %}
+                      {% endfor %}
+                    {% else %}
+                      {% comment %}Если нет услуг, ищем главную страницу категории и её подуслуги{% endcomment %}
+                      {% comment %}Ищем главную страницу категории{% endcomment %}
+                      {% assign main_category_page = nil %}
+                      {% for service in site.services %}
+                        {% assign url_parts = service.url | split: '/' %}
+                        {% if service.url contains category.id and url_parts.size == 3 %}
+                          {% assign main_category_page = service %}
+                          {% break %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if main_category_page and main_category_page.subservices %}
+                        {% for subservice in main_category_page.subservices %}
+                          <a href="{{ subservice.url | relative_url }}" class="dropdown-service-item">{{ subservice.title }}</a>
+                        {% endfor %}
                       {% endif %}
-                    {% endfor %}
+                    {% endif %}
                   </div>
                   {% endfor %}
                 </div>

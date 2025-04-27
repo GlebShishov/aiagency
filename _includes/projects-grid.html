@@ -5,9 +5,11 @@
   - show_more_link: показывать ли ссылку "Ещё проекты" (по умолчанию: true)
   - filter_buttons: показывать ли кнопки фильтрации (по умолчанию: false)
   - category: фильтровать по категории (опционально)
+  - exclude_project: URL проекта, который нужно исключить из списка (опционально)
   
   Пример использования:
   {% include projects-grid.html limit=6 show_more_link=true %}
+  {% include projects-grid.html limit=6 exclude_project=page.url %}
 {% endcomment %}
 
 {% comment %}
@@ -17,9 +19,11 @@
   - show_more_link: показывать ли ссылку "Ещё проекты" (по умолчанию: true)
   - filter_buttons: показывать ли кнопки фильтрации (по умолчанию: false)
   - category: фильтровать по категории (опционально)
+  - exclude_project: URL проекта, который нужно исключить из списка (опционально)
   
   Пример использования:
   {% include projects-grid.html limit=6 show_more_link=true %}
+  {% include projects-grid.html limit=6 exclude_project=page.url %}
 {% endcomment %}
 
 {% assign limit = include.limit | default: 999 %}
@@ -40,6 +44,8 @@
 
 <div class="case-grid-layout" id="projects-grid">
   {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+  
+  {% comment %}Фильтрация по категории{% endcomment %}
   {% if include.category %}
     {% assign filtered_projects = sorted_projects | where: "case-type", include.category %}
     {% if filtered_projects.size == 0 %}
@@ -48,6 +54,11 @@
     {% endif %}
   {% else %}
     {% assign filtered_projects = sorted_projects %}
+  {% endif %}
+  
+  {% comment %}Исключение текущего проекта{% endcomment %}
+  {% if include.exclude_project %}
+    {% assign filtered_projects = filtered_projects | where_exp: "item", "item.url != include.exclude_project" %}
   {% endif %}
   
   {% assign display_projects = filtered_projects | limit: limit %}
