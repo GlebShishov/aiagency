@@ -28,15 +28,15 @@ layout: default
           <!-- Левая колонка (большая картинка) -->
           <div class="slideshow-main">
             <div class="slideshow-image active" data-index="0">
-              <img src="{{ '/assets/images/projects/01.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 1">
+              <img src="{{ '/assets/images/projects/01.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 1" loading="lazy">
               <div class="progress-bar"><div class="progress"></div></div>
             </div>
             <div class="slideshow-image" data-index="1">
-              <img src="{{ '/assets/images/projects/02.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 2">
+              <img src="{{ '/assets/images/projects/02.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 2" loading="lazy">
               <div class="progress-bar"><div class="progress"></div></div>
             </div>
             <div class="slideshow-image" data-index="2">
-              <img src="{{ '/assets/images/projects/03.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 3">
+              <img src="{{ '/assets/images/projects/03.jpg' | relative_url }}" alt="{{ page.title }} - Изображение 3" loading="lazy">
               <div class="progress-bar"><div class="progress"></div></div>
             </div>
           </div>
@@ -44,10 +44,10 @@ layout: default
           <!-- Правая колонка (две маленькие картинки) -->
           <div class="slideshow-thumbnails">
             <div class="slideshow-thumbnail" data-index="1">
-              <img src="{{ '/assets/images/projects/04.jpg' | relative_url }}" alt="{{ page.title }} - Миниатюра 2">
+              <img src="{{ '/assets/images/projects/04.jpg' | relative_url }}" alt="{{ page.title }} - Миниатюра 2" loading="lazy">
             </div>
             <div class="slideshow-thumbnail" data-index="2">
-              <img src="{{ '/assets/images/projects/05.jpg' | relative_url }}" alt="{{ page.title }} - Миниатюра 3">
+              <img src="{{ '/assets/images/projects/05.jpg' | relative_url }}" alt="{{ page.title }} - Миниатюра 3" loading="lazy">
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ layout: default
           {% for project in service_projects %}
           <a href="{{ project.url }}" class="project-card">
             <div class="project-image">
-              <img class="project-media" src="{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}" alt="{{ project.title }}">
+              <img class="project-media" src="{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}" alt="{{ project.title }}" loading="lazy">
               <div class="project-overlay">
                 <p class="project-category">{{ project.case-type }}</p>
                 <h3 class="project-title">{{ project.title }}</h3>

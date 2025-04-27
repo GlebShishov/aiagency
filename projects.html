@@ -20,7 +20,7 @@ permalink: /projects/
   {% for project in sorted_projects %}
   <a href="{{ project.url | relative_url }}" class="project-card small" data-category="{{ project.case-type | slugify }}">
     <div class="project-image">
-      <img class="project-media" src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}">
+      <img class="project-media" src="{% if project.thumbnail %}{{ project.thumbnail | relative_url }}{% elsif project.images.first %}{{ project.images.first | relative_url }}{% else %}{{ '/assets/images/projects/0' | append: forloop.index | append: '.jpg' | relative_url }}{% endif %}" alt="{{ project.title }}" loading="lazy">
       <div class="project-overlay">
         <p class="project-category">{{ project.case-type }}</p>
         <h3 class="project-title">{{ project.title }}</h3>

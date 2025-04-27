@@ -75,7 +75,7 @@ permalink: /about/
       {% assign sorted_partners = site.partners | sort: 'order' %}
       {% for partner in sorted_partners %}
       <div class="partner-card">
-        <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" class="partner-logo">
+        <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" class="partner-logo" loading="lazy">
         <h3 class="partner-name">{{ partner.name }}</h3>s
         <p class="partner-description">{{ partner.description }}</p>
       </div>
@@ -93,7 +93,7 @@ permalink: /about/
       {% for member in sorted_team %}
       <div class="team-card">
         <div class="team-image-container">
-          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-image">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="team-image" loading="lazy">
         </div>
         <h3 class="team-name">{{ member.name }}</h3>
         <p class="team-position">{{ member.position }}</p>

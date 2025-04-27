@@ -336,9 +336,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Убедимся, что все кнопки "начать проект" открывают модальное окно
+  // Убедимся, что все кнопки "начать проект" перенаправляют на страницу контактов
   const allStartProjectButtons = document.querySelectorAll('.start-project-btn, [data-action="start-project"]');
-  const contactModal = document.getElementById('contact-modal');
+  
+  // Добавляем обработчик для кнопок start-project
+  allStartProjectButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Учитываем возможный baseurl для GitHub Pages
+      const baseUrl = document.querySelector('meta[name="baseurl"]') ? document.querySelector('meta[name="baseurl"]').getAttribute('content') : '';
+      window.location.href = baseUrl + '/contacts';
+    });
+  });
   
   // Функция для проверки содержимого кнопок
   function setupProjectButtons() {
@@ -347,10 +356,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (button.textContent.trim() === 'Обсудить проект') {
         button.addEventListener('click', function(e) {
           e.preventDefault();
-          if (contactModal) {
-            contactModal.classList.add('open');
-            document.body.style.overflow = 'hidden'; // Запрет скролла основной страницы
-          }
+          // Учитываем возможный baseurl для GitHub Pages
+      const baseUrl = document.querySelector('meta[name="baseurl"]') ? document.querySelector('meta[name="baseurl"]').getAttribute('content') : '';
+      window.location.href = baseUrl + '/contacts';
         });
       }
     });
