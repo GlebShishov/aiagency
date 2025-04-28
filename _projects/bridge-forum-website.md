@@ -14,12 +14,15 @@ thumbnail-class: "project-thumbnail-container block-size-m"
 client-url: "https://test.odayprojects.ru/bridgeforum/"
 projectend: "2023 Spring"
 images:
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-1.jpg" class="project-image image-full-width" alt="bridge-web-1">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-2.jpg" class="project-image image-half-width" alt="bridge-web-2">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-3.jpg" class="project-image image-half-width" alt="bridge-web-3">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-4.jpg" class="project-image image-full-width" alt="bridge-web-4">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-5.jpg" class="project-image image-third-width" alt="bridge-web-5">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-6.jpg" class="project-image image-third-width" alt="bridge-web-6">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-1.jpg" class="project-img-parameters img-size-full" alt="bridge-web-01">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-2.jpg" class="project-img-parameters img-size-full" alt="bridge-web-02">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-3.jpg" class="project-img-parameters img-size-full" alt="bridge-web-03">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-4.jpg" class="project-img-parameters img-size-full" alt="bridge-web-04">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-5.jpg" class="project-img-parameters img-size-full" alt="bridge-web-05">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-6.jpg" class="project-img-parameters img-size-full" alt="bridge-web-06">
+
+
+---
 team:
   - name: "Алексей Новиков"
     role: "Руководитель проекта"

@@ -12,11 +12,13 @@ idea: "Идея проекта - создать интерактивный вы�
 thumbnail-class: "large"
 client-url: "gexa.com"
 images:
-  - /assets/images/projects/01.jpg
-  - <img src="/assets/images/projects/02.jpg" class="project-image image-full-width" alt="GEXA exhibition 02">
-  - <img src="/assets/images/projects/03.jpg" class="project-image image-half-width" alt="GEXA exhibition 03">
-  - <img src="/assets/images/projects/04.jpg" class="project-image image-half-width" alt="GEXA exhibition 04">
-  - <img src="/assets/images/projects/05.jpg" class="project-image image-full-width" alt="GEXA exhibition 05">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Gexa/gexa-01.webp" class="project-img-parameters img-size-full" alt="gexa-01">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Gexa/gexa-02.webp" class="project-img-parameters img-size-full" alt="gexa-02">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Gexa/gexa-03.webp" class="project-img-parameters img-size-half" alt="gexa-03">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Gexa/gexa-04.webp" class="project-img-parameters img-size-half" alt="gexa-04">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Gexa/gexa-05.webp" class="project-img-parameters img-size-full" alt="gexa-05">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Gexa/gexa-06.webp" class="project-img-parameters img-size-full" alt="gexa-06">
+---
 team:
   - name: "Игорь Соколов"
     role: "Руководитель проекта"

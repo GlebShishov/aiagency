@@ -13,7 +13,7 @@ idea: "Создание уникальных и выразительных AR-э
 thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2020 SUMMER"
 images:
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Heep-Emoji/Heep-emoji-1.jpg" class="project-image image-full-width" alt="Heep-emoji-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Heep-Emoji/Heep-emoji-1.jpg" class="project-img-parameters img-size-full" alt="Heep-Emoji-1">
 ---
 
 ## О проекте

@@ -5,8 +5,8 @@ subtitle: "product design"
 case-type: "Разработка"
 date: 2020-09-10 00:59:00
 categories: development prom-desing
-videoUrl: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-thumbnail.mp4"
-thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-thumbnail.webp"
+videoUrl: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-thumbnail.mp4
+thumbnail: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-thumbnail.webp
 description: "Разработка инновационного устройства VR-бинокль, сочетающего технологии виртуальной реальности с функциональностью традиционного бинокля."
 task: "Создание инновационного продукта VR-бинокль, который позволит пользователям видеть дополнительную информацию об объектах наблюдения с использованием технологий виртуальной реальности."
 plan: "Мы разработали концепцию устройства, создали прототип, реализовали программное обеспечение и провели тестирование в реальных условиях."
@@ -15,14 +15,16 @@ thumbnail-class: "project-thumbnail-container block-size-l"
 client-url: "aiagency.ru"
 projectend: "2022 Summer"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-1.webp
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-3.webp" class="project-image image-full-width" alt="VR-Binoculars-3">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-4.webp" class="project-image image-half-width" alt="VR-Binoculars-4">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-5.webp" class="project-image image-half-width" alt="VR-Binoculars-5">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-7.webp" class="project-image image-full-width" alt="VR-Binoculars-7">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-9.webp" class="project-image image-third-width" alt="VR-Binoculars-9">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-8.webp" class="project-image image-third-width" alt="VR-Binoculars-8">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-10.webp" class="project-image image-third-width" alt="VR-Binoculars-10">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-1.webp" class="project-img-parameters img-size-full" alt="VR-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-3.webp" class="project-img-parameters img-size-full" alt="VR-3">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-4.webp" class="project-img-parameters img-size-full" alt="VR-4">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-5.webp" class="project-img-parameters img-size-full" alt="VR-5">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-7.webp" class="project-img-parameters img-size-full" alt="VR-7">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-9.webp" class="project-img-parameters img-size-full" alt="VR-9">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-8.webp" class="project-img-parameters img-size-half" alt="VR-8">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-10.webp" class="project-img-parameters img-size-half" alt="VR-10">
+
+---
 team:
   - name: "Игорь Петров"
     role: "Руководитель проекта"

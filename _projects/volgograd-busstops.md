@@ -5,7 +5,7 @@ subtitle: "Visializtion"
 case-type: "UX/UI"
 date: 2023-04-30 00:59:00
 categories: ux-ui 3d
-thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-thumbnail.webp"
+thumbnail: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-thumbnail.webp
 description: "Разработка концепции и прототипов современных остановок общественного транспорта для города Волгоград с учетом городской среды и потребностей жителей."
 task: "Создание современных, функциональных и эстетичных остановок общественного транспорта для Волгограда, которые будут соответствовать потребностям жителей и гармонично вписываться в городскую среду."
 plan: "Мы изучили городскую среду Волгограда, провели опрос жителей, разработали несколько концепций дизайна, создали 3D-модели и прототипы для тестирования."

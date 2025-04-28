@@ -14,18 +14,17 @@ thumbnail-class: "project-thumbnail-container block-size-l"
 client-url: "dronefinder.io"
 projectend: "2021 winter"
 images:
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-12.webp" class="project-img-parameters img-size-full" alt="Dronefinder-2">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-1.webp" class="project-img-parameters img-size-full" alt="Dronefinder-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/img/Dronefinder/drone-2.webp" class="project-img-parameters img-size-full" alt="Dronefinder-2">
 - <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-tri"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-anim-fly.webm"></video>
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-1.webp" class="project-img-parameters img-size-full" alt="drone-mobile-1">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-2.png" class="project-img-parameters img-size-full" alt="drone-mobile-2">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-3.webp" class="project-img-parameters img-size-full" alt="drone-mobile-3">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-4.webp" class="project-img-parameters img-size-full" alt="drone-mobile-4">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-5.webp" class="project-img-parameters img-size-full" alt="drone-mobile-5">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-6.png" class="project-img-parameters img-size-full" alt="drone-mobile-6">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-7.png" class="project-img-parameters img-size-full" alt="drone-mobile-7">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-8.png" class="project-img-parameters img-size-full" alt="drone-mobile-8">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-9.png" class="project-img-parameters img-size-full" alt="drone-mobile-9">
-- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/drone-mobile-10.png" class="project-img-parameters img-size-full" alt="drone-mobile-10">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-3.webp" class="project-img-parameters img-size-full" alt="Dronefinder-3">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-4.webp" class="project-img-parameters img-size-full" alt="Dronefinder-4">
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-tri"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-anim-patter.mp4"></video>
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-5.webp" class="project-img-parameters img-size-full" alt="Dronefinder-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-6.webp" class="project-img-parameters img-size-full" alt="Dronefinder-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-7.webp" class="project-img-parameters img-size-full" alt="Dronefinder-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-8.webp" class="project-img-parameters img-size-full" alt="Dronefinder-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-9.webp" class="project-img-parameters img-size-full" alt="Dronefinder-1">
 ---
 team:
   - name: "Сергей Васильев"

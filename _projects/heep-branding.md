@@ -13,7 +13,7 @@ idea: "Создание современного и узнаваемого бр�
 thumbnail-class: "project-thumbnail-container block-size-l"
 projectend: "2020 Summer"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Heep/Heep-app-1.jpg
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Heep/Heep-app-1.jpg" class="project-img-parameters img-size-full" alt="Heep-1">
 ---
 
 ## О проекте

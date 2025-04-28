@@ -12,8 +12,8 @@ plan: "Мы разработали концепцию дизайна, созда
 idea: "Создание инновационных умных опор, которые являются частью системы умного туризма и работают в паре с VR-биноклями."
 thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2021 Summer"
-images:
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Smart-Pole/Smartpole-1.jpg" class="project-image image-full-width" alt="Smartpole-1">
+iimages:
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Smart-Pole/Smartpole-1.jpg" class="project-img-parameters img-size-full" alt="Smart-Pole-1">
 ---
 
 ## О проекте

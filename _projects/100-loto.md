@@ -13,14 +13,14 @@ idea: "Объединение нескольких программ в одну 
 thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2023 Spring"
 images:
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-01.webp" class="project-image image-full-width" alt="100-loto-01">
-  - <iframe src="https://player.vimeo.com/video/1041372171?h=c2f77761a0" width="100%" height="500" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-02.webp" class="project-image image-full-width" alt="100-loto-02">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-03.webp" class="project-image image-half-width" alt="100-loto-03">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-04.webp" class="project-image image-half-width" alt="100-loto-04">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-05.webp" class="project-image image-full-width" alt="100-loto-05">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-06.webp" class="project-image image-third-width" alt="100-loto-06">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-07.webp" class="project-image image-third-width" alt="100-loto-07">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-01.webp" class="project-img-parameters img-size-full" alt="100-loto-01">
+  - <iframe class="project-img-parameters img-size-full" src="https://player.vimeo.com/video/1041372171?h=c2f77761a0&amp;badge=0&amp;autopause=0&amp&autoplay=1&loop=1;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="width:1400px%;max-height:800px;aspect-ratio:auto 16/9" title="vid-studio-Apartment"></iframe>
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-02.webp" class="project-img-parameters img-size-full" alt="100-loto-02">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-03.webp" class="project-img-parameters img-size-full" alt="100-loto-03">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-04.webp" class="project-img-parameters img-size-full" alt="100-loto-04">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-05.webp" class="project-img-parameters img-size-full" alt="100-loto-05">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-06.webp" class="project-img-parameters img-size-full" alt="100-loto-06">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-07.webp" class="project-img-parameters img-size-full" alt="100-loto-07">
 ---
 
 ## О проекте

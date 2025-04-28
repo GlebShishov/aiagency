@@ -5,7 +5,7 @@ subtitle: "Mobile APP"
 date: 2021-09-08 00:59:00
 case-type: "Разработка"
 categories: development apps
-thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_01_Thumbnail.jpg"
+thumbnail: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_01_Thumbnail.jpg
 description: "Разработка мобильного приложения для российской сети ресторанов суши Ёбидоёби."
 task: "Создание удобного и функционального мобильного приложения для заказа еды из ресторанов сети Ёбидоёби."
 plan: "Мы разработали дизайн интерфейса, создали прототип, реализовали основные функции и провели тестирование с реальными пользователями."
@@ -13,14 +13,14 @@ idea: "Создание интуитивно понятного приложен
 thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2021 September"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_01.jpg
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_02.jpg" class="project-image image-full-width" alt="YobiDoyobi_02">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_03.jpg" class="project-image image-half-width" alt="YobiDoyobi_03">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_04.jpg" class="project-image image-half-width" alt="YobiDoyobi_04">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_05.jpg" class="project-image image-third-width" alt="YobiDoyobi_05">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_06.jpg" class="project-image image-third-width" alt="YobiDoyobi_06">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_07.jpg" class="project-image image-third-width" alt="YobiDoyobi_07">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_08.jpg" class="project-image image-full-width" alt="YobiDoyobi_08">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_01.jpg" class="project-img-parameters img-size-full" alt="YobiDoyobi-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_02.jpg" class="project-img-parameters img-size-full" alt="YobiDoyobi-2">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_03.jpg" class="project-img-parameters img-size-full" alt="YobiDoyobi-3">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_04.jpg" class="project-img-parameters img-size-full" alt="YobiDoyobi-4">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_05.jpg" class="project-img-parameters img-size-full" alt="YobiDoyobi-5">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_06.jpg" class="project-img-parameters img-size-full" alt="YobiDoyobi-6">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_07.jpg" class="project-img-parameters img-size-half" alt="YobiDoyobi-7">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_08.jpg" class="project-img-parameters img-size-half" alt="YobiDoyobi-8">
 ---
 
 ## О проекте

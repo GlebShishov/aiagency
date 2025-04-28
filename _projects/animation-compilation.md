@@ -13,14 +13,15 @@ idea: "Демонстрация разнообразных возможност�
 thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2022 summer"
 images:
-  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-color.mp4" autoplay loop muted playsinline class="project-video" alt="Animation color"></video>
-  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-dragon.mp4" autoplay loop muted playsinline class="project-video" alt="Animation dragon"></video>
-  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-feroliq.mp4" autoplay loop muted playsinline class="project-video" alt="Animation feroliq"></video>
-  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-light.mp4" autoplay loop muted playsinline class="project-video" alt="Animation light"></video>
-  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-magnit.mp4" autoplay loop muted playsinline class="project-video" alt="Animation magnit"></video>
-  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-matrsh.mp4" autoplay loop muted playsinline class="project-video" alt="Animation matrsh"></video>
-  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-room.mp4" autoplay loop muted playsinline class="project-video" alt="Animation room"></video>
-  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-shafle.mp4" autoplay loop muted playsinline class="project-video" alt="Animation shafle"></video>
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-half"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-color.mp4"></video>
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-half"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-dragon.mp4"></video>
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-half"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-feroliq.mp4"></video>
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-half"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-light.mp4"></video>
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-half"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-magnit.mp4"></video>
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-half"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-matrsh.mp4"></video>
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-half"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-room.mp4"></video>
+- <video muted="muted" loop="loop" autoplay class="project-img-parameters img-size-half"> <source src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Animation/Anim-shafle.mp4"></video>
+
 ---
 
 ## О проекте

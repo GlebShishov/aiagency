@@ -22,16 +22,17 @@ team:
   - name: "Екатерина Петрова"
     role: "Дизайнер интерьеров"
 images:
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-01.webp" class="project-image image-full-width" alt="hero-01">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-02.webp" class="project-image image-half-width" alt="hero-02">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-03.webp" class="project-image image-half-width" alt="hero-03">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-04.webp" class="project-image image-full-width" alt="hero-04">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-05.webp" class="project-image image-third-width" alt="hero-05">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-06.webp" class="project-image image-third-width" alt="hero-06">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-07.webp" class="project-image image-third-width" alt="hero-07">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-08.webp" class="project-image image-half-width" alt="hero-08">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-09.webp" class="project-image image-half-width" alt="hero-09">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-10.webp" class="project-image image-full-width" alt="hero-10">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-01.webp" class="project-img-parameters img-size-full" alt="hero-01">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-02.webp" class="project-img-parameters img-size-full" alt="hero-02">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-03.webp" class="project-img-parameters img-size-half" alt="hero-03">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-04.webp" class="project-img-parameters img-size-half" alt="hero-04">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-05.webp" class="project-img-parameters img-size-full" alt="hero-04">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-06.webp" class="project-img-parameters img-size-tri" alt="hero-06">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-07.webp" class="project-img-parameters img-size-tri" alt="hero-07">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-08.webp" class="project-img-parameters img-size-tri" alt="hero-08">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-09.webp" class="project-img-parameters img-size-full" alt="hero-09">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-10.webp" class="project-img-parameters img-size-half" alt="hero-10">
+
 ---
 
 ## О проекте

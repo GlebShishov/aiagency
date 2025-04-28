@@ -14,17 +14,20 @@ thumbnail-class: "project-thumbnail-container block-size-m"
 client-url: "dag-auction.com"
 projectend: "2022 summer"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-01.webp
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-02.webp" class="project-image image-full-width" alt="DAG-02">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-03.webp" class="project-image image-full-width" alt="DAG-03">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-04.webp" class="project-image image-full-width" alt="DAG-04">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-05.webp" class="project-image image-half-width" alt="DAG-05">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-06.webp" class="project-image image-half-width" alt="DAG-06">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-07.webp" class="project-image image-full-width" alt="DAG-07">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-08.webp" class="project-image image-full-width" alt="DAG-08">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-09.webp" class="project-image image-full-width" alt="DAG-09">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-10.webp" class="project-image image-full-width" alt="DAG-10">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-11.webp" class="project-image image-full-width" alt="DAG-11">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-01.webp" class="project-img-parameters img-size-full" alt="DAG-01">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-02.webp" class="project-img-parameters img-size-full" alt="DAG-02">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-03.webp" class="project-img-parameters img-size-full" alt="DAG-03">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-04.webp" class="project-img-parameters img-size-full" alt="DAG-04">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-05.webp" class="project-img-parameters img-size-half" alt="DAG-05">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-06.webp" class="project-img-parameters img-size-half" alt="DAG-06">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-07.webp" class="project-img-parameters img-size-full" alt="DAG-07">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-08.webp" class="project-img-parameters img-size-full" alt="DAG-08">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-09.webp" class="project-img-parameters img-size-full" alt="DAG-09">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-10.webp" class="project-img-parameters img-size-full" alt="DAG-10">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-11.webp" class="project-img-parameters img-size-full" alt="DAG-11">
+
+
+---
 team:
   - name: "Ольга Смирнова"
     role: "Креативный директор"

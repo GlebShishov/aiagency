@@ -4,7 +4,7 @@ title: "Buylike - Сайт администратора"
 case-type: "Разработка"
 date: 2022-08-10 00:00:00
 categories: development
-thumbnail: "/assets/images/projects/02.jpg"
+thumbnail: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike-web/Buylike-Web-thumbnail.png
 description: "Разработка административной панели для сервиса фулфилмента Buylike, обеспечивающей эффективное управление процессами и мониторинг показателей."
 task: "Создание функциональной административной панели для сервиса Buylike, которая позволит эффективно управлять процессами фулфилмента, отслеживать ключевые показатели и автоматизировать рутинные операции."
 plan: "Мы провели анализ бизнес-процессов, определили ключевые функции, разработали прототипы интерфейсов и реализовали административную панель с учетом потребностей различных групп пользователей."
@@ -12,11 +12,9 @@ idea: "Идея проекта - создать мощный инструмен�
 thumbnail-class: "large"
 client-url: "buylike.ru"
 images:
-  - <img src="/assets/images/projects/02.jpg" class="project-image image-full-width" alt="Buylike admin 02" loading="lazy">
-  - <img src="/assets/images/projects/01.jpg" class="project-image image-full-width" alt="Buylike admin 01" loading="lazy">
-  - <img src="/assets/images/projects/03.jpg" class="project-image image-half-width" alt="Buylike admin 03" loading="lazy">
-  - <img src="/assets/images/projects/04.jpg" class="project-image image-half-width" alt="Buylike admin 04" loading="lazy">
-  - <img src="/assets/images/projects/05.jpg" class="project-image image-full-width" alt="Buylike admin 05" loading="lazy">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike-web/Buylike-web-1.jpg" class="project-img-parameters img-size-full" alt="Buylike-Web-1">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-1.webp" class="project-img-parameters img-size-full" alt=Bank-2">
+---
 team:
   - name: "Максим Петров"
     role: "Руководитель проекта"

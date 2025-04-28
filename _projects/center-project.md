@@ -13,12 +13,12 @@ idea: "Создание современного пространства для
 thumbnail-class: "project-thumbnail-container block-size-l"
 projectend: "2023 Spring"
 images:
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-01.webp" class="project-image image-full-width" alt="center-01">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-02.webp" class="project-image image-half-width" alt="center-02">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-03.webp" class="project-image image-half-width" alt="center-03">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-04.webp" class="project-image image-full-width" alt="center-04">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-05.webp" class="project-image image-full-width" alt="center-05">
-  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-06.webp" class="project-image image-full-width" alt="center-06">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-01.webp" class="project-img-parameters img-size-full" alt="center-01">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-02.webp" class="project-img-parameters img-size-half" alt="center-02">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-03.webp" class="project-img-parameters img-size-half" alt="center-03">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-04.webp" class="project-img-parameters img-size-full" alt="center-04">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-05.webp" class="project-img-parameters img-size-full" alt="center-05">
+- <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-06.webp" class="project-img-parameters img-size-full" alt="center-06">
 ---
 
 ## О проекте
