@@ -7,11 +7,11 @@ parent: development
 category: development
 service-type: Development
 example_images:
-  - /assets/images/projects/06.jpg
-  - /assets/images/projects/07.jpg
-  - /assets/images/projects/08.jpg
-  - /assets/images/projects/09.jpg
-  - /assets/images/projects/10.jpg
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
 ---
 
 ## Разработка сайтов и сервисов

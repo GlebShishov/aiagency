@@ -5,6 +5,12 @@ description: Имиджевые VIP-презентации, закрытые д�
 category: additional
 permalink: /services/additional/premium-events/
 image: /assets/images/services/premium-events.jpg
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
 ---
 
 # Организация премиальных offline-мероприятий

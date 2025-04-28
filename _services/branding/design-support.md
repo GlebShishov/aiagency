@@ -6,8 +6,14 @@ description: Обеспечиваем постоянную дизайн-подд
 permalink: /services/branding/design-support/
 category: branding
 parent: branding
+service-type: branding
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
 ---
-
 ## Что такое дизайн-поддержка
 
 Дизайн-поддержка — это комплекс услуг по сопровождению бренда, который обеспечивает единство визуальных коммуникаций компании. Это регулярная работа над созданием новых материалов и адаптацией существующих элементов фирменного стиля для различных носителей и каналов коммуникации.

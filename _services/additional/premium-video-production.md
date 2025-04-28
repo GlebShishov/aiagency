@@ -5,6 +5,12 @@ description: "Имиджевые ролики, бренд-фильмы, рекл
 category: additional
 permalink: /services/additional/premium-video-production/
 image: /assets/images/services/premium-video-production.jpg
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
 ---
 
 # Премиум видеопродакшн и видеомаркетинг

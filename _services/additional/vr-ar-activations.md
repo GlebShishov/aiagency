@@ -5,6 +5,13 @@ description: Виртуальные шоурумы, AR-фильтры и мас�
 category: additional
 permalink: /services/additional/vr-ar-activations/
 image: /assets/images/services/vr-ar-activations.jpg
+service-type: additional
+example_images:
+  - /assets/images/projects/01.jpg
+  - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
+  - /assets/images/projects/04.jpg
+  - /assets/images/projects/05.jpg
 ---
 
 # VR/AR-активации и интерактивы
