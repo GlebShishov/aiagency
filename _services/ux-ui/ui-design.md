@@ -7,11 +7,11 @@ description: Создаем привлекательные и функциона
 permalink: /services/ux-ui/ui-design/
 service-type: UX/UI
 example_images:
+  - /assets/images/projects/01.jpg
   - /assets/images/projects/02.jpg
+  - /assets/images/projects/03.jpg
   - /assets/images/projects/04.jpg
-  - /assets/images/projects/06.jpg
-  - /assets/images/projects/08.jpg
-  - /assets/images/projects/10.jpg
+  - /assets/images/projects/05.jpg
 ---
 
 # UI дизайн

@@ -1,22 +1,30 @@
 ---
 layout: project-template
-title: "DAG - Создание бренда аукционного дома"
+title: "DAG"
+subtitle: "Brand Identity"
 case-type: "Брендинг"
-date: 2023-09-15 00:00:00
-categories: branding
-thumbnail: "/assets/images/projects/04.jpg"
+date: 2022-12-10 00:59:00
+categories: branding brand-identity
+thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-thumbnail.webp"
 description: "Разработка премиального бренда для аукционного дома DAG, включая логотип, фирменный стиль и маркетинговые материалы."
 task: "Создание элегантного и престижного бренда для аукционного дома DAG, который будет отражать его статус и привлекать целевую аудиторию."
 plan: "Мы изучили историю аукционных домов, провели анализ конкурентов, разработали концепцию бренда и создали полный комплект элементов фирменного стиля."
 idea: "Идея проекта - создать бренд, который сочетает в себе классические традиции аукционных домов с современными тенденциями дизайна."
-thumbnail-class: "large"
+thumbnail-class: "project-thumbnail-container block-size-m"
 client-url: "dag-auction.com"
+projectend: "2022 summer"
 images:
-  - /assets/images/projects/04.jpg
-  - /assets/images/projects/01.jpg
-  - /assets/images/projects/02.jpg
-  - /assets/images/projects/03.jpg
-  - /assets/images/projects/05.jpg
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-01.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-02.webp" class="project-image image-full-width" alt="DAG-02">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-03.webp" class="project-image image-full-width" alt="DAG-03">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-04.webp" class="project-image image-full-width" alt="DAG-04">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-05.webp" class="project-image image-half-width" alt="DAG-05">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-06.webp" class="project-image image-half-width" alt="DAG-06">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-07.webp" class="project-image image-full-width" alt="DAG-07">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-08.webp" class="project-image image-full-width" alt="DAG-08">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-09.webp" class="project-image image-full-width" alt="DAG-09">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-10.webp" class="project-image image-full-width" alt="DAG-10">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/DAG/DAG-11.webp" class="project-image image-full-width" alt="DAG-11">
 team:
   - name: "Ольга Смирнова"
     role: "Креативный директор"
@@ -28,7 +36,7 @@ team:
 
 ## О проекте
 
-Разработка бренда для аукционного дома DAG была направлена на создание премиального визуального образа, который подчеркивает эксклюзивность и высокий статус компании на рынке.
+Создание логотипа, каталога и фирменного стиля для частного аукциона. Разработка премиального визуального образа, который подчеркивает эксклюзивность и высокий статус аукционного дома.
 
 ## Реализация
 

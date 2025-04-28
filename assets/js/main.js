@@ -730,6 +730,39 @@ document.addEventListener('DOMContentLoaded', function() {
   // Инициализация слайдера проектов
   initProjectsSlider();
   
+  // Функция для определения квадратных изображений в галерее
+  function detectSquareImages() {
+    const galleryImages = document.querySelectorAll('.gallery-item-adaptive img');
+    
+    galleryImages.forEach(img => {
+      // При загрузке изображения
+      img.onload = function() {
+        const width = this.naturalWidth;
+        const height = this.naturalHeight;
+        const ratio = width / height;
+        
+        // Если соотношение сторон близко к 1 (квадратное изображение)
+        if (ratio >= 0.9 && ratio <= 1.1) {
+          this.classList.add('square-image');
+        }
+      };
+      
+      // Если изображение уже загружено
+      if (img.complete) {
+        const width = img.naturalWidth;
+        const height = img.naturalHeight;
+        const ratio = width / height;
+        
+        if (ratio >= 0.9 && ratio <= 1.1) {
+          img.classList.add('square-image');
+        }
+      }
+    });
+  }
+  
+  // Вызываем функцию после загрузки страницы
+  detectSquareImages();
+  
   // Инициализация слайдшоу в секции услуг
   initServiceSlideshow();
 });

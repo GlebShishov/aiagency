@@ -1,22 +1,32 @@
 ---
 layout: project-template
-title: "SPUR BRICS - Создание айдентики для международного форума"
+title: "SPUR"
+subtitle: "Brand identity"
 case-type: "Брендинг"
-date: 2022-12-10 00:00:00
-categories: branding
-thumbnail: "/assets/images/projects/03.jpg"
+date: 2022-04-31 00:59:00
+categories: branding brand-identity
+thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-Thumbnail.webp"
 description: "Разработка визуальной идентичности для международного форума БРИКС, отражающей глобальный характер мероприятия и его ключевые ценности."
 task: "Создание современной и узнаваемой айдентики для международного форума SPUR BRICS, которая будет отражать многонациональный характер мероприятия и его ключевые ценности."
 plan: "Мы провели исследование культурных особенностей стран БРИКС, разработали концепцию визуальной идентичности, создали логотип и фирменный стиль, а также подготовили брендбук."
 idea: "Идея проекта - создать визуальный язык, который объединит разные культуры и будет символизировать сотрудничество и развитие."
-thumbnail-class: "large"
+thumbnail-class: "project-thumbnail-container block-size-l"
 client-url: "spur-brics.org"
+projectend: "2022 Spring"
 images:
-  - /assets/images/projects/03.jpg
-  - /assets/images/projects/01.jpg
-  - /assets/images/projects/02.jpg
-  - /assets/images/projects/04.jpg
-  - /assets/images/projects/05.jpg
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-01.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-02.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-03.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-04.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-05.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-06.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-07.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-08.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-09.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-10.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-11.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-12.webp
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-13.webp
 team:
   - name: "Михаил Петров"
     role: "Креативный директор"
@@ -30,7 +40,7 @@ team:
 
 ## О проекте
 
-Разработка айдентики для международного форума SPUR BRICS была направлена на создание визуального образа, который отражает многонациональный характер мероприятия и его ключевые ценности.
+Создание корпоративной айдентики для международного саммита SPUR BRICS. Саммит посвящен разработке стратегии устойчивого развития для стран БРИКС и СНГ. Оптимизация ресурсов страны, экология и стабильное экономическое развитие.
 
 ## Реализация
 

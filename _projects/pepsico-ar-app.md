@@ -1,22 +1,24 @@
 ---
 layout: project-template
-title: "PepsiCo - Создание приложения с дополненной реальностью"
+title: "Pepsico"
+subtitle: "AR mobile app"
 case-type: "Разработка"
-date: 2022-10-20 00:00:00
-categories: development
-thumbnail: "/assets/images/projects/05.jpg"
+date: 2020-09-13 00:59:00
+categories: development apps
+thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Pepsico/Pepsico-thumbnail.webp"
 description: "Разработка мобильного приложения с дополненной реальностью для компании PepsiCo, направленного на повышение вовлеченности потребителей."
 task: "Создание инновационного мобильного приложения с функциями дополненной реальности для компании PepsiCo, которое повысит вовлеченность потребителей и усилит взаимодействие с брендом."
 plan: "Мы разработали концепцию AR-приложения, создали прототипы интерфейсов, реализовали функции дополненной реальности и провели тестирование с фокус-группами."
 idea: "Идея проекта - создать интерактивное приложение, которое превратит обычную упаковку продукции PepsiCo в портал в мир дополненной реальности."
-thumbnail-class: "large"
+thumbnail-class: "project-thumbnail-container block-size-l"
 client-url: "pepsico.ru"
+projectend: "2020 Fall"
 images:
-  - /assets/images/projects/05.jpg
-  - /assets/images/projects/01.jpg
-  - /assets/images/projects/02.jpg
-  - /assets/images/projects/03.jpg
-  - /assets/images/projects/04.jpg
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Pepsico/Pepsico-1.webp
+  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Pepsico/Pepsico-place.mp4" autoplay loop muted playsinline class="project-video" alt="Pepsico AR placement"></video>
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Pepsico/Pepsico-2.webp" class="project-image image-full-width" alt="Pepsico-2">
+  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Pepsico/Pepsico-box.mp4" autoplay loop muted playsinline class="project-video" alt="Pepsico AR box"></video>
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Pepsico/Pepsico-3.webp" class="project-image image-full-width" alt="Pepsico-3">
 team:
   - name: "Сергей Морозов"
     role: "Руководитель проекта"
@@ -32,13 +34,13 @@ team:
 
 ## О проекте
 
-Мобильное приложение с дополненной реальностью для компании PepsiCo было разработано для создания инновационного канала коммуникации с потребителями и повышения узнаваемости бренда.
+Создание AR-приложения для компании PepsiCo. Принцип работы системы: мерчендайзер получает заказ на планшет, приезжает по адресу, используя AR устанавливает стойку и заполняет её товарами, затем отчитывается по почте.
 
 ## Реализация
 
 В рамках проекта были реализованы:
-- Функция сканирования упаковки продукции для активации AR-контента
-- Интерактивные 3D-модели и анимации
-- Игровые механики с элементами дополненной реальности
-- Система сбора и анализа пользовательских данных
-- Интеграция с социальными сетями для обмена AR-контентом
+- Мобильное приложение для мерчендайзеров
+- Функция размещения стойки в AR
+- Визуализация заполнения стойки товарами
+- Система отчетности и коммуникации
+- Интеграция с системой заказов PepsiCo

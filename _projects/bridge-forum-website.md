@@ -1,22 +1,20 @@
 ---
 layout: project-template
-title: "Bridge - Создание сайта форума"
+title: "Bridge forum website"
+subtitle: "Web design"
 case-type: "Разработка"
-date: 2023-01-25 00:00:00
-categories: development
-thumbnail: "/assets/images/projects/02.jpg"
+date: 2023-02-10 00:59:00
+categories: development website
+thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-thumbnail.jpg"
 description: "Разработка современного сайта для международного форума Bridge с функциями регистрации участников и онлайн-трансляций."
 task: "Создание функционального и современного сайта для международного форума Bridge, который обеспечит эффективную коммуникацию с участниками и организацию мероприятия."
 plan: "Мы разработали структуру сайта, создали прототипы ключевых страниц, реализовали систему регистрации участников и интегрировали платформу для онлайн-трансляций."
 idea: "Идея проекта - создать цифровую платформу, которая станет эффективным инструментом для организации и проведения международного форума."
-thumbnail-class: "large"
-client-url: "bridge-forum.org"
+thumbnail-class: "project-thumbnail-container block-size-m"
+client-url: "https://test.odayprojects.ru/bridgeforum/"
+projectend: "2023 Spring"
 images:
-  - /assets/images/projects/02.jpg
-  - /assets/images/projects/01.jpg
-  - /assets/images/projects/03.jpg
-  - /assets/images/projects/04.jpg
-  - /assets/images/projects/05.jpg
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-1.jpg
 team:
   - name: "Алексей Новиков"
     role: "Руководитель проекта"
@@ -31,6 +29,9 @@ team:
 ## О проекте
 
 Сайт для международного форума Bridge был разработан с учетом специфики организации крупных мероприятий и необходимости эффективной коммуникации с участниками.
+Создание сайта для международного форума современных технологий Bridge. Сайт разработан с учетом специфики организации крупных мероприятий и необходимости эффективной коммуникации с участниками.
+
+Сайт доступен по адресу: <a href="https://test.odayprojects.ru/bridgeforum/" target="_blank">Перейти на сайт</a>
 
 ## Реализация
 
@@ -40,3 +41,4 @@ team:
 - Интерактивная программа форума
 - Платформа для онлайн-трансляций
 - Многоязычность (русский и английский языки)
+- Интеграция с брендингом форума

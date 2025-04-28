@@ -1,29 +1,35 @@
 ---
 layout: project-template
-title: "Система управления умным домом SmartHouse"
-date: 2024-03-05
-case-type: "IoT разработка"
-categories: development
-thumbnail: "/img/03.jpg"
-description: "Разработка централизованной системы управления для умного дома, позволяющей контролировать освещение, температуру, безопасность и другие параметры через единый интерфейс."
-task: "Создание интуитивно понятной и надежной системы умного дома, которая объединит различные устройства и подсистемы в единую экосистему с централизованным управлением."
-plan: "Мы разработали архитектуру системы, создали прототип интерфейса и провели тестирование с реальными устройствами для оптимизации работы платформы."
-idea: "Создание единой платформы для мониторинга и управления всеми системами умного дома с применением искусственного интеллекта для автоматизации рутинных задач."
+title: "Situation center"
+subtitle: "Visializtion"
+date: 2023-04-30 00:59:00
+case-type: "3D визуализация"
+categories: development 3d
+thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-thumbnail.webp"
+description: "Разработка концепции центрального офиса Ситуационного центра города Сочи."
+task: "Создание современного и функционального пространства для распределения муниципальных услуг города."
+plan: "Мы разработали концепцию пространства, создали 3D-визуализации и проработали функциональные зоны для эффективной работы центра."
+idea: "Создание современного пространства для распределения муниципальных услуг города Сочи."
+thumbnail-class: "project-thumbnail-container block-size-l"
+projectend: "2023 Spring"
 images:
-  - /img/03.jpg
-  - /assets/images/projects/project3.jpg
-  - /assets/images/projects/06.jpg
-  - /assets/videos/projects/web3hub-video.mp4
+  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-01.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-02.webp" class="project-image image-half-width" alt="center-02">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-03.webp" class="project-image image-half-width" alt="center-03">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-04.webp" class="project-image image-full-width" alt="center-04">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-05.webp" class="project-image image-full-width" alt="center-05">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Center/center-06.webp" class="project-image image-full-width" alt="center-06">
 ---
 
-## Результаты
+## О проекте
 
-Центр DESIGNHUB был успешно реализован и открыт в сентябре 2023 года. Проект получил широкое признание в профессиональном сообществе, став новой архитектурной достопримечательностью и привлекает более 10 000 посетителей ежемесячно, став ключевой площадкой для профессионального сообщества архитекторов и дизайнеров.
+Создание концепции центрального офиса Ситуационного центра города Сочи. Ситуационный центр является местом распределения муниципальных услуг города.
 
-## Ключевые особенности
+## Реализация
 
-- Инновационная архитектурная концепция с использованием экологичных материалов
-- Трансформируемые выставочные пространства
-- Современный коворкинг для дизайнеров и архитекторов
-- Образовательный центр с программами мастер-классов и лекций
-- Узнаваемый фирменный стиль, отражающий динамику и креативность пространства 
+В рамках проекта были реализованы:
+- Современная концепция пространства для муниципальных услуг
+- Детальные 3D-визуализации всех зон центра
+- Функциональное зонирование пространства
+- Разработка эргономичных рабочих мест
+- Современные технологические решения для эффективной работы центра 
