@@ -65,7 +65,11 @@ layout: default
   {% if page.images %}
   <section class="case-hero-full">
     <div class="hero-image-wrapper-natural">
-      <img src="{{ page.images[0] }}" alt="{{ page.title }}" class="hero-full-image-natural" loading="lazy">
+      {% if page.images[0] contains '<img' %}
+        {{ page.images[0] }}
+      {% else %}
+        <img src="{{ page.images[0] }}" alt="{{ page.title }}" class="hero-full-image-natural" loading="lazy">
+      {% endif %}
     </div>
   </section>
   {% endif %}
@@ -107,7 +111,11 @@ layout: default
   {% if page.images and page.images.size > 1 %}
   <section class="case-hero-full">
     <div class="hero-image-wrapper-natural">
-      <img src="{{ page.images[1] }}" alt="{{ page.title }}" class="hero-full-image-natural" loading="lazy">
+      {% if page.images[1] contains '<img' %}
+        {{ page.images[1] }}
+      {% else %}
+        <img src="{{ page.images[1] }}" alt="{{ page.title }}" class="hero-full-image-natural" loading="lazy">
+      {% endif %}
     </div>
   </section>
   {% endif %}
