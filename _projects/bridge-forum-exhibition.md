@@ -13,7 +13,7 @@ idea: "Создание современного и функциональног
 thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2023 winter"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-Exhibition/Bridge-Exhibition-01.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-Exhibition/Bridge-Exhibition-01.webp" class="project-image image-full-width" alt="Bridge-Exhibition-01">
   - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-Exhibition/Bridge-Exhibition-02.webp" class="project-image image-full-width" alt="Bridge-Exhibition-02">
   - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-Exhibition/Bridge-Exhibition-03.webp" class="project-image image-full-width" alt="Bridge-Exhibition-03">
   - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-Exhibition/Bridge-Exhibition-04.webp" class="project-image image-full-width" alt="Bridge-Exhibition-04">

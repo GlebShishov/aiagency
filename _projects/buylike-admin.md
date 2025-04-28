@@ -12,11 +12,11 @@ idea: "Идея проекта - создать мощный инструмен�
 thumbnail-class: "large"
 client-url: "buylike.ru"
 images:
-  - /assets/images/projects/02.jpg
-  - /assets/images/projects/01.jpg
-  - /assets/images/projects/03.jpg
-  - /assets/images/projects/04.jpg
-  - /assets/images/projects/05.jpg
+  - <img src="/assets/images/projects/02.jpg" class="project-image image-full-width" alt="Buylike admin 02" loading="lazy">
+  - <img src="/assets/images/projects/01.jpg" class="project-image image-full-width" alt="Buylike admin 01" loading="lazy">
+  - <img src="/assets/images/projects/03.jpg" class="project-image image-half-width" alt="Buylike admin 03" loading="lazy">
+  - <img src="/assets/images/projects/04.jpg" class="project-image image-half-width" alt="Buylike admin 04" loading="lazy">
+  - <img src="/assets/images/projects/05.jpg" class="project-image image-full-width" alt="Buylike admin 05" loading="lazy">
 team:
   - name: "Максим Петров"
     role: "Руководитель проекта"

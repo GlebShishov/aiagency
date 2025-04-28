@@ -503,7 +503,8 @@
   width: auto;
 }
 
-.img-size-third {
+.img-size-third,
+.img-size-tri {
   max-width: 33.333%;
   width: auto;
 }

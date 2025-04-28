@@ -14,7 +14,7 @@ thumbnail-class: "project-thumbnail-container block-size-m"
 client-url: "buylike.ru"
 projectend: "2022 Spring"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike-web/Buylike-web-1.jpg
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike-web/Buylike-web-1.jpg" class="project-image image-full-width" alt="Buylike-web-1">
   - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-1.webp" class="project-image image-full-width" alt="Buylike-1">
 team:
   - name: "Максим Иванов"

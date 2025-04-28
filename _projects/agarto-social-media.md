@@ -12,11 +12,11 @@ idea: "Идея проекта - создать яркий и запоминаю
 thumbnail-class: "large"
 client-url: "agarto.com"
 images:
-  - /assets/images/projects/05.jpg
-  - /assets/images/projects/01.jpg
-  - /assets/images/projects/02.jpg
-  - /assets/images/projects/03.jpg
-  - /assets/images/projects/04.jpg
+  - <img src="/assets/images/projects/05.jpg" class="project-image image-full-width" alt="Agarto social media 05">
+  - <img src="/assets/images/projects/01.jpg" class="project-image image-full-width" alt="Agarto social media 01">
+  - <img src="/assets/images/projects/02.jpg" class="project-image image-half-width" alt="Agarto social media 02">
+  - <img src="/assets/images/projects/03.jpg" class="project-image image-half-width" alt="Agarto social media 03">
+  - <img src="/assets/images/projects/04.jpg" class="project-image image-full-width" alt="Agarto social media 04">
 team:
   - name: "Анна Кузнецова"
     role: "SMM-стратег"
