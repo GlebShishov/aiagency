@@ -14,7 +14,12 @@ thumbnail-class: "project-thumbnail-container block-size-m"
 client-url: "https://test.odayprojects.ru/bridgeforum/"
 projectend: "2023 Spring"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-1.jpg
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-1.jpg" class="project-image image-full-width" alt="bridge-web-1">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-2.jpg" class="project-image image-half-width" alt="bridge-web-2">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-3.jpg" class="project-image image-half-width" alt="bridge-web-3">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-4.jpg" class="project-image image-full-width" alt="bridge-web-4">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-5.jpg" class="project-image image-third-width" alt="bridge-web-5">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Bridge-web/bridge-web-6.jpg" class="project-image image-third-width" alt="bridge-web-6">
 team:
   - name: "Алексей Новиков"
     role: "Руководитель проекта"
@@ -28,7 +33,6 @@ team:
 
 ## О проекте
 
-Сайт для международного форума Bridge был разработан с учетом специфики организации крупных мероприятий и необходимости эффективной коммуникации с участниками.
 Создание сайта для международного форума современных технологий Bridge. Сайт разработан с учетом специфики организации крупных мероприятий и необходимости эффективной коммуникации с участниками.
 
 Сайт доступен по адресу: <a href="https://test.odayprojects.ru/bridgeforum/" target="_blank">Перейти на сайт</a>
