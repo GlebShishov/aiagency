@@ -16,13 +16,13 @@ client-url: "aiagency.ru"
 projectend: "2022 Summer"
 images:
   - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-1.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-3.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-4.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-5.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-7.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-9.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-8.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-10.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-3.webp" class="project-image image-full-width" alt="VR-Binoculars-3">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-4.webp" class="project-image image-half-width" alt="VR-Binoculars-4">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-5.webp" class="project-image image-half-width" alt="VR-Binoculars-5">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-7.webp" class="project-image image-full-width" alt="VR-Binoculars-7">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-9.webp" class="project-image image-third-width" alt="VR-Binoculars-9">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-8.webp" class="project-image image-third-width" alt="VR-Binoculars-8">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/VR-Binoculars/VR-Binoculars-10.webp" class="project-image image-third-width" alt="VR-Binoculars-10">
 team:
   - name: "Игорь Петров"
     role: "Руководитель проекта"

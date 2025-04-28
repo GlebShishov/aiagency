@@ -12,22 +12,31 @@ plan: "Мы разработали концепцию пространства, 
 idea: "Создание многофункционального пространства, которое может трансформироваться под различные творческие и бизнес-задачи."
 thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2023 Spring"
+team:
+  - name: "Александр Козлов"
+    role: "Руководитель проекта"
+  - name: "Мария Соколова"
+    role: "Архитектор"
+  - name: "Дмитрий Иванов"
+    role: "3D визуализатор"
+  - name: "Екатерина Петрова"
+    role: "Дизайнер интерьеров"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-01.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-02.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-03.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-04.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-05.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-06.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-07.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-08.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-09.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-10.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-01.webp" class="project-image image-full-width" alt="hero-01">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-02.webp" class="project-image image-half-width" alt="hero-02">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-03.webp" class="project-image image-half-width" alt="hero-03">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-04.webp" class="project-image image-full-width" alt="hero-04">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-05.webp" class="project-image image-third-width" alt="hero-05">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-06.webp" class="project-image image-third-width" alt="hero-06">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-07.webp" class="project-image image-third-width" alt="hero-07">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-08.webp" class="project-image image-half-width" alt="hero-08">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-09.webp" class="project-image image-half-width" alt="hero-09">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Hero-media-Hub/hero-10.webp" class="project-image image-full-width" alt="hero-10">
 ---
 
 ## О проекте
 
-Mediab Project - арт-бизнес пространство для реализации любых творческих идей. Пространство предназначено для проведения выставок, рекламных кампаний, презентаций, фотосессий, аудиозаписей и концертов.
+MediaHUB Hero - арт-бизнес пространство для реализации любых творческих идей. Пространство предназначено для проведения выставок, рекламных кампаний, презентаций, фотосессий, аудиозаписей и концертов.
 
 ## Реализация
 
@@ -38,3 +47,10 @@ Mediab Project - арт-бизнес пространство для реали�
 - Дизайн освещения для разных сценариев использования
 - Акустическое проектирование для аудиозаписей и концертов
 - Разработка технических решений для проведения выставок и презентаций
+
+## Команда проекта
+
+- **Александр Козлов** — Руководитель проекта
+- **Мария Соколова** — Архитектор
+- **Дмитрий Иванов** — 3D визуализатор
+- **Екатерина Петрова** — Дизайнер интерьеров

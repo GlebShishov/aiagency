@@ -14,13 +14,13 @@ thumbnail-class: "project-thumbnail-container block-size-l"
 client-url: "vkusvill.ru"
 projectend: "2022 Fall"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-1.png
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-2.png
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-3.png
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-4.png
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-5.png
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-6.png
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-7.png
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-1.png" class="project-image image-full-width" alt="vkussvill-1">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-2.png" class="project-image image-half-width" alt="vkussvill-2">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-3.png" class="project-image image-half-width" alt="vkussvill-3">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-4.png" class="project-image image-full-width" alt="vkussvill-4">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-5.png" class="project-image image-third-width" alt="vkussvill-5">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-6.png" class="project-image image-third-width" alt="vkussvill-6">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Vkusvill/vkussvill-7.png" class="project-image image-third-width" alt="vkussvill-7">
 team:
   - name: "Алексей Морозов"
     role: "Руководитель проекта"

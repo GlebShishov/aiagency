@@ -14,13 +14,13 @@ thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2021 September"
 images:
   - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_01.jpg
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_02.jpg
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_03.jpg
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_04.jpg
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_05.jpg
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_06.jpg
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_07.jpg
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_08.jpg
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_02.jpg" class="project-image image-full-width" alt="YobiDoyobi_02">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_03.jpg" class="project-image image-half-width" alt="YobiDoyobi_03">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_04.jpg" class="project-image image-half-width" alt="YobiDoyobi_04">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_05.jpg" class="project-image image-third-width" alt="YobiDoyobi_05">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_06.jpg" class="project-image image-third-width" alt="YobiDoyobi_06">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_07.jpg" class="project-image image-third-width" alt="YobiDoyobi_07">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_08.jpg" class="project-image image-full-width" alt="YobiDoyobi_08">
 ---
 
 ## О проекте

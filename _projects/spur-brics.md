@@ -14,19 +14,19 @@ thumbnail-class: "project-thumbnail-container block-size-l"
 client-url: "spur-brics.org"
 projectend: "2022 Spring"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-01.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-02.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-03.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-04.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-05.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-06.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-07.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-08.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-09.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-10.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-11.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-12.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-13.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-01.webp" class="project-image image-full-width" alt="SPUR-01">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-02.webp" class="project-image image-half-width" alt="SPUR-02">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-03.webp" class="project-image image-half-width" alt="SPUR-03">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-04.webp" class="project-image image-full-width" alt="SPUR-04">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-05.webp" class="project-image image-third-width" alt="SPUR-05">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-06.webp" class="project-image image-third-width" alt="SPUR-06">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-07.webp" class="project-image image-third-width" alt="SPUR-07">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-08.webp" class="project-image image-half-width" alt="SPUR-08">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-09.webp" class="project-image image-half-width" alt="SPUR-09">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-10.webp" class="project-image image-full-width" alt="SPUR-10">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-11.webp" class="project-image image-third-width" alt="SPUR-11">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-12.webp" class="project-image image-third-width" alt="SPUR-12">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/SPUR/SPUR-13.webp" class="project-image image-third-width" alt="SPUR-13">
 team:
   - name: "Михаил Петров"
     role: "Креативный директор"

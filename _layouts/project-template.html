@@ -116,7 +116,7 @@ layout: default
   {% if page.images and page.images.size > 2 %}
   <section class="case-gallery-simple">
     {% for image in page.images offset:2 %}
-      {% if image contains '<video' %}
+      {% if image contains '<video' or image contains '<iframe' %}
         {{ image }}
       {% elsif image contains '<img' %}
         {{ image }}

@@ -14,21 +14,21 @@ thumbnail-class: "project-thumbnail-container block-size-l"
 projectend: "2021 spring"
 videoUrl: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-anim-knot.mp4"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-1.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-2.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-3.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-anim-line.mp4
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-anim-cube.mp4
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-4.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-5.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-6.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-7.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-8.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-9.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-10.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-11.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-12.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-13.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-1.webp" class="project-image image-full-width" alt="Buylike-1">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-2.webp" class="project-image image-half-width" alt="Buylike-2">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-3.webp" class="project-image image-half-width" alt="Buylike-3">
+  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-anim-line.mp4" autoplay loop muted playsinline class="project-video" alt="Buylike animation line"></video>
+  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-anim-cube.mp4" autoplay loop muted playsinline class="project-video" alt="Buylike animation cube"></video>
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-4.webp" class="project-image image-full-width" alt="Buylike-4">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-5.webp" class="project-image image-third-width" alt="Buylike-5">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-6.webp" class="project-image image-third-width" alt="Buylike-6">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-7.webp" class="project-image image-third-width" alt="Buylike-7">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-8.webp" class="project-image image-half-width" alt="Buylike-8">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-9.webp" class="project-image image-half-width" alt="Buylike-9">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-10.webp" class="project-image image-full-width" alt="Buylike-10">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-11.webp" class="project-image image-half-width" alt="Buylike-11">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-12.webp" class="project-image image-half-width" alt="Buylike-12">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Buylike/Buylike-13.webp" class="project-image image-full-width" alt="Buylike-13">
 ---
 
 ## О проекте

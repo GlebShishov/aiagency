@@ -14,13 +14,13 @@ thumbnail-class: "project-thumbnail-container block-size-l"
 client-url: "volgograd.ru"
 projectend: "2023 Spring"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-01.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-02.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-03.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-04.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-05.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-06.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-07.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-01.webp" class="project-image image-full-width" alt="busstop-01">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-02.webp" class="project-image image-half-width" alt="busstop-02">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-03.webp" class="project-image image-half-width" alt="busstop-03">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-04.webp" class="project-image image-full-width" alt="busstop-04">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-05.webp" class="project-image image-third-width" alt="busstop-05">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-06.webp" class="project-image image-third-width" alt="busstop-06">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Busstop/busstop-07.webp" class="project-image image-third-width" alt="busstop-07">
 team:
   - name: "Андрей Козлов"
     role: "Руководитель проекта"

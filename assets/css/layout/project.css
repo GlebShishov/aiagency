@@ -396,9 +396,9 @@
   margin: 60px auto;
   padding: 0 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px;
 }
 
 /* Классы для изображений уже созданы выше:
@@ -458,26 +458,26 @@
 /* Классы для стилизации изображений в проектах */
 .project-image {
   display: block;
-  margin-bottom: 0.5rem;
-  width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 /* Изображение во всю ширину */
 .image-full-width {
   width: 100%;
+  flex-grow: 2;
 }
 
 /* Изображение на половину ширины */
 .image-half-width {
-  max-width: 50%;
-  width: auto;
+  width: calc(50.5% - 1vw);
+  flex-grow: 2;
 }
 
 /* Изображение на треть ширины */
 .image-third-width {
-  max-width: 33.333%;
-  width: auto;
+  width: calc(30% - 1vw);
+  flex-grow: 2;
 }
 
 /* Видео */
@@ -485,7 +485,7 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 0.5rem;
+  flex-grow: 2;
 }
 
 /* Совместимость со старыми классами */

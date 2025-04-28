@@ -15,16 +15,16 @@ client-url: "dronefinder.io"
 projectend: "2021 winter"
 images:
   - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-1.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/img/Dronefinder/drone-2.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-anim-fly.webm
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-3.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-4.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-anim-patter.mp4
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-5.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-6.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-7.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-8.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-9.webp
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/img/Dronefinder/drone-2.webp" class="project-image image-full-width" alt="drone-2">
+  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-anim-fly.webm" autoplay loop muted playsinline class="project-video" alt="drone animation fly"></video>
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-3.webp" class="project-image image-half-width" alt="drone-3">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-4.webp" class="project-image image-half-width" alt="drone-4">
+  - <video src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-anim-patter.mp4" autoplay loop muted playsinline class="project-video" alt="drone animation pattern"></video>
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-5.webp" class="project-image image-third-width" alt="drone-5">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-6.webp" class="project-image image-third-width" alt="drone-6">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-7.webp" class="project-image image-third-width" alt="drone-7">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-8.webp" class="project-image image-full-width" alt="drone-8">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-9.webp" class="project-image image-full-width" alt="drone-9">
 team:
   - name: "Сергей Васильев"
     role: "Руководитель проекта"

@@ -14,13 +14,13 @@ thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2023 Spring"
 images:
   - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-01.webp
-  - https://player.vimeo.com/video/1041372171?h=c2f77761a0
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-02.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-03.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-04.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-05.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-06.webp
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-07.webp
+  - <iframe src="https://player.vimeo.com/video/1041372171?h=c2f77761a0" width="100%" height="500" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-02.webp" class="project-image image-full-width" alt="100-loto-02">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-03.webp" class="project-image image-half-width" alt="100-loto-03">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-04.webp" class="project-image image-half-width" alt="100-loto-04">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-05.webp" class="project-image image-full-width" alt="100-loto-05">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-06.webp" class="project-image image-third-width" alt="100-loto-06">
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/100-Loto/100-loto-07.webp" class="project-image image-third-width" alt="100-loto-07">
 ---
 
 ## О проекте

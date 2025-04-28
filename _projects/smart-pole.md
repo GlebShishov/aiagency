@@ -13,7 +13,7 @@ idea: "Создание инновационных умных опор, кото
 thumbnail-class: "project-thumbnail-container block-size-m"
 projectend: "2021 Summer"
 images:
-  - https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Smart-Pole/Smartpole-1.jpg
+  - <img src="https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Smart-Pole/Smartpole-1.jpg" class="project-image image-full-width" alt="Smartpole-1">
 ---
 
 ## О проекте
