@@ -40,7 +40,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  user-select: none; /* Запрет выделения */
+  pointer-events: none; /* Отключаем взаимодействие с мышью, чтобы не блокировать скролл */
 }
 
 .projects-slider-container {
@@ -69,7 +69,13 @@
   scroll-snap-align: start;
 }
 
-
+.project-slide a {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius, 8px);
+  pointer-events: auto; /* Возвращаем взаимодействие для ссылок */
+}
 
 .project-slide img {
   width: 100%;

@@ -30,6 +30,7 @@
   display: block;
   text-decoration: none;
   color: inherit;
+  background-color: black;
 }
 
 .project-card:hover {
@@ -39,7 +40,7 @@
 .project-image {
   width: 100%;
   position: relative;
-  background-color: var(--accent-bg, #f5f5f5);
+  background-color: black;
   /* padding-bottom: 75%; 4:3 соотношение сторон по умолчанию */
   overflow: hidden;
 }

@@ -101,7 +101,7 @@
 /* Правая колонка с формой */
 .contact-form {
   background-color: var(--accent-bg, #e9f7f0);
-  padding: 5rem;
+  padding: clamp(2rem, 4vw, 4rem);
 }
 
 .form-header {

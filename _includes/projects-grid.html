@@ -61,7 +61,7 @@
     {% assign filtered_projects = filtered_projects | where_exp: "item", "item.url != include.exclude_project" %}
   {% endif %}
   
-  {% assign display_projects = filtered_projects | limit: limit %}
+  {% assign display_projects = filtered_projects | limit: 8 %}
   {% for project in display_projects %}
   <a href="{{ project.url | relative_url }}" class="project-card small text-dec-none" data-category="{{ project.case-type | slugify }}">
     <div class="project-image">
@@ -74,7 +74,7 @@
   </a>
   {% endfor %}
   
-  {% if show_more_link and filtered_projects.size > limit %}
+  {% if show_more_link and filtered_projects.size > 8 %}
   <a href="{{ '/projects' | relative_url }}{% if include.category %}?category={{ include.category | slugify }}{% endif %}" class="project-card small cta-card text-dec-none">
     <div class="cta-content">
       <h3>Ещё проекты</h3>

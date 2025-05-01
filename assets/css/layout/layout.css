@@ -207,7 +207,7 @@
 .hero-video {
   position: relative;
   overflow: hidden;
-  height: 90vh;
+  height: 100vh;
   background-color: #fff; /* Белый фон для hero секции */
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
