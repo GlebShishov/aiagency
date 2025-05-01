@@ -4,7 +4,7 @@ title: "M2AA - Создание Telegram бота"
 case-type: "Разработка"
 date: 2023-12-05 00:00:00
 categories: development
-thumbnail: "/assets/images/projects/03.jpg"
+thumbnail: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/m2aaa-bot/m2aaa-bot.webp
 description: "Разработка интерактивного Telegram бота для компании M2AA с функциями автоматизации коммуникации и обработки запросов."
 task: "Создание функционального Telegram бота для автоматизации взаимодействия с клиентами, предоставления информации о продуктах и услугах компании M2AA."
 plan: "Мы определили ключевые функции бота, разработали алгоритмы взаимодействия, создали прототип и провели тестирование перед запуском в эксплуатацию."

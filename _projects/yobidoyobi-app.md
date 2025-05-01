@@ -5,7 +5,7 @@ subtitle: "Mobile APP"
 date: 2021-09-08 00:59:00
 case-type: "Разработка"
 categories: development apps
-thumbnail: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_01_Thumbnail.jpg
+thumbnail: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/YobiDoyobi/YobiDoyobi_01_Thumbnail.webp
 description: "Разработка мобильного приложения для российской сети ресторанов суши Ёбидоёби."
 task: "Создание удобного и функционального мобильного приложения для заказа еды из ресторанов сети Ёбидоёби."
 plan: "Мы разработали дизайн интерфейса, создали прототип, реализовали основные функции и провели тестирование с реальными пользователями."

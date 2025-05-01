@@ -5,7 +5,7 @@ subtitle: "Brand Identity"
 case-type: "Разработка"
 date: 2021-01-10 00:59:00
 categories: development brand-identity
-thumbnail: "https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder/drone-thumbnail.webp"
+thumbnail: https://glebshishov.fra1.cdn.digitaloceanspaces.com/web/Dronefinder-mobile/Dronefinder-thumbnail.png
 description: "Разработка мобильного приложения Dronefinder для удаленного управления и мониторинга дронов с расширенными функциями навигации."
 task: "Создание интуитивно понятного мобильного приложения для управления дронами с функциями планирования маршрутов, мониторинга полета и анализа собранных данных."
 plan: "Мы разработали архитектуру приложения, создали прототипы интерфейсов, реализовали ключевые функции и провели тестирование в реальных условиях."
