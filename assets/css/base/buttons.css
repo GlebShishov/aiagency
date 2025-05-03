@@ -247,6 +247,28 @@ span + .btn__icon {
   color: #fff !important;
 }
 
+/* Стили для белых кнопок с черным текстом */
+.button.white {
+  background-color: #fff;
+  color: #000 !important;
+  border: none;
+}
+
+.button.white:hover {
+  background-color: #f5f5f5;
+  color: #000 !important;
+}
+
+.button.rounded.white {
+  background-color: #fff;
+  color: #000 !important;
+}
+
+.button.rounded.white:hover {
+  background-color: #f5f5f5;
+  color: #000 !important;
+}
+
 /* Утилиты для текста */
 .text-dec-none {
   text-decoration: none !important;

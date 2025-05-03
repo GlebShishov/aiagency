@@ -136,62 +136,15 @@
 
 
 /* Стили для заголовка AI Agency */
-.hero-animation .hero-name {
-  font-size: 20vw; /* Размер шрифта до 20% ширины экрана */
-  line-height: normal;
-  margin: 0;
-  z-index: 20;
-  white-space: nowrap;
-  align-self: flex-start;
+.hero-name {
+  font-size: calc(100vw / 6);
   font-weight: 900;
   color: #fff;
-  opacity: 1; /* Всегда видимый */
-}
-
-/* Individual character animations - без анимаций */
-.hero-animation .hero-title-char {ы
-  display: inline-block;
-  opacity: 1; /* Всегда видимый */
-  color: #fff; /* Ensure text is visible on video background */
-}
-
-
-
-/* Staggered animation delays for each character */
-.a-char {
-  animation-delay: 1.8s;
-}
-
-.i-char {
-  animation-delay: 1.9s;
-}
-
-.space-char {
-  animation-delay: 2.0s;
-}
-
-.agency-char:nth-child(4) {
-  animation-delay: 2.1s;
-}
-
-.agency-char:nth-child(5) {
-  animation-delay: 2.2s;
-}
-
-.agency-char:nth-child(6) {
-  animation-delay: 2.3s;
-}
-
-.agency-char:nth-child(7) {
-  animation-delay: 2.4s;
-}
-
-.agency-char:nth-child(8) {
-  animation-delay: 2.5s;
-}
-
-.agency-char:nth-child(9) {
-  animation-delay: 2.6s;
+  margin-bottom: 0;
+  line-height: 1;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
 }
 
 /* Группа с кнопками и текстом на правой стороне */
@@ -210,7 +163,7 @@
 }
 
 /* Табы с кнопками - без анимаций */
-.hero-animation .tabs-container {
+.tabs-container {
   opacity: 1; /* Всегда видимый */
   animation: none ; /* Убираем анимацию */
   display: flex ;
@@ -222,7 +175,7 @@
 }
 
 /* Кнопка Обсудить проект - без анимаций */
-.hero-animation .button.rounded {
+.button.rounded {
   opacity: 1 ; /* Всегда видимый */
   animation: none ; /* Убираем анимацию */
   align-self: flex-start ;
@@ -323,14 +276,13 @@
 }
 
 /* Стили для hero-container */
-.hero-animation .hero-container {
+.hero-container {
   padding: 2rem !important;
   width: 100% !important;
   height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: flex-end !important; /* Располагаем все элементы внизу */
-  align-items: flex-start !important; /* Выравниваем по левому краю */
+  justify-content: center !important;
   gap: 1.5rem !important;
   z-index: 10 !important;
   position: relative !important;

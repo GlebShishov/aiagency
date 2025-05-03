@@ -26,18 +26,33 @@
   {% include projects-grid.html limit=6 exclude_project=page.url %}
 {% endcomment %}
 
-{% assign limit = include.limit | default: 999 %}
+{% assign limit = include.limit | default: 8 %}
 {% assign show_more_link = include.show_more_link | default: true %}
 {% assign filter_buttons = include.filter_buttons | default: false %}
 
 {% if filter_buttons %}
 <section class="projects-filter">
-  <div class="filter-buttons">
-    <button class="filter-button active" data-filter="all">Все</button>
-    <button class="filter-button" data-filter="Branding">Брендинг</button>
-    <button class="filter-button" data-filter="UX/UI">UX/UI</button>
-    <button class="filter-button" data-filter="Development">Разработка</button>
-    <button class="filter-button" data-filter="Marketing">Маркетинг</button>
+  <div class="filter-buttons form-services">
+    <label class="service-checkbox" id="all-filter">
+      <input type="radio" name="project-filter" value="all" checked>
+      <span class="checkbox-text">Все</span>
+    </label>
+    <label class="service-checkbox" id="branding-filter">
+      <input type="radio" name="project-filter" value="Branding">
+      <span class="checkbox-text">Брендинг</span>
+    </label>
+    <label class="service-checkbox" id="uxui-filter">
+      <input type="radio" name="project-filter" value="UX/UI">
+      <span class="checkbox-text">UX/UI</span>
+    </label>
+    <label class="service-checkbox" id="development-filter">
+      <input type="radio" name="project-filter" value="Development">
+      <span class="checkbox-text">Разработка</span>
+    </label>
+    <label class="service-checkbox" id="marketing-filter">
+      <input type="radio" name="project-filter" value="Marketing">
+      <span class="checkbox-text">Маркетинг</span>
+    </label>
   </div>
 </section>
 {% endif %}
@@ -88,35 +103,85 @@
 {% if filter_buttons %}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-button');
+    const filterInputs = document.querySelectorAll('.service-checkbox input');
     const projectCards = document.querySelectorAll('.project-card');
+    const projectsGrid = document.getElementById('projects-grid');
     
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const filter = this.getAttribute('data-filter');
-        
-        // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Filter projects
-        projectCards.forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category').toLowerCase() === filter.toLowerCase()) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+    // Начальное количество отображаемых проектов
+    let visibleCount = 8; // Начальное количество проектов
+    let allProjects = Array.from(projectCards);
+    let currentFilter = 'all';
+    
+    // Функция для фильтрации и отображения проектов
+    function filterAndShowProjects() {
+      // Сначала скрываем все проекты
+      allProjects.forEach(function(card) {
+        card.style.display = 'none';
+      });
+      
+      // Фильтруем проекты по категории
+      let filteredProjects = allProjects.filter(function(card) {
+        return currentFilter === 'all' || card.getAttribute('data-category').toLowerCase() === currentFilter.toLowerCase();
+      });
+      
+      // Показываем только первые visibleCount проектов
+      filteredProjects.slice(0, visibleCount).forEach(function(card) {
+        card.style.display = 'block';
+      });
+      
+      // Проверяем, нужно ли показывать кнопку "Загрузить еще"
+      const loadMoreButton = document.getElementById('load-more-button');
+      if (loadMoreButton) {
+        if (filteredProjects.length > visibleCount) {
+          loadMoreButton.style.display = 'block';
+        } else {
+          loadMoreButton.style.display = 'none';
+        }
+      }
+    }
+    
+    // Обработчик для фильтров
+    filterInputs.forEach(function(input) {
+      input.addEventListener('change', function() {
+        if (this.checked) {
+          currentFilter = this.value;
+          visibleCount = 8; // Сбрасываем счетчик при смене фильтра
+          filterAndShowProjects();
+        }
       });
     });
     
-    // Check if URL has category param and apply filter
+    // Добавляем кнопку "Загрузить еще"
+    const loadMoreButton = document.createElement('button');
+    loadMoreButton.id = 'load-more-button';
+    loadMoreButton.className = 'button rounded';
+    loadMoreButton.textContent = 'Загрузить еще';
+    loadMoreButton.style.margin = '2rem auto';
+    loadMoreButton.style.display = 'block';
+    
+    // Добавляем обработчик для кнопки "Загрузить еще"
+    loadMoreButton.addEventListener('click', function() {
+      visibleCount += 8; // Увеличиваем количество отображаемых проектов
+      filterAndShowProjects();
+    });
+    
+    // Добавляем кнопку после сетки проектов
+    projectsGrid.parentNode.insertBefore(loadMoreButton, projectsGrid.nextSibling);
+    
+    // Инициализация: показываем первые проекты
+    filterAndShowProjects();
+    
+    // Проверяем URL параметры для фильтрации
     const urlParams = new URLSearchParams(window.location.search);
     const categoryParam = urlParams.get('category');
     if (categoryParam) {
-      const matchingButton = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter').toLowerCase() === categoryParam.toLowerCase());
-      if (matchingButton) {
-        matchingButton.click();
+      const matchingInput = Array.from(filterInputs).find(function(input) {
+        return input.value.toLowerCase() === categoryParam.toLowerCase();
+      });
+      if (matchingInput) {
+        matchingInput.checked = true;
+        currentFilter = matchingInput.value;
+        filterAndShowProjects();
       }
     }
   });

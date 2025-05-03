@@ -552,7 +552,7 @@
 
 /* Стили для секции с подуслугами во всю ширину */
 .service-offerings-fullwidth {
-  padding: 60px 0;
+  /* padding: 60px 0; */
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
   width: 100%;

@@ -26,7 +26,7 @@ permalink: /services/
 </section>
 
 <!-- Секция с категориями услуг -->
-<div class="services-categories-grid">
+<section class="services-categories-grid">
   {% assign main_services = site.services | where_exp: "item", "item.url contains '/services/'" | sort: 'order' %}
   {% for service in main_services %}
     {% assign service_slug = service.url | split: '/' | last %}
@@ -54,4 +54,4 @@ permalink: /services/
       </div>
     {% endif %}
   {% endfor %}
-</div>
+</section>

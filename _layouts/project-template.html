@@ -2,9 +2,8 @@
 layout: default
 ---
 
-<article class="case-page">
-  <!-- Заголовок кейса с информацией о клиенте и задаче -->
-  <section class="case-header">
+<!-- Заголовок кейса с информацией о клиенте и задаче -->
+<section class="case-header">
     <div class="container">
       <div class="container">
         <h1 class="case-title">{{ page.title }}</h1>
@@ -165,4 +164,3 @@ layout: default
 
   <!-- Другие проекты -->
   {% include projects-grid.html limit=6 show_more_link=true exclude_project=page.url %}
-</article>

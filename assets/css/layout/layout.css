@@ -273,14 +273,6 @@
   line-height: 1;
 }
 
-.hero-name {
-  font-size: clamp(4rem, 10vw, 7rem);
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: 0;
-  line-height: 1;
-}
-
 .hero-title-char {
   display: inline-block;
   color: #fff;
@@ -760,10 +752,7 @@
   visibility: visible;
 }
 
-/* Стили для основного контента страницы */
-.page-content-wrapper {
-  padding-top: 80px;
-}
+
 
 /* Медиа запросы */
 @media (max-width: 1024px) {
