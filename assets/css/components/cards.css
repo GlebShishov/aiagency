@@ -142,3 +142,36 @@
   color: #fff;
   margin-top: var(--spacing-xs, 0.25rem);
 }
+
+  /* Ensure only 8 projects are displayed on home page */
+.case-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(33, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
+  }
+  
+ .project-card:nth-child(n+9) {
+    display: none !important;
+  }
+  
+  @media (max-width: 1200px) {
+.case-grid-layout {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+  
+  @media (max-width: 768px) {
+.case-grid-layout {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+  
+  @media (max-width: 480px) {
+ .case-grid-layout {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(8, auto);
+    }
+  }

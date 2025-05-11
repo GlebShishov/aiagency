@@ -25,51 +25,52 @@ document.addEventListener('DOMContentLoaded', function() {
     const orderDesignBtn = document.querySelector('.order-design-btn');
     const contactSection = document.querySelector('.contact-section');
     
-    // Если на главной странице, контролируем прозрачность фона header
+    // Если на главной странице
     if (isHomePage) {
-      if (currentScrollY <= 10) {
-        // Если вверху страницы, делаем фон прозрачным
-        header.classList.remove('scrolled');
-        header.classList.add('transparent');
-      } else {
-        // Если прокрутили вниз, добавляем фон
-        header.classList.add('scrolled');
-        header.classList.remove('transparent');
-      }
+      // Делаем хедер статичным и прозрачным на главной странице
+      header.classList.add('static');
+      header.classList.add('transparent');
+      header.classList.remove('scrolled');
+      
+      // Всегда показываем хедер на главной странице
+      header.classList.remove('hidden');
+      header.classList.add('visible');
     } else {
-      // На других страницах всегда показываем фон
+      // На других страницах всегда показываем фон и делаем хедер фиксированным
+      header.classList.remove('static');
       header.classList.add('scrolled');
       header.classList.remove('transparent');
-    }
-    
-    // Если скролл вниз и не в самом верху
-    if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      header.classList.add('hidden');
-      header.classList.remove('visible');
       
-      // Показываем кнопку заказа дизайна при скролле вниз
-      if (orderDesignBtn) {
-        // Проверяем, находимся ли мы на секции контактов
-        if (contactSection) {
-          const contactRect = contactSection.getBoundingClientRect();
-          // Если контактная секция видима на экране, скрываем кнопку
-          if (contactRect.top < window.innerHeight && contactRect.bottom > 0) {
-            orderDesignBtn.classList.remove('visible');
+      // Плавный выезд хедера при скролле на внутренних страницах
+      // Если скролл вниз и не в самом верху
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        header.classList.add('hidden');
+        header.classList.remove('visible');
+        
+        // Показываем кнопку заказа дизайна при скролле вниз
+        if (orderDesignBtn) {
+          // Проверяем, находимся ли мы на секции контактов
+          if (contactSection) {
+            const contactRect = contactSection.getBoundingClientRect();
+            // Если контактная секция видима на экране, скрываем кнопку
+            if (contactRect.top < window.innerHeight && contactRect.bottom > 0) {
+              orderDesignBtn.classList.remove('visible');
+            } else {
+              orderDesignBtn.classList.add('visible');
+            }
           } else {
             orderDesignBtn.classList.add('visible');
           }
-        } else {
-          orderDesignBtn.classList.add('visible');
         }
-      }
-    } else {
-      // Если скролл вверх или в самом верху
-      header.classList.remove('hidden');
-      header.classList.add('visible');
-      
-      // Скрываем кнопку заказа дизайна при скролле вверх или в самом верху
-      if (orderDesignBtn && currentScrollY <= 100) {
-        orderDesignBtn.classList.remove('visible');
+      } else {
+        // Если скролл вверх или в самом верху
+        header.classList.remove('hidden');
+        header.classList.add('visible');
+        
+        // Скрываем кнопку заказа дизайна при скролле вверх или в самом верху
+        if (orderDesignBtn && currentScrollY <= 100) {
+          orderDesignBtn.classList.remove('visible');
+        }
       }
     }
     

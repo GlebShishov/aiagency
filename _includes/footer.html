@@ -47,7 +47,7 @@
                 <input type="text" id="name" name="name" class="form-control" placeholder="Имя" required maxlength="50" pattern="[А-Яа-яЁёA-Za-z\s]+" title="Только буквы и пробелы">
               </div>
               <div class="form-group">
-                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (XXX) XXX XX-XX" required pattern="\+7 \(\d{3}\) \d{3} \d{2}-\d{2}">
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 123 456 78 90" required pattern="\+7 \(\d{3}\) \d{3} \d{2}-\d{2}">
               </div>
             </div>
             
@@ -80,6 +80,13 @@
                 </label>
               </div>
               
+              <p class="file-tips">
+                Из какой вы компании, чем она занимается?<br>
+                С какой задачей/проблемой Вы обращаетесь к нам?<br>
+                На какой бюджет Вы рассчитываете?<br>
+                Напишите, если дедлайн горит и нужно сделать в кратчайшие сроки.
+              </p>
+              
               <div class="form-group">
                 <textarea id="description" name="description" class="form-control" rows="4" placeholder="Опишите задачу" required maxlength="500"></textarea>
                 <div class="char-counter"><span id="charCount">0</span>/500</div>
@@ -91,12 +98,6 @@
                 </label>
                 <input type="file" id="file" name="file" class="file-input">
                 <div class="file-info">
-                  <ol class="file-tips">
-                    <li>Из какой вы компании, чем она занимается?</li>
-                    <li>С какой задачей/проблемой Вы обращаетесь к нам?</li>
-                    <li>На какой бюджет Вы рассчитываете?</li>
-                    <li>Напишите, если дедлайн горит и нужно сделать в кратчайшие...</li>
-                  </ol>
                 </div>
               </div>
               
@@ -191,4 +192,32 @@
       </div>
     </div>
   </div> -->
+<script>
+  // Функция для управления чекбоксами услуг
+  document.addEventListener('DOMContentLoaded', function() {
+    const complexCheckbox = document.querySelector('#complex-service input[type="checkbox"]');
+    const otherCheckboxes = document.querySelectorAll('.service-checkbox:not(#complex-service) input[type="checkbox"]');
+    
+    // При клике на комплексный сервис
+    complexCheckbox.addEventListener('change', function() {
+      if(this.checked) {
+        // Если выбран комплексный, снимаем выбор с остальных
+        otherCheckboxes.forEach(checkbox => {
+          checkbox.checked = false;
+        });
+      }
+    });
+    
+    // При клике на любой другой сервис
+    otherCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        if(this.checked && complexCheckbox.checked) {
+          // Если выбран другой сервис и был выбран комплексный,
+          // снимаем выбор с комплексного
+          complexCheckbox.checked = false;
+        }
+      });
+    });
+  });
+</script>
 </footer>
